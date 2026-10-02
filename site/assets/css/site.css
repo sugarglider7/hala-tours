@@ -607,7 +607,8 @@ a.dp__mood:hover{text-decoration:underline}
   .f--row>.fld:not(.fld--num){grid-column:1/-1}
   .guide--home .ch__intro{font-size:1rem;line-height:1.42}
   .guide--home .ch__band{padding-top:22px}
-  .guide--home .ch__places span:nth-child(n+5){display:none}
+  .guide--home .ch__places span:nth-child(n+4){display:none}
+  .guide--home .ch__places{padding-bottom:58px}
   .daymap__text p:not(.kicker):not(.daymap__link){display:none}
   .reviews:not(.reviews--page):not(.reviews--inline) .rv:nth-child(3){display:none}
   .mchip span,.lchip span{min-height:44px;padding:0 13px;font-size:.95rem}
