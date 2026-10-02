@@ -2,6 +2,20 @@
 
 _Last updated: 2026-10-02 by FixHala (Phase 4 fix pass — Audit A + B findings applied, see QA_CHECKLIST "Fix log")_
 
+## FINAL STATE — orchestrator sign-off (2026-10-02 08:15 UTC)
+- **Status: COMPLETE — deployed and owner-showable.** Live: https://hala-tours.peashoot.io/ (Cloudflare Pages, domain active, live commit 3aafb61 (site) / 7531caa (docs)).
+- Pages: 39 EN + 39 FR + bilingual 404 (79).
+- Conversion: WhatsApp day planner (home + /plan/), per-day price form + one-tap link, transfer form → wa.me/212660732477; tel + email fallbacks.
+- QA: Audit A 26 + Audit B 27 findings → 51 fixed, B25 partly (intentional inset), A14 owner decision. check_site OK (79 pages). Live 390 checks pass; 1920/2560 pass.
+- Cross-site checks passed: differentiation (type, hero, nav, grid, motion distinct from the other two and from hyle/agadir-trip), AI-copy scan clean, owner-embarrassment audit applied, live mobile inspection at 390.
+- Redeploy after any push: `/home/agent/agadir-pilot/tools/cf-static-deploy.sh hala-tours deploy` (pushes don't auto-deploy).
+- Questions for the owner (Fadwa) — everything uncertain is omitted or softened on the site until answered:
+  - Phone: site/WhatsApp use +212 660 732 477; Google lists …177 — which is live? (single constant in tools/content/catalogue.json)
+  - Still sold? balloon, Zagora 2 days, El Borj 2 days, Marrakech + Essaouira 2 days, Tafraout/Tiznit (shown 'on request')
+  - Paradise Valley: half or full day?
+  - OK to reuse photos showing guests' faces? OK to name Ayoub?
+  - A photo of the desk at the Hamilton (biggest image gap)
+
 ## Recovered state (resume of crashed run "agadir-batch2")
 - Prior run left ONLY raw material (no repo, no status files, no code, no deployment):
   raw page dumps + downloaded images, now in `research/raw/` (gitignored; on disk at /home/agent/agadir-pilot/sites/hala-tours/research/raw/). Original copy still at /tmp/sites2/hala-tours/.
@@ -69,12 +83,10 @@ _Last updated: 2026-10-02 by FixHala (Phase 4 fix pass — Audit A + B findings 
 - Live check 2026-10-02 after phase 4 (deploy 3aafb61, CSS ?v=de8413ae): at 390 `/`, `/fr/`, `/days/`, `/days/hot-air-balloon/`, `/days/buggy/`, `/where-we-go/`, `/transfers/`, `/visit/`, `/fr/sorties/desert-de-zagora/`, valleys mood page → no overflow, no broken images, no aggregateRating, no console errors/failed requests; header FR pill → `/fr/`; "Two days" filter → 1 chapter + "3 days fit “Two days”"; balloon form → "Could it run on my dates…" decoded. Shots `qa/hala-tours/p4-fix/live-*`.
 
 ## Outstanding problems
-- Orphan Google Maps tabs may remain in shared Chromium from ResearchHala's timed-out tab.run (not closable from its kernel) — orchestrator informed.
 - No photo of the desk/Hamilton entrance (biggest image gap; Fadwa could take one). Visit section uses the OSM locator + minibus photo instead.
 - Guests' faces in Hala's own photos (hero riders, minibus selfie) — owner should confirm reuse consent.
 - Homepage at 390 is 11.8k CSS px (11,763; was 11,871) although every home row now carries its one-line description; chapters 4–7 are compact on phones. With a length filter on, it drops to 6.9–9.1k.
 - JSON-LD carries no aggregateRating (orchestrator decision); "5.0 on Google · 390 reviews" stays visible on the page.
-- Visit page has no photo of the desk itself (none exists).
 
 ## Log
 - 05:08 recovery: workspace created from prior raw research; brief + standard written.
