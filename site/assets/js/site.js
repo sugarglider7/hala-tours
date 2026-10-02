@@ -240,7 +240,7 @@
     form.addEventListener("submit", function (ev) {
       ev.preventDefault();
       var bad = validate(form);
-      if (bad) { bad.focus(); return; }
+      if (bad) { var det = bad.closest("details"); if (det) det.open = true; bad.focus(); return; }
       var text = COMPOSE[form.dataset.wa](form).join("\n"), href = D.wa + "?text=" + encodeURIComponent(text);
       $("[data-retry]", form).href = href;
       $("[data-mail]", form).href = "mailto:" + D.email + "?subject=" + encodeURIComponent(S.mail_subject) + "&body=" + encodeURIComponent(text);

@@ -287,7 +287,7 @@ ul{padding:0;list-style:none}
 
 /* ---------- desk (cobalt band) */
 .desk{background:var(--cobalt);color:var(--paper);padding:60px var(--pad) 64px;display:grid;gap:30px;
-  grid-template-areas:"text" "map" "facts" "tr"}
+  grid-template-areas:"text" "map" "tr"}
 .desk--page{grid-template-areas:"text" "map";padding-top:40px}
 .desk .kicker{color:var(--saffron)}
 .desk__text{grid-area:text}
@@ -335,10 +335,9 @@ ul{padding:0;list-style:none}
 @media (min-width:48em){.desk{border-radius:var(--r);margin:0 var(--pad);padding:56px 48px}}
 @media (min-width:64em){
   .desk{max-width:calc(var(--maxw) - 2 * var(--pad));margin:0 auto;grid-template-columns:minmax(0,5fr) minmax(0,7fr);column-gap:56px;row-gap:36px;padding:72px 56px;
-    grid-template-areas:"text map" "facts facts" "tr tr"}
+    grid-template-areas:"text map" "tr map"}
   .desk--page{grid-template-areas:"text map";padding-top:56px}
   .desk__map{align-self:center}
-  .desk__facts{grid-template-columns:repeat(4,minmax(0,1fr));column-gap:28px}
 }
 @media (min-width:80em){.desk{max-width:calc(var(--maxw) - 2 * var(--pad))}}
 
@@ -432,8 +431,9 @@ a.ch__num:hover{text-decoration:underline}
 .guide__h--page{font-size:clamp(2.6rem,1.3rem + 5.4vw,5.4rem);line-height:.94;letter-spacing:-.035em;max-width:14ch;margin-bottom:16px}
 .guide__lede{font-size:1.1rem;max-width:36em;margin-bottom:26px}
 .guide__head:has(.guide__h--page){border-top:0;padding-top:12px}
-.moodpage>.lenbar{max-width:var(--maxw);margin:0 auto;padding:4px var(--pad) 0}
-.moodpage .ch{padding-top:52px}
+.ch__list>.lenbar{margin:0 0 20px}
+.moodpage .ch{padding-top:44px}
+@media (min-width:64em){.moodpage .ch__list{padding-top:28px}.moodpage .ch__days{margin-top:0}}
 .others{max-width:var(--maxw);margin:0 auto;padding:44px var(--pad) 8px}
 .others__h{font-family:var(--hand);font-weight:700;font-size:1.35rem;color:var(--cobalt);margin-bottom:10px;transform:rotate(-2deg);transform-origin:left}
 
@@ -448,7 +448,7 @@ a.ch__num:hover{text-decoration:underline}
 /* ---------- day page */
 .dp{max-width:var(--maxw);margin:0 auto}
 .dp__band{background:var(--c);color:var(--on);padding:26px var(--pad) 84px;position:relative}
-.dp__mood{display:inline-block;background:var(--paper);color:var(--cd);font-weight:700;font-size:.9rem;padding:8px 14px 9px;border-radius:12px 12px 12px 3px;text-decoration:none;margin:0 0 16px}
+.dp__mood{display:inline-block;justify-self:start;background:var(--paper);color:var(--cd);font-weight:700;font-size:.9rem;padding:8px 14px 9px;border-radius:12px 12px 12px 3px;text-decoration:none;margin:0 0 16px}
 a.dp__mood:hover{text-decoration:underline}
 .dp__h{font-size:clamp(2.5rem,1.3rem + 5.2vw,5.4rem);line-height:.94;font-weight:800;letter-spacing:-.035em;font-variation-settings:"opsz" 96;text-wrap:balance;margin-bottom:14px}
 .badge--band{background:var(--paper);color:var(--ink);vertical-align:.5em;font-size:.8rem;letter-spacing:.06em}
@@ -589,7 +589,39 @@ a.dp__mood:hover{text-decoration:underline}
 .cr__place{font-weight:700}
 .cr p{font-size:.95rem}
 .cr__small{color:rgba(16,20,63,.7);font-size:.85rem!important;margin-top:4px}
-.foot__links{display:grid;gap:0}
+.foot__links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:16px}
+@media (min-width:64em){.foot__links{grid-template-columns:1fr}}
+/* homepage guide on phones: name + length + add only; the full line lives on the mood and day pages */
+@media (max-width:47.99em){
+  .guide--home .day__line{display:none}
+  .guide--home .day{padding:12px 0 14px;row-gap:2px}
+  .guide--home .ch__band{padding-bottom:68px}
+  .guide--home .ch{padding-top:40px}
+  .guide--home .ch__img{aspect-ratio:2/1}
+  .guide--home .note--ch{position:absolute;left:10px;bottom:-16px;margin:0;max-width:calc(100% - 20px);background:var(--paper);padding:7px 12px 8px;
+    border-radius:12px 12px 12px 3px;box-shadow:0 8px 20px -10px rgba(16,20,63,.5);font-size:1.12rem}
+  .guide--home .note--ch .note__arrow{display:none}
+  .guide--home .ch__body{gap:30px}
+  .f--row{grid-template-columns:1fr 1fr;column-gap:12px}
+  .f--row>.fld:not(.fld--num){grid-column:1/-1}
+  .guide--home .ch__intro{font-size:1rem;line-height:1.42}
+  .guide--home .ch__band{padding-top:22px}
+  .guide--home .ch__places span:nth-child(n+5){display:none}
+  .daymap__text p:not(.kicker):not(.daymap__link){display:none}
+  .reviews:not(.reviews--page):not(.reviews--inline) .rv:nth-child(3){display:none}
+  .mchip span,.lchip span{min-height:44px;padding:0 13px;font-size:.95rem}
+  .guide--home .note--ch{bottom:-30px}
+  .guide--home .ch__body{gap:44px}
+  .guide--home #mood-sand .ch__img{object-position:50% 85%}
+  .guide--home #mood-hooves .ch__img{object-position:50% 40%}
+  .guide--home #mood-medina .ch__img{object-position:50% 60%}
+}
+.more{border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+.more>summary{display:flex;align-items:center;gap:10px;min-height:52px;font-weight:700;cursor:pointer;list-style:none}
+.more>summary::-webkit-details-marker{display:none}
+.more>summary::before{content:"+";display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--ink);color:var(--paper);font-weight:800;flex:none}
+.more[open]>summary::before{content:"−"}
+.more__in{display:grid;gap:26px;padding:8px 0 24px}
 .foot__links a{display:inline-flex;align-items:center;min-height:40px;text-decoration:none}
 .foot__links a:hover{text-decoration:underline}
 @media (min-width:64em){.foot__in{grid-template-columns:1.6fr 1.3fr 1.3fr 1fr}}

@@ -34,7 +34,7 @@
   "lengths": {"hours": "A couple of hours", "half": "Half a day", "full": "All day", "two": "Two days"},
   "length_short": {"hours": "Couple of hours", "half": "Half day", "full": "All day", "two": "Two days"},
   "days_range": [["Monday – Saturday", "08:00 – 23:00"], ["Sunday", "09:00 – 22:00"]],
-  "more_days": "All {n} days in {mood}",
+  "more_days": "See all {n} days in this mood",
   "count_days": "{n} days",
   "photo_by": "Photo",
   "context_photo": "the place, not our trip"
@@ -134,6 +134,7 @@
   "request_text": "This one doesn't run every week. Message us with your dates and we'll tell you honestly what's possible.",
   "ask_kicker": "No prices printed — ever",
   "ask_title": "Check today's price on WhatsApp",
+  "dock": "Today's price",
   "ask_text": "Add a date and how many of you, if you know. It becomes a WhatsApp message to our desk; you can edit it before you send.",
   "one_tap": "Ask about this day on WhatsApp",
   "submit": "Send on WhatsApp",
@@ -183,7 +184,7 @@
    {"q": "It's easy to communicate with the guys from the agency, because they speak English very well.", "by": "Hannah VG"},
    {"q": "Paradise city trip was out of this world lots of beautiful scenery.", "by": "Stephanie McDougal"}
   ],
-  "home_pick": [0, 1, 2, 3, 4],
+  "home_pick": [0, 2, 3],
   "platform": "Google review",
   "link": "Read them all on Google",
   "more": "More reviews",
@@ -304,6 +305,7 @@
   "remove": "Remove",
   "length_label": "How long?",
   "length_any": "Not sure",
+  "more_summary": "Add a date, how many of you and where you're staying",
   "date_label": "When?",
   "date_hint": "Leave empty if you're not sure yet.",
   "adults_label": "Adults",

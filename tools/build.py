@@ -508,7 +508,7 @@ def chapter(t, m, i, mode="home"):
   </header>
   <div class="ch__body">
     <div class="ch__media">{mood_media(t, m, lazy=(mode != "page"))}{note}</div>
-    <div class="ch__list"><ul class="ch__days">{rows}</ul>
+    <div class="ch__list">{lenbar(t) if mode == "page" else ""}<ul class="ch__days">{rows}</ul>
     <p class="ch__none" hidden>{e(t['guide']['none_here'])}</p>{more}</div>
   </div>
 </{tag}>"""
@@ -530,7 +530,7 @@ def guide(t, mode="home"):
         p = t["days_page"]
         headh = f'<p class="kicker">{e(p["kicker"])}</p><h1 class="guide__h guide__h--page" id="guide-h">{e(p["h1"])}</h1><p class="guide__lede">{e(p["lede"])}</p>'
         tail = ""
-    return f"""<section class="guide" id="guide" aria-labelledby="guide-h">
+    return f"""<section class="guide guide--{mode}" id="guide" aria-labelledby="guide-h">
   <div class="guide__head">{headh}{lenbar(t)}</div>
   {thumbs(t)}
 {chapters}
@@ -540,7 +540,7 @@ def guide(t, mode="home"):
 
 def daymap(t, mode="home"):
     m, lang = t["map"], t["lang"]
-    link = f'<p><a class="link" href="{url("where", lang)}">{e(m["page_link"])}{icon("i-arrow")}</a></p>' if mode == "home" else ""
+    link = f'<p class="daymap__link"><a class="link" href="{url("where", lang)}">{e(m["page_link"])}{icon("i-arrow")}</a></p>' if mode == "home" else ""
     return f"""<section class="daymap" id="map" aria-labelledby="map-h">
   <div class="daymap__text">
     <p class="kicker">{e(m['kicker'])}</p>
@@ -579,7 +579,6 @@ def hours_table(t):
 def desk(t):
     """Homepage version: compact; the full story lives on /visit/."""
     d, lang = t["desk"], t["lang"]
-    facts = "".join(f"<li><strong>{e(a)}</strong> {e(b)}</li>" for a, b in d["facts"])
     return f"""<section class="desk" id="desk" aria-labelledby="desk-h">
   <div class="desk__text">
     <p class="kicker">{e(d['kicker'])}</p>
@@ -593,7 +592,6 @@ def desk(t):
     </div>
   </div>
   <figure class="desk__map">{locator_svg(t)}<p class="note note--desk">{e(d['note'])}</p></figure>
-  <ul class="desk__facts">{facts}</ul>
   <p class="desk__tr"><a class="link" href="{url('transfers', lang)}">{e(d['transfers_line'])}{icon('i-arrow')}</a></p>
 </section>"""
 
@@ -615,12 +613,13 @@ def people_fields(t, prefix):
             f'<div class="fld" data-ages hidden><label for="{prefix}-ages">{e(p["ages_label"])}</label><input id="{prefix}-ages" name="ages" type="text" placeholder="{e(p["ages_ph"])}" autocomplete="off"></div>')
 
 
-def planner(t, level="h2"):
+def planner(t, level="h2", compact=False):
     p, u = t["plan"], t["ui"]
     moods = "".join(f'<label class="mchip mchip--{m["color"]}"><input type="checkbox" name="mood" value="{m["id"]}"><span>{e(t["moods"][m["id"]]["name"])}</span></label>' for m in CAT["moods"])
     lens = "".join(f'<label class="lchip"><input type="radio" name="length" value="{l}"><span>{len_glyph(l)}{e(u["lengths"][l])}</span></label>' for l in CAT["lengths"])
     lens += f'<label class="lchip"><input type="radio" name="length" value="" checked><span>{e(p["length_any"])}</span></label>'
     hcls = "sec-h sec-h--page" if level == "h1" else "sec-h"
+    open_d, close_d = (f'<details class="more"><summary>{e(p["more_summary"])}</summary><div class="more__in">', "</div></details>") if compact else ("", "")
     return f"""<section class="plan" id="plan" aria-labelledby="plan-h" data-dock-hide>
   <div class="plan__head">
     <p class="kicker">{e(p['kicker'])}</p>
@@ -631,7 +630,7 @@ def planner(t, level="h2"):
     <fieldset class="f f--moods"><legend>{e(p['moods_label'])}</legend><div class="mchips">{moods}</div></fieldset>
     <div class="f f--picked"><p class="f__l">{e(p['picked_label'])}</p><ul class="picked" data-picked></ul><p class="picked__empty" data-picked-empty>{e(p['picked_empty'])}</p></div>
     <p class="err" data-err="what" hidden>{e(p['err_what'])}</p>
-    <fieldset class="f f--len"><legend>{e(p['length_label'])}</legend><div class="lchips">{lens}</div></fieldset>
+    {open_d}<fieldset class="f f--len"><legend>{e(p['length_label'])}</legend><div class="lchips">{lens}</div></fieldset>
     <div class="f f--row">
       <div class="fld"><label for="f-date">{e(p['date_label'])}</label><input id="f-date" name="date" type="date" aria-describedby="f-date-h"><p class="hint" id="f-date-h">{e(p['date_hint'])}</p><p class="err" data-err="date" hidden>{e(p['err_date'])}</p></div>
       {people_fields(t, 'f')}
@@ -639,7 +638,7 @@ def planner(t, level="h2"):
     <div class="f f--row">
       <div class="fld"><label for="f-stay">{e(p['stay_label'])}</label><input id="f-stay" name="stay" type="text" placeholder="{e(p['stay_ph'])}" autocomplete="off"></div>
       <div class="fld"><label for="f-name">{e(p['name_label'])}</label><input id="f-name" name="name" type="text" autocomplete="given-name"></div>
-    </div>
+    </div>{close_d}
     <div class="fld"><label for="f-msg">{e(p['msg_label'])}</label><textarea id="f-msg" name="msg" rows="3" placeholder="{e(p['msg_ph'])}"></textarea></div>
     <div class="planner__go"><button class="btn btn--sun btn--big" type="submit">{icon('i-wa')}{e(p['submit'])}</button>
       <noscript><a class="link" href="{wa(p['wa_simple'])}">{e(p['nojs'])}</a></noscript></div>
@@ -694,9 +693,9 @@ def page_data(t):
 
 
 def page(t, key, title, desc, main, ldata, dock_html=None):
-    return (head(t, key, title, desc) + "</head>\n<body>\n" + "\n".join([
+    return (head(t, key, title, desc) + "</head>\n<body>\n<!--email_off-->\n" + "\n".join([
         header(t, key), sheet(t, key), f'<main id="main">{main}</main>', footer(t, key),
-        dock_html or dock(t), SPRITE, page_data(t), ld(*ldata)]) + "\n</body>\n</html>\n")
+        dock_html or dock(t), SPRITE, page_data(t), ld(*ldata)]) + "\n<!--/email_off-->\n</body>\n</html>\n")
 
 
 def cta_band(t, title, text, href=None, label=None):
@@ -708,11 +707,11 @@ def cta_band(t, title, text, href=None, label=None):
 # ---------------------------------------------------------------- pages
 def render_home(t):
     lang = t["lang"]
-    main = "\n".join([hero(t), guide(t, "home"), daymap(t), reviews(t), desk(t), planner(t)])
+    main = "\n".join([hero(t), guide(t, "home"), daymap(t), reviews(t), desk(t), planner(t, compact=True)])
     data = dict(org(t), **{"@context": "https://schema.org"})
-    return (head(t, "home", t["meta"]["title"], t["meta"]["description"]) + "</head>\n<body>\n" + "\n".join([
+    return (head(t, "home", t["meta"]["title"], t["meta"]["description"]) + "</head>\n<body>\n<!--email_off-->\n" + "\n".join([
         header(t, "home"), sheet(t, "home"), f'<main id="main">{main}</main>', footer(t, "home"), dock(t), SPRITE, page_data(t),
-        '<script type="application/ld+json">' + json.dumps(data, ensure_ascii=False) + "</script>"]) + "\n</body>\n</html>\n")
+        '<script type="application/ld+json">' + json.dumps(data, ensure_ascii=False) + "</script>"]) + "\n<!--/email_off-->\n</body>\n</html>\n")
 
 
 def render_days(t):
@@ -729,7 +728,7 @@ def render_mood(t, mid):
     m, mt, mp = MOOD[mid], t["moods"][mid], t["mood_page"]
     others = "".join(f'<li><a class="tab tab--{o["color"]}" href="{url("mood:" + o["id"], lang)}">{e(t["moods"][o["id"]]["name"])}</a></li>' for o in CAT["moods"] if o["id"] != mid)
     main = (crumbs(t, [(t["guide"]["kicker"], url("days", lang)), (mt["name"], None)])
-            + f'<div class="moodpage">{lenbar(t)}{chapter(t, m, i, "page")}</div>'
+            + f'<div class="moodpage">{chapter(t, m, i, "page")}</div>'
             + f'<nav class="others" aria-labelledby="others-h"><p class="others__h" id="others-h">{e(mp["other"])}</p><ul class="tabs">{others}</ul></nav>'
             + cta_band(t, mp["plan_title"], mp["plan_text"]))
     items = [{"@type": "ListItem", "position": j + 1, "url": ORIGIN + url("day:" + d["id"], lang), "name": d[lang]["name"]} for j, d in enumerate(mood_days(mid))]
@@ -818,7 +817,7 @@ def render_day(t, did):
     agency = {"@type": "TravelAgency", "@id": ORIGIN + "/#agency", "name": "Hala Tours Agadir", "url": ORIGIN + "/", "telephone": C["phone_display"]}
     trail = [(u["home"], url("home", lang)), (t["guide"]["kicker"], url("days", lang)), (mt["name"], url("mood:" + d["mood"], lang)), (s["name"], url("day:" + did, lang))]
     return page(t, "day:" + did, s["title"], s["desc"], main, [trip, agency, crumbs_ld(lang, trail)],
-                dock(t, "#ask", dd["ask_title"]))
+                dock(t, "#ask", dd["dock"]))
 
 
 def render_where(t):
