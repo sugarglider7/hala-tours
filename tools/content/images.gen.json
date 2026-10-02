@@ -1,0 +1,223 @@
+{
+ "hero-horses": {
+  "w": 1600,
+  "h": 1200,
+  "color": "#7c6457",
+  "lqip": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAABQBACdASoUAA8APu1iqU2ppaOiMAgBMB2JQBOmUABpLKzBGG/bU8OtTPeAAP6xO5QdLcV3j55b0HDemAKOMZ66jNm6VZSl7AhMMwtpTntIhX9fXCasjLZxFPovrnTZD4UMnpSO5mkDAs7l80rR8cc7fySvF8bSkxvIAAAA",
+  "alt": "A line of riders on horseback along a cliff-top path above the Atlantic surf",
+  "variants": [
+   {
+    "w": 1440,
+    "h": 1080,
+    "file": "hero-horses-1440.webp",
+    "kb": 251
+   },
+   {
+    "w": 1100,
+    "h": 825,
+    "file": "hero-horses-1100.webp",
+    "kb": 158
+   },
+   {
+    "w": 800,
+    "h": 600,
+    "file": "hero-horses-800.webp",
+    "kb": 86
+   }
+  ]
+ },
+ "hero-horses-m": {
+  "w": 1060,
+  "h": 1140,
+  "color": "#6f5c51",
+  "lqip": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4ILQAAABQBQCdASoTABQAPu1oqVAppiOiqA1RMB2JYwCdMxs73CTVf+QNdfiKCQxXvbGCFJ0EYAAA/rF6O9AUfAwoZDebd2Yqzn9t2XGPYmIg6X5rKLVxwFAZcOEcZ0DF12/Gx1/RO8tM4Q7HeaiT1dTS+c8iESD7YlPCpIgq9epdCDY2iCVsV3nj9W+XbqBqSSD4E9SugZhVJzYBZkvFtYL0wwShBFQxQXOY2mGc6CnHiQ6h6A4AAAA=",
+  "alt": "A line of riders on horseback along a cliff-top path above the Atlantic surf",
+  "variants": [
+   {
+    "w": 800,
+    "h": 860,
+    "file": "hero-horses-m-800.webp",
+    "kb": 108
+   },
+   {
+    "w": 560,
+    "h": 602,
+    "file": "hero-horses-m-560.webp",
+    "kb": 57
+   }
+  ]
+ },
+ "quad-dunes": {
+  "w": 1280,
+  "h": 1400,
+  "color": "#d4d9dc",
+  "lqip": "data:image/webp;base64,UklGRrwAAABXRUJQVlA4ILAAAAAwBgCdASoSABQAPu1eqk4ppKQiMBgMATAdiWQArDL1K5Cl8/+Aer6rCFAXa/45LEkFaIAl2bgNaZmAAP7nM5FT+H/u13T8gAFEGDjcY6GquhxvzzIk+UYCSlF8XTFK6y2m008/9fCkt1ziGPml7ptDH+HJtyiSaecMppeMKrqnK1ACs2W+Zlm/NUbHscbk4OnR+bZaP6y2Bzq9KMoiMCvnC8X9CWNgrspD6JcwwAAAAA==",
+  "alt": "A quad bike parked on orange dunes with argan trees behind",
+  "variants": [
+   {
+    "w": 900,
+    "h": 984,
+    "file": "quad-dunes-900.webp",
+    "kb": 80
+   },
+   {
+    "w": 600,
+    "h": 656,
+    "file": "quad-dunes-600.webp",
+    "kb": 38
+   }
+  ]
+ },
+ "jetski-spray": {
+  "w": 856,
+  "h": 572,
+  "color": "#688da9",
+  "lqip": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAACwAwCdASoUAA0APu1kqU4ppaOiMAgBMB2JYgCdL1yBBwPCKNNDnADqmcq1pju++RkG27v3lQrkbE2p+LOtRxWkOzaFV9kUF3yohtnLFQsPAWTn9BItskV4k8noq96wAAA=",
+  "alt": "A rider on a red jet ski throwing up a wall of spray",
+  "variants": [
+   {
+    "w": 856,
+    "h": 572,
+    "file": "jetski-spray-856.webp",
+    "kb": 56
+   },
+   {
+    "w": 560,
+    "h": 374,
+    "file": "jetski-spray-560.webp",
+    "kb": 25
+   }
+  ]
+ },
+ "camel-sand": {
+  "w": 1600,
+  "h": 1833,
+  "color": "#e9bc88",
+  "lqip": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAAAwBQCdASoRABQAPu1oqVAppiOiqA1RMB2JYgC/UuAAKFr1QGz3a0OwSbKDwq7kj8g2wAD8pTim/E0puM2HQ8XkOyV/kDGXFoxchl4TWIBzr/AcTBB5XZwOouH0+zZBsEzqx7LcNkwkvo5FuH64LVkZzR74uS57qo29xcYTitM4cnWSDaOCBcwYHGAAAAAA",
+  "alt": "A camel on a lead rope on sandy ground, more camels resting behind",
+  "variants": [
+   {
+    "w": 900,
+    "h": 1031,
+    "file": "camel-sand-900.webp",
+    "kb": 146
+   },
+   {
+    "w": 600,
+    "h": 687,
+    "file": "camel-sand-600.webp",
+    "kb": 66
+   }
+  ]
+ },
+ "essaouira-cannon": {
+  "w": 1242,
+  "h": 1213,
+  "color": "#603630",
+  "lqip": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAAAwBACdASoUABQAPu1gq1AppSOisBgIATAdiWQAuxH/4Bs3oTvuD9+aggAA/p7Kb9gWNLESHbDrC4ElJ0/G2wWo3WJmgc4PcxTamq5BkeAJJyEJkyYGhqEe7JCW+WXKybjAuxq3Wm+LjEJFtlOvA6QWlX8g4n6rjz17sctq2N85lbzCeSA2hgAA",
+  "alt": "Bronze cannons on the Skala ramparts in Essaouira under a blue sky",
+  "variants": [
+   {
+    "w": 1000,
+    "h": 977,
+    "file": "essaouira-cannon-1000.webp",
+    "kb": 71
+   },
+   {
+    "w": 600,
+    "h": 586,
+    "file": "essaouira-cannon-600.webp",
+    "kb": 36
+   }
+  ]
+ },
+ "deckchair-bay": {
+  "w": 1242,
+  "h": 973,
+  "color": "#3d362d",
+  "lqip": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAABwBACdASoUABAAPu1iqU2ppaQiMAgBMB2JZgCdMoMYL0AA3zx97rCjf9xFEAD+0Lxsmdfem2WE22HXIaoRw2e/WZGlKmigmtUC8gYT1TC8k4lDr6Tvl90NXfch4sVPrCX/be28JBO/XvDvjLpIg80tqFdi4x2Dg8JF4kFRNPmL7vcfhvqUQAAA",
+  "alt": "A deckchair under a palm tree looking out over a wide turquoise bay",
+  "variants": [
+   {
+    "w": 1000,
+    "h": 783,
+    "file": "deckchair-bay-1000.webp",
+    "kb": 124
+   },
+   {
+    "w": 600,
+    "h": 470,
+    "file": "deckchair-bay-600.webp",
+    "kb": 59
+   }
+  ]
+ },
+ "robe-wind": {
+  "w": 1200,
+  "h": 1480,
+  "color": "#bf8e50",
+  "lqip": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwACaWHBnoDOiigROEAP121XLD5P8rKyAz45J77oKEiqWtmwmG4rhI+OXu5/VOXZ3X421Lwe9qL2fvD4y/FiBrV350xjvczaK8g6X0TbmHe1tbIzMpZpxMZ30+8FeXVwEAAA==",
+  "alt": "Someone in a blue robe letting a long white scarf fly in the wind on open, sandy scrubland",
+  "variants": [
+   {
+    "w": 900,
+    "h": 1110,
+    "file": "robe-wind-900.webp",
+    "kb": 149
+   },
+   {
+    "w": 600,
+    "h": 740,
+    "file": "robe-wind-600.webp",
+    "kb": 69
+   }
+  ]
+ },
+ "minibus-smiles": {
+  "w": 1600,
+  "h": 1933,
+  "color": "#61524b",
+  "lqip": "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAACwBACdASoRABQAPu1wsFIppiSiqAgBMB2JQBOkF6AVNrg6d1x+BglDA6wapk4AAM4mdYfW5cLGVyOfMZUl+WP8NXKbxvPI3arMIP/gl/8+ieoIqWPoUpPcXCBdbZodyiOtLvm5H32QM7xgf0EvDXsrtg66PanfoLnTnLHZNQLwYELIqpqUhJiraSLzzQ7sXNfmxttmX8j9gcJdwo1Jhb2sAPXzA/7R0pfQAAAA",
+  "alt": "A minibus full of smiling, waving passengers on the way to a day trip",
+  "variants": [
+   {
+    "w": 800,
+    "h": 966,
+    "file": "minibus-smiles-800.webp",
+    "kb": 46
+   },
+   {
+    "w": 560,
+    "h": 677,
+    "file": "minibus-smiles-560.webp",
+    "kb": 28
+   }
+  ]
+ },
+ "group-4x4": {
+  "w": 1600,
+  "h": 1200,
+  "color": "#736866",
+  "lqip": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAADQAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JYgCsAB6J9vrxSdJVSSAA38BOgbfte0qLO6wvFS/X65mCoG+mHSRyENHv0DPXU5WFHudrUcI80g5D9+6cnnSkf7NRB64mqJ/ss9kHR8vAJQHisMJAf/2jSfoIQy0AvPaLi8ngN3AthHh4m8MITtUnNrvif8wvnp+AAA==",
+  "alt": "A group of travellers and their guide in a blue robe in front of a silver 4x4 with a roof rack",
+  "variants": [
+   {
+    "w": 1200,
+    "h": 900,
+    "file": "group-4x4-1200.webp",
+    "kb": 152
+   },
+   {
+    "w": 700,
+    "h": 525,
+    "file": "group-4x4-700.webp",
+    "kb": 63
+   }
+  ]
+ },
+ "_og": {
+  "file": "og-hala.jpg",
+  "w": 1200,
+  "h": 630
+ }
+}

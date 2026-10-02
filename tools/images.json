@@ -1,0 +1,27 @@
+{
+  "_doc": "Declarative image list for tools/images.py. src is relative to research/raw/images/. crop = [left, top, right, bottom] in source pixels (optional). Each variant writes site/assets/img/<name>-<width>.webp. Only first-party Hala photos here (ASSET_INVENTORY status USE).",
+  "quality": 74,
+  "images": [
+    {"name": "hero-horses", "src": "google-owner/gm-owner-2.jpg", "asset": "#25", "widths": [1440, 1100, 800],
+     "alt": "A line of riders on horseback along a cliff-top path above the Atlantic surf"},
+    {"name": "hero-horses-m", "src": "google-owner/gm-owner-2.jpg", "asset": "#25", "crop": [540, 60, 1600, 1200], "widths": [800, 560],
+     "alt": "A line of riders on horseback along a cliff-top path above the Atlantic surf"},
+    {"name": "quad-dunes", "src": "site-gal-whatsapp.image.2022.11.30.at.13.20.32.jpeg", "asset": "#13", "crop": [0, 200, 1280, 1600], "widths": [900, 600],
+     "alt": "A quad bike parked on orange dunes with argan trees behind"},
+    {"name": "jetski-spray", "src": "site-gal-whatsapp.image.2022.11.30.at.13.20.31.1.jpeg", "asset": "#11", "widths": [856, 560],
+     "alt": "A rider on a red jet ski throwing up a wall of spray"},
+    {"name": "camel-sand", "src": "google-owner/gm-owner-1.jpg", "asset": "#24", "crop": [0, 300, 1600, 2133], "widths": [900, 600],
+     "alt": "A camel on a lead rope on sandy ground, more camels resting behind"},
+    {"name": "essaouira-cannon", "src": "site-gal-whatsapp.image.2022.11.30.at.13.20.29.jpeg", "asset": "#9", "widths": [1000, 600],
+     "alt": "Bronze cannons on the Skala ramparts in Essaouira under a blue sky"},
+    {"name": "deckchair-bay", "src": "site-gal-whatsapp.image.2022.11.30.at.13.20.28.1.jpeg", "asset": "#5", "widths": [1000, 600],
+     "alt": "A deckchair under a palm tree looking out over a wide turquoise bay"},
+    {"name": "robe-wind", "src": "site-gal-whatsapp.image.2022.11.30.at.13.20.33.jpeg", "asset": "#15", "crop": [0, 120, 1200, 1600], "widths": [900, 600],
+     "alt": "Someone in a blue robe letting a long white scarf fly in the wind on open, sandy scrubland"},
+    {"name": "minibus-smiles", "src": "google-owner/gm-owner-6.jpg", "asset": "#29", "crop": [0, 200, 1600, 2133], "widths": [800, 560],
+     "alt": "A minibus full of smiling, waving passengers on the way to a day trip"},
+    {"name": "group-4x4", "src": "google-owner/gm-owner-5.jpg", "asset": "#21", "widths": [1200, 700],
+     "alt": "A group of travellers and their guide in a blue robe in front of a silver 4x4 with a roof rack"}
+  ],
+  "og": {"name": "og-hala", "src": "google-owner/gm-owner-2.jpg", "crop": [0, 180, 1600, 1020], "size": [1200, 630]}
+}

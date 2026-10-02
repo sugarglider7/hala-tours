@@ -1,0 +1,62 @@
+{
+  "_doc": "Language-neutral structure. Strings live in en.json / fr.json under the same ids. Facts: SOURCE_OF_TRUTH.md + research/notes-catalogue.md (site id = legacy de_sv.php i=). status: 'sold' = review evidence; 'on_request' = listed by Hala, unconfirmed (orchestrator decision 2). lengths: hours | half | full | two (roughly; a product may sit in two). map: [lat, lon] of the destination for the day-trip map (general geography).",
+  "contact": {
+    "phone_display": "+212 660 732 477",
+    "phone_tel": "+212660732477",
+    "wa": "212660732477",
+    "email": "halatoursagadir@gmail.com",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=Hala+Tours+Agadir&query_place_id=ChIJNV9mB2y3sw0Regqs_xYbumA",
+    "geo": [30.412687, -9.597437],
+    "plus_code": "CC73+32W",
+    "hours": [["Mo", "08:00", "23:00"], ["Tu", "08:00", "23:00"], ["We", "08:00", "23:00"], ["Th", "08:00", "23:00"], ["Fr", "08:00", "23:00"], ["Sa", "08:00", "23:00"], ["Su", "09:00", "22:00"]],
+    "rating": {"value": "5.0", "count": 390, "platform": "Google"}
+  },
+  "moods": [
+    {"id": "sand", "color": "dune", "img": "quad-dunes"},
+    {"id": "salt", "color": "atlantic", "img": "jetski-spray"},
+    {"id": "hooves", "color": "saffron", "img": "camel-sand"},
+    {"id": "medina", "color": "chili", "img": "essaouira-cannon"},
+    {"id": "valleys", "color": "argan", "img": null},
+    {"id": "slow", "color": "sky", "img": "deckchair-bay"},
+    {"id": "further", "color": "cobalt", "img": "robe-wind"}
+  ],
+  "lengths": ["hours", "half", "full", "two"],
+  "products": [
+    {"id": "quad", "site_id": 84, "mood": "sand", "lengths": ["hours"], "status": "sold"},
+    {"id": "buggy", "site_id": 85, "mood": "sand", "lengths": ["half"], "status": "sold"},
+    {"id": "sandboarding", "site_id": 93, "mood": "sand", "lengths": ["hours", "half"], "status": "sold"},
+    {"id": "little-desert", "site_id": 76, "mood": "sand", "lengths": ["full"], "status": "sold", "map": [29.96, -9.62]},
+
+    {"id": "jet-ski", "site_id": 88, "mood": "salt", "lengths": ["hours"], "status": "sold"},
+    {"id": "boat-trip", "site_id": 94, "mood": "salt", "lengths": ["half"], "status": "sold"},
+    {"id": "surf", "site_id": 92, "mood": "salt", "lengths": ["half"], "status": "sold"},
+    {"id": "legzira", "site_id": 97, "mood": "salt", "lengths": ["full"], "status": "sold", "map": [29.445, -10.115]},
+
+    {"id": "camel", "site_id": 95, "mood": "hooves", "lengths": ["hours"], "status": "sold"},
+    {"id": "camel-bbq", "site_id": 87, "mood": "hooves", "lengths": ["hours"], "status": "sold"},
+    {"id": "horse", "site_id": 86, "mood": "hooves", "lengths": ["hours"], "status": "sold"},
+    {"id": "crocoparc", "site_id": 83, "mood": "hooves", "lengths": ["half"], "status": "sold"},
+
+    {"id": "marrakech", "site_id": 77, "mood": "medina", "lengths": ["full"], "status": "sold", "map": [31.6295, -7.9811]},
+    {"id": "essaouira", "site_id": 82, "mood": "medina", "lengths": ["full"], "status": "sold", "map": [31.5085, -9.7595]},
+    {"id": "city-tour", "site_id": 90, "mood": "medina", "lengths": ["half"], "status": "sold"},
+
+    {"id": "paradise-valley", "site_id": 78, "mood": "valleys", "lengths": ["half", "full"], "status": "sold", "map": [30.585, -9.505]},
+    {"id": "taroudant", "site_id": 75, "mood": "valleys", "lengths": ["full"], "status": "sold", "map": [30.4703, -8.877]},
+    {"id": "tafraout", "site_id": 96, "mood": "valleys", "lengths": ["full"], "status": "on_request", "map": [29.7194, -8.9726]},
+
+    {"id": "hammam", "site_id": 100, "mood": "slow", "lengths": ["hours"], "status": "sold"},
+    {"id": "berber-evening", "site_id": 98, "mood": "slow", "lengths": ["hours"], "status": "sold"},
+    {"id": "balloon", "site_id": 101, "mood": "slow", "lengths": ["half"], "status": "on_request"},
+
+    {"id": "zagora", "site_id": 79, "mood": "further", "lengths": ["two"], "status": "on_request", "map": [30.33, -5.84]},
+    {"id": "el-borj", "site_id": 81, "mood": "further", "lengths": ["two"], "status": "on_request"},
+    {"id": "marrakech-essaouira", "site_id": 80, "mood": "further", "lengths": ["two"], "status": "on_request"}
+  ],
+  "map_extra": {
+    "agadir": [30.4202, -9.5982],
+    "tiznit": [29.6974, -9.7316],
+    "tiout": [30.3948, -8.7046],
+    "coast": [[31.95, -9.55], [31.51, -9.77], [31.39, -9.84], [31.1, -9.82], [30.84, -9.83], [30.71, -9.85], [30.63, -9.89], [30.55, -9.73], [30.48, -9.68], [30.42, -9.62], [30.35, -9.6], [30.2, -9.63], [30.03, -9.66], [29.8, -9.84], [29.58, -10.03], [29.445, -10.115], [29.38, -10.17], [29.1, -10.4]]
+  }
+}
