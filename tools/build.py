@@ -701,7 +701,7 @@ def page(t, key, title, desc, main, ldata, dock_html=None):
 def cta_band(t, title, text, href=None, label=None):
     lang = t["lang"]
     return (f'<aside class="band-cta"><div class="band-cta__in"><p class="band-cta__h">{e(title)}</p><p>{e(text)}</p>'
-            f'<a class="btn btn--sun btn--big" href="{href or url("plan", lang)}">{icon("i-wa")}{e(label or t["ui"]["sticky_idle"])}</a></div></aside>')
+            f'<a class="btn btn--sun btn--big" href="{href or url("plan", lang)}">{icon("i-wa")}{e(label or t["mood_page"]["plan_cta"])}</a></div></aside>')
 
 
 # ---------------------------------------------------------------- pages
@@ -991,7 +991,7 @@ main{{max-width:34rem}}h1{{font-size:clamp(2.2rem,8vw,3.6rem);line-height:1.02;m
 a.alt{{background:transparent;color:#fffcf6;box-shadow:inset 0 0 0 2px #fffcf6}}
 </style></head>
 <body><main><div class="sun" aria-hidden="true"></div><h1>{e(n['h1'])}</h1><p>{e(n['text'])}</p>
-<p><a href="/">{e(n['home'])}</a><a class="alt" href="{wa(T['en']['plan']['wa_simple'])}">WhatsApp {e(C['phone_display'])}</a></p>
+<p><a href="/">{e(n['home'])}</a><a class="alt" href="{wa(T['en']['plan']['wa_simple'])}">WhatsApp</a></p>
 <div class="fr" lang="fr"><p class="h">{e(f['h1'])}</p><p>{e(f['text'])}</p><p><a href="/fr/">{e(f['home'])}</a><a class="alt" href="{wa(T['fr']['plan']['wa_simple'])}">WhatsApp</a></p></div>
 </main></body></html>
 """

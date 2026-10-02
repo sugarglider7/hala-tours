@@ -393,6 +393,7 @@ ul{padding:0;list-style:none}
 .dock.is-hidden{transform:translateY(140%);opacity:0;pointer-events:none}
 .dock__menu,.dock__call{display:grid;place-items:center;width:56px;height:56px;border-radius:16px;border:0;background:var(--ink);color:var(--paper);flex:none}
 .dock__plan{flex:1;display:flex;align-items:center;justify-content:center;gap:9px;min-height:56px;border-radius:16px;background:var(--sun);color:var(--ink);font-weight:800;font-size:1.05rem;text-decoration:none;box-shadow:0 10px 30px -12px rgba(16,20,63,.6)}
+.dock__plan [data-dock-label]{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .dock__count{display:inline-grid;place-items:center;min-width:26px;height:26px;border-radius:13px;background:var(--ink);color:var(--paper);font-size:.85rem;padding:0 6px}
 body{padding-bottom:84px}
 @media (min-width:64em){.dock{display:none}body{padding-bottom:0}}
