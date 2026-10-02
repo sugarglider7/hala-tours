@@ -63,7 +63,7 @@ def main():
         im = open_src(item["src"])
         if item.get("crop"): im = im.crop(tuple(item["crop"]))
         entry = {"w": im.width, "h": im.height, "color": dominant(im), "lqip": lqip(im),
-                 "alt": item.get("alt", ""), "variants": []}
+                 "alt": item.get("alt", ""), "alt_fr": item.get("alt_fr", item.get("alt", "")), "variants": []}
         if item.get("credit"): entry["credit"] = item["credit"]
         for w in sorted(item["widths"], reverse=True):
             if w > im.width: continue

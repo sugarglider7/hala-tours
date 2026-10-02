@@ -5,6 +5,7 @@
   "color": "#7c6457",
   "lqip": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAABQBACdASoUAA8APu1iqU2ppaOiMAgBMB2JQBOmUABpLKzBGG/bU8OtTPeAAP6xO5QdLcV3j55b0HDemAKOMZ66jNm6VZSl7AhMMwtpTntIhX9fXCasjLZxFPovrnTZD4UMnpSO5mkDAs7l80rR8cc7fySvF8bSkxvIAAAA",
   "alt": "A line of riders on horseback along a cliff-top path above the Atlantic surf",
+  "alt_fr": "Une file de cavaliers sur un sentier de falaise au-dessus des vagues de l'Atlantique",
   "variants": [
    {
     "w": 1440,
@@ -27,23 +28,24 @@
   ]
  },
  "hero-horses-m": {
-  "w": 1060,
-  "h": 1140,
-  "color": "#6f5c51",
-  "lqip": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4ILQAAABQBQCdASoTABQAPu1oqVAppiOiqA1RMB2JYwCdMxs73CTVf+QNdfiKCQxXvbGCFJ0EYAAA/rF6O9AUfAwoZDebd2Yqzn9t2XGPYmIg6X5rKLVxwFAZcOEcZ0DF12/Gx1/RO8tM4Q7HeaiT1dTS+c8iESD7YlPCpIgq9epdCDY2iCVsV3nj9W+XbqBqSSD4E9SugZhVJzYBZkvFtYL0wwShBFQxQXOY2mGc6CnHiQ6h6A4AAAA=",
+  "w": 1260,
+  "h": 1022,
+  "color": "#b1c7df",
+  "lqip": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAABwBACdASoUABAAPu1iqU2ppaOiMAgBMB2JQBOmUABgK5aWyv0EJB5aFXMlgAD+1OZevtvSjO1bMhNfqVDNqvbcRZEL1lupNYmCjOIn6Z5Hk4VP0fZbSmw7cA1SE+oddu4u9fz2XaeBnCvzBUxnBilxt2enFfZAKrwmvytrX8DCP2+JN4HsvR5k9dQGgImr4AA=",
   "alt": "A line of riders on horseback along a cliff-top path above the Atlantic surf",
+  "alt_fr": "Une file de cavaliers sur un sentier de falaise au-dessus des vagues de l'Atlantique",
   "variants": [
    {
     "w": 800,
-    "h": 860,
+    "h": 649,
     "file": "hero-horses-m-800.webp",
-    "kb": 108
+    "kb": 103
    },
    {
     "w": 560,
-    "h": 602,
+    "h": 454,
     "file": "hero-horses-m-560.webp",
-    "kb": 57
+    "kb": 52
    }
   ]
  },
@@ -52,7 +54,8 @@
   "h": 1400,
   "color": "#d4d9dc",
   "lqip": "data:image/webp;base64,UklGRrwAAABXRUJQVlA4ILAAAAAwBgCdASoSABQAPu1eqk4ppKQiMBgMATAdiWQArDL1K5Cl8/+Aer6rCFAXa/45LEkFaIAl2bgNaZmAAP7nM5FT+H/u13T8gAFEGDjcY6GquhxvzzIk+UYCSlF8XTFK6y2m008/9fCkt1ziGPml7ptDH+HJtyiSaecMppeMKrqnK1ACs2W+Zlm/NUbHscbk4OnR+bZaP6y2Bzq9KMoiMCvnC8X9CWNgrspD6JcwwAAAAA==",
-  "alt": "A quad bike parked on orange dunes with argan trees behind",
+  "alt": "A rider in a sun hat on a quad bike on orange dunes, argan trees behind",
+  "alt_fr": "Un pilote en chapeau de soleil sur un quad, dans les dunes orang\u00e9es, des arganiers derri\u00e8re",
   "variants": [
    {
     "w": 900,
@@ -74,6 +77,7 @@
   "color": "#688da9",
   "lqip": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAACwAwCdASoUAA0APu1kqU4ppaOiMAgBMB2JYgCdL1yBBwPCKNNDnADqmcq1pju++RkG27v3lQrkbE2p+LOtRxWkOzaFV9kUF3yohtnLFQsPAWTn9BItskV4k8noq96wAAA=",
   "alt": "A rider on a red jet ski throwing up a wall of spray",
+  "alt_fr": "Un jet-ski rouge qui soul\u00e8ve un mur d'\u00e9cume",
   "variants": [
    {
     "w": 856,
@@ -94,7 +98,8 @@
   "h": 1833,
   "color": "#e9bc88",
   "lqip": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAAAwBQCdASoRABQAPu1oqVAppiOiqA1RMB2JYgC/UuAAKFr1QGz3a0OwSbKDwq7kj8g2wAD8pTim/E0puM2HQ8XkOyV/kDGXFoxchl4TWIBzr/AcTBB5XZwOouH0+zZBsEzqx7LcNkwkvo5FuH64LVkZzR74uS57qo29xcYTitM4cnWSDaOCBcwYHGAAAAAA",
-  "alt": "A camel on a lead rope on sandy ground, more camels resting behind",
+  "alt": "A man leading a young camel on a rope across sandy ground, more camels resting behind",
+  "alt_fr": "Un homme tient un jeune dromadaire par la longe sur un terrain sableux, d'autres dromadaires au repos derri\u00e8re",
   "variants": [
    {
     "w": 900,
@@ -116,6 +121,7 @@
   "color": "#603630",
   "lqip": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAAAwBACdASoUABQAPu1gq1AppSOisBgIATAdiWQAuxH/4Bs3oTvuD9+aggAA/p7Kb9gWNLESHbDrC4ElJ0/G2wWo3WJmgc4PcxTamq5BkeAJJyEJkyYGhqEe7JCW+WXKybjAuxq3Wm+LjEJFtlOvA6QWlX8g4n6rjz17sctq2N85lbzCeSA2hgAA",
   "alt": "Bronze cannons on the Skala ramparts in Essaouira under a blue sky",
+  "alt_fr": "Des canons de bronze sur les remparts de la Skala, \u00e0 Essaouira, sous un ciel bleu",
   "variants": [
    {
     "w": 1000,
@@ -137,6 +143,7 @@
   "color": "#3d362d",
   "lqip": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAABwBACdASoUABAAPu1iqU2ppaQiMAgBMB2JZgCdMoMYL0AA3zx97rCjf9xFEAD+0Lxsmdfem2WE22HXIaoRw2e/WZGlKmigmtUC8gYT1TC8k4lDr6Tvl90NXfch4sVPrCX/be28JBO/XvDvjLpIg80tqFdi4x2Dg8JF4kFRNPmL7vcfhvqUQAAA",
   "alt": "A deckchair under a palm tree looking out over a wide turquoise bay",
+  "alt_fr": "Une chaise longue sous un palmier, face \u00e0 une grande baie turquoise",
   "variants": [
    {
     "w": 1000,
@@ -158,6 +165,7 @@
   "color": "#bf8e50",
   "lqip": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwACaWHBnoDOiigROEAP121XLD5P8rKyAz45J77oKEiqWtmwmG4rhI+OXu5/VOXZ3X421Lwe9qL2fvD4y/FiBrV350xjvczaK8g6X0TbmHe1tbIzMpZpxMZ30+8FeXVwEAAA==",
   "alt": "Someone in a blue robe letting a long white scarf fly in the wind on open, sandy scrubland",
+  "alt_fr": "Une personne en robe bleue laisse flotter au vent un long foulard blanc, sur une \u00e9tendue sableuse",
   "variants": [
    {
     "w": 900,
@@ -179,6 +187,7 @@
   "color": "#61524b",
   "lqip": "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAACwBACdASoRABQAPu1wsFIppiSiqAgBMB2JQBOkF6AVNrg6d1x+BglDA6wapk4AAM4mdYfW5cLGVyOfMZUl+WP8NXKbxvPI3arMIP/gl/8+ieoIqWPoUpPcXCBdbZodyiOtLvm5H32QM7xgf0EvDXsrtg66PanfoLnTnLHZNQLwYELIqpqUhJiraSLzzQ7sXNfmxttmX8j9gcJdwo1Jhb2sAPXzA/7R0pfQAAAA",
   "alt": "A minibus full of smiling, waving passengers on the way to a day trip",
+  "alt_fr": "Un minibus plein de passagers souriants qui saluent, en route pour la journ\u00e9e",
   "variants": [
    {
     "w": 800,
@@ -199,7 +208,8 @@
   "h": 1200,
   "color": "#736866",
   "lqip": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAADQAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JYgCsAB6J9vrxSdJVSSAA38BOgbfte0qLO6wvFS/X65mCoG+mHSRyENHv0DPXU5WFHudrUcI80g5D9+6cnnSkf7NRB64mqJ/ss9kHR8vAJQHisMJAf/2jSfoIQy0AvPaLi8ngN3AthHh4m8MITtUnNrvif8wvnp+AAA==",
-  "alt": "A group of travellers and their guide in a blue robe in front of a silver 4x4 with a roof rack",
+  "alt": "A group of travellers and a man in a blue robe in front of a silver 4x4 with a roof rack",
+  "alt_fr": "Un groupe de voyageurs et un homme en robe bleue devant un 4x4 argent\u00e9 avec galerie de toit",
   "variants": [
    {
     "w": 1200,
@@ -227,6 +237,7 @@
   "color": "#f6d7b3",
   "lqip": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAACQBACdASoUAA8APu1iqU2ppaOiMAgBMB2JZACdMoKABb/4DyB9UzbviBehXQAA/q9vqrRP5WkvFo+S4+bSVkwKuEezpzD0r3E0emh7fjKwsIlbIkn7uCstHrjduaW4JGdh61EeRNmFL1yAAAA=",
   "alt": "A man sitting on a pale sand dune high above the blue Atlantic",
+  "alt_fr": "Un homme assis sur une dune de sable clair, haut au-dessus de l'Atlantique bleu",
   "variants": [
    {
     "w": 1200,
@@ -254,6 +265,7 @@
   "color": "#b69b84",
   "lqip": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAAAwBACdASoUAA8APu1iqU2ppaOiMAgBMB2JQBOmUI7gA3+M+tiy8xryK4AA/tDDk8OJfcPhqesLAmDSKfZ5Ag3DH/4OIfZ0T/o2IUKpbcDiq6FcWnd6waAF8pnH/87fTn1zl9kdhknESowdSCVC5gAeFgxEnQAA",
   "alt": "A stone gateway at the end of a busy medina lane lined with stalls",
+  "alt_fr": "Une porte de pierre au bout d'une ruelle anim\u00e9e de la m\u00e9dina, bord\u00e9e d'\u00e9choppes",
   "variants": [
    {
     "w": 1200,
@@ -281,6 +293,7 @@
   "color": "#3f567e",
   "lqip": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAABQBACdASoUAA8APu1iqU2ppaOiMAgBMB2JZgCdMoRwAB0YWh5gDlpG491UAMyEq4f4rdV2lSEcqfcJN5nfuAiesLuw3JCaokH5ke8HUMp57NNjPeT+oXXdUiNFT5NpUsavsB/fDsrGt+qZ/curAXd3atW8VOQoVrzvu22sZwv4ZrauEAA=",
   "alt": "Three travellers standing in front of a silver minivan under palm trees",
+  "alt_fr": "Trois voyageurs debout devant un minivan argent\u00e9, sous les palmiers",
   "variants": [
    {
     "w": 1200,
@@ -308,6 +321,7 @@
   "color": "#272423",
   "lqip": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAABwAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JQBOgA6cYf3tzXgAA9nztiX2dUC+1XRTQl39ElaexT/i2u3MdiklRHlGwdjJ4V9Bf9OgGDn+9gm2fnqDg90gA",
   "alt": "Palm trees along a still green river pool at the foot of a rocky gorge",
+  "alt_fr": "Des palmiers au bord d'un bassin d'eau verte, au pied d'une gorge rocheuse",
   "variants": [
    {
     "w": 1200,
@@ -345,6 +359,7 @@
   "color": "#282e15",
   "lqip": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAABQBACdASoUAA8APu1iqU2ppaOiMAgBMB2JaACdH8GJ/gLsbiTcReR7ihbQAPpKNonMeeBybzpskhV0LLHyUYHgeM1xSt+gZfbgBVQfDOupO7FzjjElNliIWw4flxE0pSlTvUWASGaKiM+EgvownZOL8UJWZwZXtAAAAA==",
   "alt": "The Koutoubia minaret rising above palm trees and gardens under a blue sky",
+  "alt_fr": "Le minaret de la Koutoubia au-dessus des palmiers et des jardins, sous un ciel bleu",
   "variants": [
    {
     "w": 1200,
@@ -382,6 +397,7 @@
   "color": "#6faadd",
   "lqip": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAAAwBACdASoUAA0APu1iqU2ppaOiMAgBMB2JZgCdMoGv/gPAYj+G1Jhs+kgA/d0TTTTcVc8yxeIzevuraG/CG0/7UkX2wK6tjapgYzSEVPgW/yU+0DnW/RcZtubzqpAH/ySvty7AlLEKOxoLZBrmwU+BVAAAAA==",
   "alt": "Crenellated red-earth ramparts and towers running along a wide road",
+  "alt_fr": "Des remparts cr\u00e9nel\u00e9s en terre rouge et leurs tours, le long d'une large route",
   "variants": [
    {
     "w": 1200,
@@ -419,6 +435,7 @@
   "color": "#62544a",
   "lqip": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAQBACdASoUAA0APu1kqU2ppaQiMAgBMB2JZgCdMoAC+24zZrjhQpkbQAD+38DjCMgMYV4cAtnx0ufKT1K8KJ9E0wDkouhPXXayERyrOWQ+hxUcfVN9mfnjfsPR31rGhEjXFPQbdfbV3AAA",
   "alt": "Boulders painted blue and pink scattered across a green valley below a mountain ridge",
+  "alt_fr": "Des rochers peints en bleu et rose dans une vall\u00e9e verte, au pied d'une cr\u00eate",
   "variants": [
    {
     "w": 1200,
@@ -456,6 +473,7 @@
   "color": "#d6ad88",
   "lqip": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAQBACdASoUAAsAPu1iqU2ppaOiMAgBMB2JZACdL1yBz4qvceb/M/tXuAD+2UH/ZLX+L+Pr2HQsgLB2RETiEqOfMKKQ7PQVuWyvPUaz4/hYw+lOR7hLKX0F3AA=",
   "alt": "A red rock arch on a wide sandy beach, people walking beneath it",
+  "alt_fr": "Une arche de roche rouge sur une large plage de sable, des promeneurs dessous",
   "variants": [
    {
     "w": 1200,
@@ -478,8 +496,8 @@
   ],
   "credit": {
    "place": {
-    "en": "Legzira beach, 2018 \u2014 the arch that still stands",
-    "fr": "La plage de Legzira en 2018 \u2014 l'arche toujours debout"
+    "en": "Legzira beach in 2018, after the big arch fell",
+    "fr": "La plage de Legzira en 2018, apr\u00e8s la chute de la grande arche"
    },
    "author": "Roy Egloff",
    "license": "CC BY-SA 4.0",
@@ -493,6 +511,7 @@
   "color": "#787b7f",
   "lqip": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAACwAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JYgCdACHcUz+6kYmZQAD+xtZQ+nMW/aGRf/mv6As2yykXzcysu9vAn3i2J7bYMbEXStlgsnFG5D6F3Z/zfaX4W8TB0zcyUlI3AAAA",
   "alt": "The port of Agadir and the bay seen from the hilltop of Agadir Oufella",
+  "alt_fr": "Le port d'Agadir et la baie vus du haut d'Agadir Oufella",
   "variants": [
    {
     "w": 1200,
@@ -530,6 +549,7 @@
   "color": "#445a4c",
   "lqip": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAABQBACdASoUAA0APu1iqU2ppaOiMAgBMB2JZgCdMoMjbEZbaLVprWy5RwWAAPzUAfsp9BZKZZTXjla4aa+hgQq2agAtkc2tAfWajZJV3mItj2Oz107jyQEMcJtLmDwInVAl3tgFoA1p+mcKnET6KVPGYAA=",
   "alt": "Pontoons and moored boats in Agadir marina, white apartment buildings around the basin",
+  "alt_fr": "Pontons et bateaux amarr\u00e9s \u00e0 la marina d'Agadir, entour\u00e9e d'immeubles blancs",
   "variants": [
    {
     "w": 1200,
@@ -567,6 +587,7 @@
   "color": "#716448",
   "lqip": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAADQAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JQBOgA+hkf5jPGRCTHbAA34BY5IsRnjGWGANCrgqvn0DVoEFAgIq4J1Osd+K2e2jIDHYLF0R3OFjj3PgDb5m/nt9lciTzKZAEQjE1ev34uiAA",
   "alt": "A dense palm grove in the Draa valley at Agdz below a bare mountain",
+  "alt_fr": "Une palmeraie dense dans la vall\u00e9e du Dr\u00e2a, \u00e0 Agdz, au pied d'une montagne nue",
   "variants": [
    {
     "w": 1200,

@@ -3,7 +3,7 @@
  "locale": "fr_FR",
  "meta": {
   "title": "Hala Tours Agadir — excursions, activités et transferts depuis l'hôtel Hamilton",
-  "description": "Quad, chameau, jet-ski, Vallée du Paradis, Marrakech, Essaouira et transferts aéroport au départ d'Agadir. Réservez à notre comptoir de l'hôtel Hamilton ou sur WhatsApp.",
+  "description": "Quad, chameau, jet-ski, Vallée du Paradis, Marrakech, Essaouira et transferts aéroport au départ d'Agadir. Réservez à notre comptoir, à l'hôtel Hamilton, ou sur WhatsApp.",
   "og_title": "Hala Tours Agadir — quelle journée vous fait envie ?",
   "suffix": " | Hala Tours Agadir"
  },
@@ -26,23 +26,24 @@
   "added": "Ajouté",
   "on_request": "Sur demande",
   "sticky_idle": "Ma journée",
-  "sticky_go": "Envoyer",
+  "sticky_go": "Organiser sur WhatsApp",
+  "picks_one": "1 sortie choisie · Organiser",
+  "picks_many": "{n} sorties choisies · Organiser",
   "open_now": "Comptoir ouvert · jusqu'à {close}",
   "closed_now": "Le comptoir ouvre à {open}",
   "crumb_label": "Fil d'Ariane",
   "home": "Accueil",
-  "lengths": {"hours": "Deux ou trois heures", "half": "Une demi-journée", "full": "Toute la journée", "two": "Deux jours"},
-  "length_short": {"hours": "Quelques heures", "half": "Demi-journée", "full": "Journée", "two": "Deux jours"},
-  "days_range": [["Lundi – samedi", "08:00 – 23:00"], ["Dimanche", "09:00 – 22:00"]],
+  "lengths": {"hours": "Quelques heures ou moins", "half": "Une demi-journée", "full": "Toute la journée", "two": "Deux jours"},
+  "length_short": {"hours": "Quelques heures ou moins", "half": "Demi-journée", "full": "Journée", "two": "Deux jours"},
+  "days_range": [["Lundi – samedi", "8 h – 23 h"], ["Dimanche", "9 h – 22 h"]],
   "more_days": "Voir les {n} sorties de cette envie",
-  "count_days": "{n} sorties",
-  "photo_by": "Photo",
+  "photo_by": "Photo :",
   "context_photo": "le lieu, pas notre sortie"
  },
  "hero": {
   "eyebrow": "Excursions, activités et transferts au départ d'Agadir",
   "h1": "Quelle journée vous fait envie ?",
-  "lede": "Du quad dans les dunes, du chameau au bord de l'oued Souss, Marrakech ou Essaouira à la journée, le transfert vers l'aéroport à la fin du séjour. Dites-nous la journée que vous imaginez : on sait sûrement quoi faire — et on vient vous chercher à l'hôtel pour presque toutes les sorties.",
+  "lede": "Du quad dans les dunes, du chameau au bord de l'oued Souss, Marrakech ou Essaouira à la journée, le transfert vers l'aéroport à la fin du séjour. Dites-nous la journée que vous imaginez : on a sûrement une idée — et on vient vous chercher à l'hôtel pour presque toutes les sorties.",
   "moods_label": "Choisissez une envie",
   "rating": "sur Google",
   "rating_count": "390 avis",
@@ -54,6 +55,8 @@
   "filter_label": "Combien de temps avez-vous ?",
   "filter_all": "Peu importe",
   "none_here": "Rien de cette durée ici — essayez une autre envie, ou demandez-nous.",
+  "count_one": "1 sortie pour « {len} »",
+  "count_many": "{n} sorties pour « {len} »",
   "chapter": "Envie {n} sur 7",
   "all_link": "Voir les 24 sorties sur une seule page"
  },
@@ -66,18 +69,18 @@
    "desc": "Sable & moteurs : le quad jusqu'aux dunes de Tifnit, le buggy biplace, le sandboard et le Petit Désert en 4x4. Prise en charge à l'hôtel à Agadir. Prix du jour sur WhatsApp."
   },
   "salt": {
-   "name": "Côté mer", "short": "Mer", "slug": "cote-mer",
+   "name": "Côté mer", "short": "Côté mer", "slug": "cote-mer",
    "intro": "Agadir vit face à sa baie. On va dessus, on va dedans, ou on suit la côte vers le sud pour une grande journée au bord de l'océan.",
    "page_note": "Pour tout ce qui se passe sur l'eau, les matins calmes sont les meilleurs.",
    "title": "Jet-ski, sortie en bateau, surf et Legzira au départ d'Agadir",
    "desc": "Côté mer : le jet-ski dans la baie d'Agadir, la sortie en bateau avec pêche et poisson grillé à bord, les cours de surf avec prise en charge, et la journée à Legzira."
   },
   "hooves": {
-   "name": "Sabots, bosses & crocodiles", "short": "Animaux", "slug": "sabots-bosses-et-crocodiles",
-   "intro": "Chameaux et chevaux jusqu'à l'oued Souss, où les flamants roses se nourrissent dans l'eau peu profonde. Et pour les enfants, un parc rempli de crocodiles du Nil.",
+   "name": "Sabots, bosses & crocodiles", "short": "Sabots", "slug": "sabots-bosses-et-crocodiles",
+   "intro": "Chameaux et chevaux jusqu'à l'oued Souss, où les flamants roses viennent souvent se nourrir dans l'eau peu profonde. Et pour les enfants, un parc rempli de crocodiles du Nil.",
    "note": "Demandez la balade au coucher du soleil.",
    "title": "Balades à dos de chameau, à cheval et Crocoparc au départ d'Agadir",
-   "desc": "Chameau au bord de l'oued Souss et de ses flamants roses, chameau et dîner barbecue, balade à cheval dans les eucalyptus, et le Crocoparc. Prise en charge à l'hôtel."
+   "desc": "Chameau jusqu'à l'oued Souss, chameau et dîner barbecue, balade à cheval dans les eucalyptus, et le Crocoparc. Prise en charge à l'hôtel à Agadir."
   },
   "medina": {
    "name": "Médinas & souks", "short": "Médinas", "slug": "medinas-et-souks",
@@ -87,8 +90,7 @@
    "desc": "Médinas & souks : Marrakech à la journée, les remparts et le port d'Essaouira avec un guide, et trois heures de visite d'Agadir avec le souk El Had. Prise en charge à l'hôtel."
   },
   "valleys": {
-   "name": "Palmiers, gorges & villages de montagne", "short": "Vallées", "slug": "palmiers-gorges-et-villages",
-   "places": ["Imouzzer", "Vallée du Paradis", "Taroudant", "Tiout", "Tafraout", "Ameln"],
+   "name": "Palmiers, gorges & villages de montagne", "short": "Palmiers", "slug": "palmiers-gorges-et-villages",
    "intro": "Dans les terres, l'air change. Les gorges de palmiers sur la route d'Imouzzer, les remparts de Taroudant, les villages de granit autour de Tafraout.",
    "note": "L'été, on va à la Vallée du Paradis le matin. L'après-midi, c'est la fournaise.",
    "title": "Vallée du Paradis, Taroudant et Tafraout — excursions au départ d'Agadir",
@@ -96,14 +98,14 @@
   },
   "slow": {
    "name": "Au ralenti", "short": "Ralenti", "slug": "au-ralenti",
-   "intro": "Pas besoin de moteur tous les jours. Vapeur et huile d'argan, un long dîner en musique, une montgolfière au lever du soleil si les dates collent.",
+   "intro": "Pas besoin de moteur tous les jours. Vapeur et huile d'argan, un long dîner en musique — et, sur demande, une montgolfière au lever du soleil.",
    "page_note": "Le hammam, le lendemain de Marrakech. Croyez-nous.",
-   "title": "Hammam, soirée berbère et montgolfière — journées tranquilles à Agadir",
+   "title": "Hammam, soirée berbère et montgolfière sur demande — journées tranquilles au départ d'Agadir",
    "desc": "Au ralenti : hammam traditionnel et massage à l'huile d'argan avec transport, soirée berbère avec dîner et fantasia, et vol en montgolfière au lever du soleil sur demande."
   },
   "further": {
    "name": "Deux jours, une nuit ailleurs", "short": "2 jours", "slug": "deux-jours-ailleurs",
-   "intro": "Dormir dans le désert à Zagora ou à El Borj, ou enchaîner Marrakech et Essaouira. Ces circuits se font sur demande — écrivez-nous pour les dates.",
+   "intro": "Dormir dans le désert à Zagora ou à El Borj, ou enchaîner Marrakech et Essaouira. Ces trois circuits se font sur demande — envoyez-nous vos dates, on vérifie si l'un d'eux peut partir.",
    "page_note": "Donnez-nous d'abord vos dates. On vous dira franchement ce qui est possible.",
    "title": "Circuits de 2 jours depuis Agadir — Zagora, El Borj, Marrakech et Essaouira",
    "desc": "Deux jours, une nuit ailleurs, sur demande : le désert de Zagora par la vallée du Drâa, les dunes d'El Borj, ou Marrakech et Essaouira. Écrivez-nous pour les dates."
@@ -111,7 +113,7 @@
  },
  "days_page": {
   "title": "Les 24 sorties au départ d'Agadir — par envie et par durée",
-  "desc": "Toutes les excursions, activités et circuits qu'on réserve depuis notre comptoir de l'hôtel Hamilton à Agadir, en sept envies — filtrez selon votre temps. Prix sur WhatsApp.",
+  "desc": "Toutes les excursions, activités et circuits qu'on réserve depuis notre comptoir à l'hôtel Hamilton, à Agadir, en sept envies — filtrez selon votre temps. Prix sur WhatsApp.",
   "kicker": "Tout le guide",
   "h1": "Toutes les sorties au départ d'Agadir",
   "lede": "Vingt-quatre sorties, sept envies. Filtrez selon le temps que vous avez, ouvrez une sortie pour les détails, et ajoutez celles qui vous plaisent à votre journée."
@@ -131,32 +133,38 @@
   "good": "Bon à savoir",
   "suits": "Pour qui",
   "request_title": "Sur demande",
-  "request_text": "Cette sortie ne part pas toutes les semaines. Écrivez-nous vos dates : on vous dira franchement ce qui est possible.",
-  "ask_kicker": "Aucun prix affiché — jamais",
+  "request_text": "Celle-ci s'organise sur demande — ce n'est pas un départ régulier. Envoyez-nous vos dates : on vous dira franchement si elle peut se faire.",
+  "ask_kicker": "Les prix changent selon la saison",
   "ask_title": "Le prix du jour sur WhatsApp",
+  "ask_title_req": "Demandez-nous pour vos dates sur WhatsApp",
   "dock": "Prix du jour",
+  "dock_req": "Demander les dates",
   "ask_text": "Ajoutez une date et le nombre de personnes, si vous les connaissez. Cela devient un message WhatsApp pour notre comptoir ; vous pouvez le modifier avant de l'envoyer.",
   "one_tap": "Poser une question sur WhatsApp",
   "submit": "Envoyer sur WhatsApp",
-  "or_desk": "Ou passez au comptoir du Hamilton",
+  "or_desk": "Ou passez nous voir au Hamilton",
   "or_plan": "Plusieurs journées à organiser ?",
   "related": "Dans le même esprit",
   "times_note": "Horaires habituels — on vous confirme les vôtres à la réservation.",
   "wa_intro": "Bonjour Hala Tours ! Je suis intéressé(e) par : {day}.",
   "wa_outro": "Est-ce possible, et quel est le prix aujourd'hui ?",
-  "photo_alt_note": ""
+  "wa_outro_req": "Est-ce faisable à mes dates, et à quel prix ?",
+  "mail_subject": "{day} — prix du jour",
+  "mail_subject_req": "{day} — mes dates"
  },
  "map": {
   "kicker": "Où on va",
   "title": "Agadir au milieu, les sorties tout autour",
-  "text": "Chaque trait part de notre comptoir, boulevard Mohammed V. Touchez un lieu pour ouvrir sa sortie.",
   "agadir": "Agadir",
   "desk": "notre comptoir",
   "ocean": "Océan Atlantique",
   "zagora_arrow": "Zagora",
   "caption": "Croquis : les lieux à peu près où ils sont, routes non tracées.",
-  "labels": {"little-desert": "Petit Désert", "legzira": "Legzira", "marrakech": "Marrakech", "essaouira": "Essaouira", "paradise-valley": "Vallée du Paradis", "taroudant": "Taroudant", "tafraout": "Tafraout"},
-  "page_link": "La carte en grand, avec tous les lieux"
+  "labels": {"little-desert": "Petit Désert", "legzira": "Legzira", "marrakech": "Marrakech", "essaouira": "Essaouira", "paradise-valley": "Vallée du Paradis", "taroudant": "Taroudant", "tafraout": "Tafraout", "el-borj": "El Borj"},
+  "minor": {"imouzzer": "Imouzzer", "tifnit": "Tifnit", "aglou": "Aglou", "tiznit": "Tiznit", "tiout": "Tiout", "taliouine": "Taliouine", "tighmert": "Tighmert"},
+  "river": "Oued Souss",
+  "teaser_text": "Marrakech et Essaouira au nord, Taroudant et l'Anti-Atlas dans les terres, Legzira et le désert au sud — et Agadir au milieu.",
+  "teaser_cta": "Ouvrir la carte"
  },
  "where_page": {
   "title": "Où on va — les excursions autour d'Agadir sur une carte",
@@ -164,13 +172,13 @@
   "h1": "Où on va",
   "lede": "Agadir au milieu, les sorties tout autour. Chaque trait part de notre comptoir, boulevard Mohammed V.",
   "away_h": "Plus loin",
-  "away_text": "Excursions à la journée et circuits, avec prise en charge à votre hôtel.",
+  "away_text": "Excursions à la journée et circuits — la plupart avec prise en charge à l'hôtel ; les plus longues sur demande.",
   "near_h": "Autour d'Agadir",
   "near_text": "Quad, chameau, la baie, le hammam — la plupart à quelques minutes de route de votre hôtel."
  },
  "reviews": {
   "kicker": "Avis",
-  "title": "sur Google, sur 390 avis",
+  "title": "sur Google · 390 avis",
   "items": [
    {"q": "very honest and will tell you to see other prices before you book with him.", "by": "Noor"},
    {"q": "The communication with the agency was easy, the price honest and the organisation very good.", "by": "Maura Bestetti"},
@@ -184,24 +192,25 @@
    {"q": "It's easy to communicate with the guys from the agency, because they speak English very well.", "by": "Hannah VG"},
    {"q": "Paradise city trip was out of this world lots of beautiful scenery.", "by": "Stephanie McDougal"}
   ],
-  "home_pick": [0, 2, 3],
+  "home_pick": [1, 2, 3],
   "platform": "avis Google",
   "link": "Tous les avis sur Google",
+  "link_short": "Tous sur Google",
   "more": "Plus d'avis",
   "lang_note": "Les avis sont cités tels qu'ils ont été écrits, en anglais."
  },
  "reviews_page": {
-  "title": "Avis — 5,0 sur Google, sur 390 avis",
-  "desc": "Ce que disent ceux qui ont réservé leurs sorties avec Hala Tours Agadir à l'hôtel Hamilton : 5,0 sur Google, sur 390 avis. De courts extraits, tels qu'ils ont été écrits.",
+  "title": "Avis — 5,0 sur Google (390 avis)",
+  "desc": "Ce que disent ceux qui ont réservé leurs sorties avec Hala Tours Agadir à l'hôtel Hamilton : 5,0 sur Google pour 390 avis. De courts extraits, tels qu'ils ont été écrits.",
   "h1": "sur Google",
-  "lede": "Sur 390 avis. En voici quelques-uns, mot pour mot.",
+  "lede": "390 avis en tout. En voici quelques-uns, mot pour mot.",
   "cta_title": "Envie d'une journée comme la leur ?",
   "cta_text": "Dites-nous quelle journée vous ferait plaisir : on vous répond avec des idées et le prix du jour."
  },
  "desk": {
   "kicker": "Nous trouver",
   "title": "Venez nous voir au Hamilton",
-  "text": "Un vrai comptoir dans un vrai hôtel : Hala Tours Agadir, dans l'hôtel Hamilton, boulevard Mohammed V. Venez en parler avec Ayoub et l'équipe — ou écrivez-nous d'abord, on aura des idées prêtes.",
+  "text": "Hala Tours Agadir, c'est à l'hôtel Hamilton, boulevard Mohammed V. Passez en parler avec Ayoub et l'équipe — ou écrivez-nous d'abord, on aura des idées prêtes.",
   "address": "Hôtel Hamilton, boulevard Mohammed V, Agadir 80000",
   "hours_title": "Horaires du comptoir",
   "maps": "Ouvrir dans Google Maps",
@@ -213,7 +222,7 @@
   ],
   "note": "Passez nous dire bonjour !",
   "photo_caption": "En route pour la journée.",
-  "map_alt": "Plan : Hala Tours Agadir à l'hôtel Hamilton, avenue Mohammed V, Agadir",
+  "map_alt": "Plan : Hala Tours Agadir à l'hôtel Hamilton, boulevard Mohammed V, Agadir",
   "osm": "Données cartographiques © contributeurs OpenStreetMap",
   "beach": "Plage",
   "more": "Comment nous trouver",
@@ -221,12 +230,12 @@
  },
  "visit_page": {
   "title": "Nous trouver — Hala Tours Agadir à l'hôtel Hamilton",
-  "desc": "Le comptoir Hala Tours Agadir est dans l'hôtel Hamilton, boulevard Mohammed V, Agadir. Ouvert du lundi au samedi de 8 h à 23 h, le dimanche de 9 h à 22 h. Plan, accès, WhatsApp.",
+  "desc": "Le comptoir Hala Tours Agadir est à l'hôtel Hamilton, boulevard Mohammed V, Agadir. Ouvert du lundi au samedi de 8 h à 23 h, le dimanche de 9 h à 22 h. Plan, accès, WhatsApp.",
   "h1": "Venez nous voir au Hamilton",
-  "lede": "Un vrai comptoir dans un vrai hôtel. Entrez, asseyez-vous, dites-nous ce qui vous tente — ou écrivez-nous d'abord, on aura des idées prêtes.",
+  "lede": "Passez au comptoir aux heures d'ouverture et dites-nous ce qui vous tente — ou écrivez-nous d'abord, on aura des idées prêtes.",
   "find_h": "Nous trouver",
   "find": [
-   "Nous sommes dans l'hôtel Hamilton, boulevard Mohammed V, au centre d'Agadir.",
+   "Nous sommes à l'hôtel Hamilton, boulevard Mohammed V, au centre d'Agadir.",
    "Entrez par l'entrée principale de l'hôtel. Vous ne nous voyez pas tout de suite ? Demandez à la réception.",
    "Vous logez dans un autre hôtel ? Aucun souci — pour presque toutes les sorties, on vient vous chercher à votre hôtel à Agadir."
   ],
@@ -237,7 +246,7 @@
    ["En taxi", "Demandez l'hôtel Hamilton, boulevard Mohammed V."]
   ],
   "team_h": "Ayoub et l'équipe",
-  "team": "La plupart des gens rencontrent Ayoub au comptoir. Dites-lui ce que vous aimez, le temps que vous avez et qui vient avec vous : vous aurez une réponse honnête — y compris sur les sorties qui ne valent pas le coup avec de jeunes enfants.",
+  "team": "Au comptoir, c'est souvent Ayoub qui vous accueille. Dites-lui ce que vous aimez, le temps que vous avez et qui vient avec vous : vous aurez une réponse honnête — y compris sur les sorties qui ne valent pas le coup avec de jeunes enfants.",
   "quotes": [5, 6, 8],
   "plus_code": "Plus Code",
   "wa_cta": "Écrivez-nous avant de venir"
@@ -253,7 +262,7 @@
   "title": "Transferts aéroport — Agadir, Marrakech, Casablanca et Essaouira",
   "desc": "Transferts entre l'aéroport d'Agadir–Al Massira et votre hôtel, et depuis les aéroports de Marrakech, Casablanca et Essaouira vers Agadir. Prix par véhicule, 1–3 ou 4–7 personnes.",
   "h1": "Transferts aéroport",
-  "lede": "Quelqu'un qui vous attend à l'arrivée, et une voiture pour l'aéroport quand il faut repartir. Un prix par véhicule — pour 1 à 3 ou 4 à 7 personnes — donc plus vous êtes nombreux, plus c'est intéressant.",
+  "lede": "Un trajet de l'aéroport jusqu'à votre hôtel, et retour quand il faut repartir. Le prix est par véhicule — un tarif pour 1 à 3 personnes, un pour 4 à 7 — donc plus vous êtes nombreux, plus c'est intéressant.",
   "routes_h": "Nos trajets",
   "routes": [
    ["agadir-in", "Aéroport d'Agadir → votre hôtel"],
@@ -264,9 +273,11 @@
    ["other", "Autre trajet"]
   ],
   "vehicle_h": "Prix par véhicule",
-  "vehicle": "Le prix est par véhicule, pas par personne : un pour 1 à 3 personnes, un pour 4 à 7. Demandez le prix du jour sur WhatsApp.",
+  "vehicle": "Le prix est par véhicule, pas par personne : un tarif pour 1 à 3 personnes, un pour 4 à 7. Demandez le prix du jour sur WhatsApp.",
   "late_h": "Arrivée tardive ?",
-  "late": "Donnez-nous votre numéro et l'heure de votre vol. Une arrivée tard le soir, ça se fait — demandez-nous avant.",
+  "late": "Donnez-nous votre numéro et l'heure de votre vol : on vous dira ce qui est possible.",
+  "other_h": "Autre chose ?",
+  "other": "Un minibus pour un groupe, ou un autre trajet ? Demandez-nous.",
   "form_title": "Demander votre transfert",
   "form_text": "Remplissez ce que vous savez ; cela devient un message WhatsApp pour notre comptoir.",
   "route_label": "Quel transfert ?",
@@ -282,9 +293,11 @@
   "submit": "Envoyer sur WhatsApp",
   "err_route": "De quel transfert avez-vous besoin ?",
   "err_date": "Choisissez une date qui n'est pas passée.",
+  "err_date_empty": "Quelle date ?",
   "err_people": "Combien de personnes ? Au moins une.",
   "wa_intro": "Bonjour Hala Tours ! J'aimerais un transfert.",
   "wa_route": "Trajet",
+  "wa_routes": {"agadir-in": "Aéroport d'Agadir → mon hôtel", "agadir-out": "Mon hôtel → aéroport d'Agadir"},
   "wa_date": "Date",
   "wa_time": "Heure du vol",
   "wa_flight": "Vol",
@@ -293,7 +306,7 @@
   "wa_stay": "Hôtel",
   "wa_name": "Prénom",
   "wa_outro": "Quel est le prix aujourd'hui ?",
-  "quote": 7
+  "quote": 2
  },
  "plan": {
   "kicker": "Racontez-nous votre journée",
@@ -323,7 +336,7 @@
   "err_date": "Cette date est déjà passée.",
   "ok_title": "WhatsApp devrait s'être ouvert avec votre message.",
   "ok_text": "Appuyez sur envoyer, et on vous répond.",
-  "retry": "Rien ne s'ouvre ? Touchez ici",
+  "retry": "Pas ouvert ? Touchez ici",
   "or_call": "Ou appelez le",
   "or_mail": "Ou écrivez à",
   "nojs": "Ou écrivez-nous simplement sur WhatsApp",
@@ -349,7 +362,7 @@
   "title": "Organiser ma journée — dites-nous sur WhatsApp ce qui vous tente",
   "desc": "Choisissez une envie, ajoutez les sorties qui vous plaisent, indiquez la date et qui vient. Cela devient un message WhatsApp pour le comptoir Hala Tours à Agadir.",
   "aside_h": "Et ensuite ?",
-  "aside": ["Votre message s'ouvre dans WhatsApp — relisez-le et appuyez sur envoyer.", "On vous répond avec des idées, des horaires et le prix du jour.", "Vous dites oui, et on vient vous chercher à l'hôtel le jour J."],
+  "aside": ["Votre message s'ouvre dans WhatsApp — relisez-le et appuyez sur envoyer.", "On vous répond avec des idées, des horaires et le prix du jour.", "Vous dites oui et, pour la plupart des sorties, on vient vous chercher à l'hôtel."],
   "browse": "Voir d'abord toutes les sorties"
  },
  "credits_page": {
@@ -364,7 +377,7 @@
   "licence": "Licence",
   "source": "Fichier d'origine",
   "changes": "Recadrée et redimensionnée pour ce site.",
-  "used_on": "Utilisée sur",
+  "used_on": "Utilisée sur :",
   "map_h": "Cartes",
   "map": "Le plan du quartier du Hamilton utilise les données OpenStreetMap © contributeurs OpenStreetMap, sous licence Open Database License. La carte des excursions est notre propre croquis.",
   "odbl": "https://www.openstreetmap.org/copyright",
@@ -372,7 +385,7 @@
   "fonts": "Bricolage Grotesque et Kalam, toutes deux sous licence SIL Open Font License."
  },
  "footer": {
-  "line": "Le comptoir d'excursions de l'hôtel Hamilton, à Agadir.",
+  "line": "Votre comptoir d'excursions, installé à l'hôtel Hamilton, à Agadir.",
   "contact": "Contact",
   "visit": "Adresse",
   "pages": "Pages",

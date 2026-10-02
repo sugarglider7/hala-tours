@@ -45,11 +45,12 @@
       var day = p.weekday.slice(0, 2), now = p.hour.replace("24", "00") + ":" + p.minute;
       var row = D.hours.filter(function (h) { return h[0] === day; })[0];
       var open = row && now >= row[1] && now < row[2];
+      var hh = function (x) { return D.lang === "fr" ? parseInt(x, 10) + "\u00a0h" + (x.slice(3) === "00" ? "" : "\u00a0" + x.slice(3)) : x; };
       var txt, next = row;
-      if (open) txt = fmt(D.ui.open_now, { close: row[2] });
+      if (open) txt = fmt(D.ui.open_now, { close: hh(row[2]) });
       else {
         if (row && now >= row[2]) { var i = D.hours.indexOf(row); next = D.hours[(i + 1) % 7]; }
-        txt = fmt(D.ui.closed_now, { open: next[1] });
+        txt = fmt(D.ui.closed_now, { open: hh(next[1]) });
       }
       $$("[data-status]").forEach(function (a) { a.classList.toggle("is-open", open); $("[data-status-text]", a).textContent = txt; });
       $$("[data-status-badge]").forEach(function (b) { b.textContent = txt; b.hidden = false; b.classList.toggle("is-open", open); });
@@ -63,6 +64,7 @@
   if (!Array.isArray(picks)) picks = [];
   picks = picks.filter(function (id, i) { return D.products[id] && picks.indexOf(id) === i; });
   var dockLink = $(".dock__plan"), dockLabel = $("[data-dock-label]"), dockCount = $("[data-count]");
+  var picksChip = $("[data-picks]"), picksText = $("[data-picks-text]");
   var pickedList = $("[data-picked]"), pickedEmpty = $("[data-picked-empty]");
   function renderPicks() {
     try { store && store.setItem(KEY, JSON.stringify(picks)); } catch (e) {}
@@ -70,6 +72,10 @@
     if (dockCount && !dockLink.hasAttribute("data-static")) {
       dockCount.hidden = !picks.length; dockCount.textContent = picks.length;
       dockLabel.textContent = picks.length ? D.ui.sticky_go : D.ui.sticky_idle;
+    }
+    if (picksChip) {
+      picksChip.hidden = !picks.length;
+      picksText.textContent = picks.length === 1 ? D.ui.picks_one : fmt(D.ui.picks_many, { n: picks.length });
     }
     if (pickedList) {
       pickedList.innerHTML = "";
@@ -98,22 +104,28 @@
   });
   renderPicks();
 
-  /* ---------- length filter (works on every chapter on the page; on the homepage it also reveals hidden rows) */
-  var chips = $$(".chip[data-len]"), bar = $(".lenbar");
+  /* ---------- length filter. Pages with several chapters (home, all days) drop the chapters with no match,
+     so the matches move up; a single mood page keeps its chapter and says "nothing that length". */
+  var chips = $$(".chip[data-len]"), bar = $(".lenbar"), live = $("[data-count-live]");
+  var chapters = $$(".ch"), many = chapters.length > 1;
   chips.forEach(function (c) {
     c.addEventListener("click", function () {
-      var len = c.dataset.len;
+      var len = c.dataset.len, total = 0;
       chips.forEach(function (x) { x.setAttribute("aria-pressed", String(x === c)); });
-      $$(".ch").forEach(function (ch) {
+      chapters.forEach(function (ch) {
         var shown = 0;
         ch.classList.toggle("is-filtered", !!len);
         $$(".day", ch).forEach(function (row) {
           var ok = !len || row.dataset.lengths.split(" ").indexOf(len) > -1;
           row.classList.toggle("is-out", !ok); if (ok) shown++;
         });
+        total += shown;
         ch.classList.toggle("is-empty", !shown);
-        $(".ch__none", ch).hidden = !!shown;
+        ch.hidden = many && !shown;
+        var th = $('[data-thumb="' + ch.dataset.mood + '"]');
+        if (th) th.parentNode.hidden = !shown;
       });
+      if (live) live.textContent = !len ? "" : !total ? D.count.none_here : fmt(total === 1 ? D.count.count_one : D.count.count_many, { n: total, len: D.lengths[len] });
       if (bar && bar.getBoundingClientRect().top < 0) bar.scrollIntoView({ block: "start" });
     });
   });
@@ -154,14 +166,13 @@
     return dt.toLocaleDateString(D.lang === "fr" ? "fr-FR" : "en-GB", { weekday: "short", day: "numeric", month: "short", year: "numeric" });
   };
   var val = function (form, name) { var el = form.elements[name]; return el ? String(el.value || "").trim() : ""; };
-  var line = function (L, label, v) { if (v) L.push("• " + label + ": " + v); };
-  var lineFr = function (L, label, v) { if (v) L.push("• " + label + (D.lang === "fr" ? " : " : ": ") + v); };
-  var add = D.lang === "fr" ? lineFr : line;
+  var FR = D.lang === "fr", colon = FR ? "\u00a0: " : ": ";
+  var add = function (L, label, v) { if (v) L.push("• " + label + colon + v); };
 
   function people(form) {
     var a = parseInt(val(form, "adults"), 10) || 0, k = parseInt(val(form, "kids"), 10) || 0, ages = val(form, "ages");
     var txt = a === 1 ? S.wa_adult : fmt(S.wa_adults, { n: a });
-    if (k > 0) txt += ", " + (k === 1 ? S.wa_kid : fmt(S.wa_kids, { n: k })) + (ages ? " (" + S.wa_ages + (D.lang === "fr" ? " : " : ": ") + ages + ")" : "");
+    if (k > 0) txt += ", " + (k === 1 ? S.wa_kid : fmt(S.wa_kids, { n: k })) + (ages ? " (" + S.wa_ages + colon + ages + ")" : "");
     return txt;
   }
   var COMPOSE = {
@@ -169,7 +180,7 @@
       var L = [S.wa_intro, ""];
       var moods = $$('input[name="mood"]:checked', form).map(function (x) { return D.moods[x.value]; });
       add(L, S.wa_moods, moods.join(", "));
-      add(L, S.wa_picked, picks.map(function (id) { return D.products[id]; }).join(D.lang === "fr" ? " ; " : "; "));
+      add(L, S.wa_picked, picks.map(function (id) { return D.products[id]; }).join(FR ? "\u202f; " : "; "));
       var len = ($('input[name="length"]:checked', form) || {}).value;
       add(L, S.wa_length, len ? D.lengths[len] : "");
       add(L, S.wa_date, val(form, "date") && nice(val(form, "date")));
@@ -185,12 +196,12 @@
       add(L, S.wa_date, val(form, "date") && nice(val(form, "date")));
       add(L, S.wa_people, people(form));
       add(L, S.wa_stay, val(form, "stay"));
-      L.push("", S.d_outro);
+      L.push("", form.dataset.outro || S.d_outro);
       return L;
     },
     transfer: function (form) {
       var L = [S.t_intro, ""], r = form.elements.route;
-      add(L, S.t_route, r.value ? r.options[r.selectedIndex].text : "");
+      add(L, S.t_route, r.value ? (S.t_routes[r.value] || r.options[r.selectedIndex].text) : "");
       add(L, S.t_date, val(form, "date") && nice(val(form, "date")));
       add(L, S.t_time, val(form, "time"));
       add(L, S.t_flight, val(form, "flight"));
@@ -225,11 +236,15 @@
     if (f.adults) { var a = parseInt(f.adults.value, 10); if (showErr(form, "adults", !(a >= 1 && a <= 60), f.adults)) bad.push(f.adults); }
     if (kind === "transfer") {
       if (showErr(form, "route", !f.route.value, f.route)) bad.push(f.route);
+      var dateEl = $('[data-err="date"]', form);
+      if (dateEl && dateEl.dataset.msgEmpty) dateEl.textContent = f.date.value ? dateEl.dataset.msgPast : dateEl.dataset.msgEmpty;
       if (showErr(form, "date", !f.date.value || f.date.value < today, f.date)) bad.push(f.date);
       var n = parseInt(f.people.value, 10); if (showErr(form, "people", !(n >= 1 && n <= 60), f.people)) bad.push(f.people);
     } else if (f.date) {
       if (showErr(form, "date", !!f.date.value && f.date.value < today, f.date)) bad.push(f.date);
     }
+    // focus the first problem in reading order, not in check order
+    bad.sort(function (x, y) { return x.compareDocumentPosition(y) & Node.DOCUMENT_POSITION_FOLLOWING ? -1 : 1; });
     return bad[0] || null;
   }
 
@@ -243,7 +258,7 @@
       if (bad) { var det = bad.closest("details"); if (det) det.open = true; bad.focus(); return; }
       var text = COMPOSE[form.dataset.wa](form).join("\n"), href = D.wa + "?text=" + encodeURIComponent(text);
       $("[data-retry]", form).href = href;
-      $("[data-mail]", form).href = "mailto:" + D.email + "?subject=" + encodeURIComponent(S.mail_subject) + "&body=" + encodeURIComponent(text);
+      $("[data-mail]", form).href = "mailto:" + D.email + "?subject=" + encodeURIComponent(form.dataset.subject || S.mail_subject) + "&body=" + encodeURIComponent(text);
       ok.hidden = false; ok.focus();
       window.open(href, "_blank", "noopener");
     });

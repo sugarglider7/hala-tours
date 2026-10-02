@@ -1,5 +1,5 @@
 {
- "_doc": "One record per day out. Structure + EN/FR strings together. Facts only from SOURCE_OF_TRUTH.md / research/notes-catalogue.md (site_id = legacy de_sv.php i=). status: sold = review evidence; on_request = listed by Hala, unconfirmed (orchestrator decision 2). lengths: hours|half|full|two. img: key in images.gen.json (Hala's own photo, or a credited Commons place photo listed in tools/images.json with a 'credit' block); null = place-name stack. facts keys render only when present: time, pickup, food, incl, kids. stack = words for the place-name stack when there is no photo. Never prices.",
+ "_doc": "One record per day out. Structure + EN/FR strings together. Facts only from SOURCE_OF_TRUTH.md / research/notes-catalogue.md (site_id = legacy de_sv.php i=). status: sold = review evidence; on_request = listed by Hala, unconfirmed (orchestrator decision 2). lengths: hours|half|full|two ([] = not stated). zone: far = listed under 'Further out' on /where-we-go/ even without a map point. img: key in images.gen.json (Hala's own photo, or a credited Commons place photo listed in tools/images.json with a 'credit' block); null = route card from 'route' (stops in order, real places or what happens) + optional per-language card_note. facts keys render only when present: time, pickup, food, incl, kids. Never prices.",
  "days": [
   {
    "id": "quad", "site_id": 84, "mood": "sand", "lengths": ["hours"], "status": "sold",
@@ -30,7 +30,7 @@
   {
    "id": "buggy", "site_id": 85, "mood": "sand", "lengths": ["half"], "status": "sold",
    "slug": {"en": "buggy", "fr": "buggy"}, "img": null, "related": ["quad", "sandboarding", "little-desert"],
-   "stack": {"en": ["Forest", "Dunes", "Mint tea", "Two seats"], "fr": ["Forêt", "Dunes", "Thé à la menthe", "Deux places"]},
+   "route": {"en": ["Your hotel", "Forest tracks", "The dunes", "Mint tea", "Back to your hotel"], "fr": ["Votre hôtel", "Pistes en forêt", "Les dunes", "Thé à la menthe", "Retour à l'hôtel"]},
    "en": {
     "name": "Buggy ride",
     "line": "Two-seat buggies through forest and dunes with a mint-tea stop. Morning or afternoon; good with kids beside you.",
@@ -40,30 +40,32 @@
     "facts": {"time": "Morning: out around 08:30, back around 12:00. Afternoon: around 14:00 to 17:30. About 1½ hours of driving.", "pickup": "From your hotel, about 20 minutes' drive to the buggies", "food": "Mint tea on the way"},
     "steps": ["We pick you up at your hotel; the buggies are about 20 minutes away.", "Your guide shows you the controls and leads the way.", "Forest tracks first, then out onto the dunes.", "A stop for mint tea.", "Back on the tracks to the base, then home to your hotel."],
     "tips": ["The two-seaters mean a parent can drive with a child beside them — tell us the kids' ages when you book.", "Sunglasses and a scarf for the dust; closed shoes.", "Mornings are cooler in summer."],
-    "suits": "Families: one adult drives, one child rides alongside."
+    "suits": "Families: one adult drives, one child rides alongside.",
+    "card_note": "Mornings are cooler in summer."
    },
    "fr": {
     "name": "Buggy",
-    "line": "Des buggys biplaces entre forêt et dunes, avec une pause thé à la menthe. Le matin ou l'après-midi ; idéal avec un enfant à côté de vous.",
+    "line": "Des buggys biplaces entre forêt et dunes, avec une pause thé à la menthe. Le matin ou l'après-midi ; pratique avec un enfant à côté de vous.",
     "title": "Buggy au départ d'Agadir — forêt, dunes et thé à la menthe",
     "desc": "Un buggy biplace sur les pistes de forêt et les dunes près d'Agadir, avec un guide et une pause thé. Matin ou après-midi, prise en charge à l'hôtel. Prix du jour sur WhatsApp.",
     "lede": "Deux places côte à côte, un guide devant, des pistes en forêt puis les dunes — et une pause thé à la menthe à mi-parcours. Vous choisissez le matin ou l'après-midi.",
     "facts": {"time": "Matin : départ vers 8 h 30, retour vers 12 h. Après-midi : de 14 h à 17 h 30 environ. Environ 1 h 30 de conduite.", "pickup": "À votre hôtel, à une vingtaine de minutes des buggys", "food": "Thé à la menthe en route"},
     "steps": ["On vient vous chercher à l'hôtel ; les buggys sont à une vingtaine de minutes.", "Votre guide vous montre les commandes et ouvre la route.", "D'abord les pistes en forêt, puis les dunes.", "Une pause thé à la menthe.", "Retour à la base, puis à votre hôtel."],
     "tips": ["En biplace, un parent conduit avec son enfant à côté — donnez-nous l'âge des enfants en réservant.", "Lunettes de soleil, foulard contre la poussière et chaussures fermées.", "En été, le matin est plus frais."],
-    "suits": "Les familles : un adulte conduit, un enfant à côté."
+    "suits": "Les familles : un adulte conduit, un enfant à côté.",
+    "card_note": "En été, le matin est plus frais."
    }
   },
   {
-   "id": "sandboarding", "site_id": 93, "mood": "sand", "lengths": ["hours", "half"], "status": "sold",
+   "id": "sandboarding", "site_id": 93, "mood": "sand", "lengths": ["half"], "status": "sold",
    "slug": {"en": "sandboarding", "fr": "sandboard"}, "img": "dune-ocean", "related": ["quad", "buggy", "camel"],
    "en": {
     "name": "Sandboarding",
     "line": "Boards and a big dune. Best paired with the quads — ask us.",
     "title": "Sandboarding near Agadir — on its own or with the quads",
     "desc": "Sandboarding on the dunes near Agadir, on its own or combined with a quad ride or a camel. Tell us what you'd like on WhatsApp and we'll put the afternoon together.",
-    "lede": "A board, a tall dune and the walk back up. Most people do it as part of a bigger afternoon — quads first, then the boards, sometimes a camel at the end.",
-    "facts": {"time": "A couple of hours on its own, or half a day combined with quads"},
+    "lede": "A board, a tall dune and the walk back up. It's at its best as part of a bigger afternoon — quads first, then the boards, sometimes a camel at the end.",
+    "facts": {},
     "steps": ["Tell us whether you want the boards on their own or with quads and a camel.", "We drive you out to the dunes.", "Boards on: down the face, back up on foot, again.", "Back to Agadir and your hotel."],
     "tips": ["Sunglasses — the sand gets everywhere.", "Climbing back up a dune is a workout; bring water.", "Shorts and a T-shirt you don't mind sanding down."],
     "note": "Quads + sandboard + camel = one very good afternoon."
@@ -73,8 +75,8 @@
     "line": "Une planche et une grande dune. Encore mieux avec le quad — demandez-nous.",
     "title": "Sandboard près d'Agadir — seul ou avec le quad",
     "desc": "Du sandboard sur les dunes près d'Agadir, seul ou combiné avec le quad ou un tour à dos de chameau. Dites-nous sur WhatsApp ce qui vous tente, on organise l'après-midi.",
-    "lede": "Une planche, une haute dune et la remontée à pied. La plupart le font dans un après-midi plus complet — le quad d'abord, puis les planches, parfois un chameau pour finir.",
-    "facts": {"time": "Deux heures environ seul, ou une demi-journée avec le quad"},
+    "lede": "Une planche, une haute dune et la remontée à pied. C'est encore mieux dans un après-midi plus complet — le quad d'abord, puis les planches, parfois un chameau pour finir.",
+    "facts": {},
     "steps": ["Dites-nous si vous voulez les planches seules, ou avec quad et chameau.", "On vous emmène jusqu'aux dunes.", "Planche aux pieds : on descend, on remonte à pied, on recommence.", "Retour à Agadir et à votre hôtel."],
     "tips": ["Des lunettes de soleil — le sable se glisse partout.", "Remonter une dune, ça se mérite : prenez de l'eau.", "Short et t-shirt qui ne craignent rien."],
     "note": "Quad + sandboard + chameau = un très bel après-midi."
@@ -88,7 +90,7 @@
     "line": "Dunes and a short camel ride, the Souss-Massa coast, lunch in a Berber family's home, then the old medina of Tiznit. Out 08:30, back around 17:30.",
     "title": "The Little Desert by 4x4 — Souss-Massa, dunes and Tiznit",
     "desc": "A full day south of Agadir by 4x4: the Souss-Massa coast, dunes and a short camel ride, lunch in a Berber family's home and Tiznit's medina. Out 08:30, back about 17:30.",
-    "lede": "A long day south by 4x4: the Souss-Massa coast and its birds, real dunes with a short camel ride, lunch at a Berber family's table and an hour in Tiznit's old walled town.",
+    "lede": "A long day south by 4x4: the Souss-Massa coast and its birds, real dunes with a short camel ride, lunch at a Berber family's table and time in Tiznit's old walled town.",
     "facts": {"time": "Out around 08:30, back around 17:30", "pickup": "From your hotel in Agadir", "food": "Lunch in a Berber family's home"},
     "steps": ["Pickup at your hotel around 08:30, then south in the 4x4.", "The Souss-Massa national park, along the coast where the birds gather.", "The dunes, and a short ride on a camel.", "Lunch in a Berber family's home.", "Tiznit: the old medina and the Mechouar square.", "Back to Agadir around 17:30."],
     "tips": ["A hat and sunscreen; it's a long day outdoors.", "Bring binoculars if you have them — the park is good for birds.", "Some cash for Tiznit's silver shops, if you're tempted."]
@@ -98,9 +100,9 @@
     "line": "Les dunes et une petite balade à dos de chameau, la côte du Souss-Massa, le déjeuner chez une famille berbère, puis la médina de Tiznit. Départ 8 h 30, retour vers 17 h 30.",
     "title": "Le Petit Désert en 4x4 — Souss-Massa, dunes et Tiznit",
     "desc": "Une journée en 4x4 au sud d'Agadir : la côte du Souss-Massa, les dunes et un peu de chameau, un déjeuner chez une famille berbère et la médina de Tiznit. Départ 8 h 30.",
-    "lede": "Une grande journée vers le sud en 4x4 : la côte du Souss-Massa et ses oiseaux, de vraies dunes avec une courte balade à dos de chameau, le déjeuner à la table d'une famille berbère et une heure dans la vieille ville de Tiznit.",
+    "lede": "Une grande journée vers le sud en 4x4 : la côte du Souss-Massa et ses oiseaux, de vraies dunes avec une courte balade à dos de chameau, le déjeuner à la table d'une famille berbère et du temps dans la vieille ville de Tiznit.",
     "facts": {"time": "Départ vers 8 h 30, retour vers 17 h 30", "pickup": "À votre hôtel à Agadir", "food": "Déjeuner chez une famille berbère"},
-    "steps": ["On vous prend à l'hôtel vers 8 h 30, cap au sud en 4x4.", "Le parc national du Souss-Massa, là où l'oued rejoint l'océan et où se posent les oiseaux.", "Les dunes, et une courte balade à dos de chameau.", "Le déjeuner chez une famille berbère.", "Tiznit : la vieille médina et la place du Méchouar.", "Retour à Agadir vers 17 h 30."],
+    "steps": ["On vous prend à l'hôtel vers 8 h 30, cap au sud en 4x4.", "Le parc national du Souss-Massa, le long de la côte, là où se posent les oiseaux.", "Les dunes, et une courte balade à dos de chameau.", "Le déjeuner chez une famille berbère.", "Tiznit : la vieille médina et la place du Méchouar.", "Retour à Agadir vers 17 h 30."],
     "tips": ["Chapeau et crème solaire : on passe la journée dehors.", "Des jumelles si vous en avez — le parc est riche en oiseaux.", "Un peu de liquide pour les bijoutiers de Tiznit, au cas où."]
    }
   },
@@ -136,7 +138,7 @@
     "line": "Out from the marina with fishing gear on board, a swim stop, then fish grilled on deck with Moroccan salad. Back at your hotel early afternoon.",
     "title": "Agadir boat trip — fishing, a swim and fish grilled on board",
     "desc": "Out from Agadir marina along the coast: fishing with the gear on board, a swim stop and a fish barbecue with Moroccan salad. Back at your hotel around 14:30.",
-    "lede": "Out of the marina and along the coast. Lines over the side — the gear is on board — then a swim, then the catch of the day grilled on deck with a Moroccan salad.",
+    "lede": "Out of the marina and along the coast. Lines over the side — the gear is on board — then a swim, then fresh fish grilled on deck with a Moroccan salad.",
     "facts": {"time": "Back at the marina around 14:00 and at your hotel around 14:30", "pickup": "From your hotel", "food": "Fish barbecue with Moroccan salad, on board", "incl": "Fishing gear and drinks on board"},
     "steps": ["We take you from your hotel to Agadir marina.", "Out along the coast.", "A fishing stop — the gear is on board.", "A swim stop.", "Fish grilled on deck, with Moroccan salad.", "Back at the marina around 14:00, at your hotel around 14:30."],
     "tips": ["Swimsuit and a towel.", "Prone to seasickness? Take something before you go, and tell us.", "A hat — there's not much shade at sea."]
@@ -146,7 +148,7 @@
     "line": "Départ de la marina avec le matériel de pêche à bord, une pause baignade, puis du poisson grillé sur le pont avec une salade marocaine. De retour à l'hôtel en début d'après-midi.",
     "title": "Sortie en bateau à Agadir — pêche, baignade et poisson grillé à bord",
     "desc": "Depuis la marina d'Agadir, le long de la côte : pêche avec le matériel à bord, baignade et barbecue de poisson avec salade marocaine. Retour à l'hôtel vers 14 h 30.",
-    "lede": "On quitte la marina et on longe la côte. Les lignes à l'eau — le matériel est à bord —, une baignade, puis la pêche du jour grillée sur le pont avec une salade marocaine.",
+    "lede": "On quitte la marina et on longe la côte. Les lignes à l'eau — le matériel est à bord —, une baignade, puis du poisson frais grillé sur le pont avec une salade marocaine.",
     "facts": {"time": "Retour à la marina vers 14 h, à votre hôtel vers 14 h 30", "pickup": "À votre hôtel", "food": "Barbecue de poisson et salade marocaine, à bord", "incl": "Matériel de pêche et boissons à bord"},
     "steps": ["On vous conduit de l'hôtel à la marina d'Agadir.", "Cap le long de la côte.", "Un arrêt pêche — le matériel est à bord.", "Un arrêt baignade.", "Le poisson grillé sur le pont, avec une salade marocaine.", "Retour à la marina vers 14 h, à l'hôtel vers 14 h 30."],
     "tips": ["Maillot de bain et serviette.", "Sujet au mal de mer ? Prenez vos précautions avant, et prévenez-nous.", "Un chapeau : en mer, l'ombre est rare."]
@@ -155,7 +157,7 @@
   {
    "id": "surf", "site_id": 92, "mood": "salt", "lengths": ["half"], "status": "sold",
    "slug": {"en": "surf", "fr": "surf"}, "img": null, "related": ["jet-ski", "boat-trip", "sandboarding"],
-   "stack": {"en": ["Beginners", "Improvers", "Boards", "Waves"], "fr": ["Débutants", "Intermédiaires", "Planches", "Vagues"]},
+   "route": {"en": ["Your hotel in Agadir", "A lesson at your level", "Back to your hotel"], "fr": ["Votre hôtel à Agadir", "Un cours à votre niveau", "Retour à l'hôtel"]},
    "en": {
     "name": "Surf lessons",
     "line": "Beginner and intermediate lessons, with pickup from your hotel in Agadir. Kids from about seven — ask us.",
@@ -164,7 +166,8 @@
     "lede": "Never stood on a board, or ready for the next step? Lessons for beginners and intermediate surfers, and we drive you there from your hotel.",
     "facts": {"pickup": "From your hotel in Agadir, included", "kids": "From about 7 years old — ask us"},
     "steps": ["Tell us your level and how many of you want a lesson.", "We collect you from your hotel.", "A lesson matched to your level.", "Back to your hotel."],
-    "tips": ["Swimsuit, towel and plenty of sunscreen.", "Lesson length and times depend on the day — ask us when you book.", "Tell us the children's ages; from about seven is usually fine."]
+    "tips": ["Swimsuit, towel and plenty of sunscreen.", "Lesson length and times depend on the day — ask us when you book.", "Tell us the children's ages; from about seven is usually fine."],
+    "card_note": "Never stood on a board? Start with the beginners."
    },
    "fr": {
     "name": "Cours de surf",
@@ -174,14 +177,15 @@
     "lede": "Jamais monté sur une planche, ou prêt à passer à l'étape suivante ? Des cours pour débutants et intermédiaires, et on vous y conduit depuis votre hôtel.",
     "facts": {"pickup": "À votre hôtel à Agadir, compris", "kids": "À partir de 7 ans environ — demandez-nous"},
     "steps": ["Dites-nous votre niveau et combien vous êtes.", "On passe vous prendre à l'hôtel.", "Un cours adapté à votre niveau.", "Retour à votre hôtel."],
-    "tips": ["Maillot, serviette et beaucoup de crème solaire.", "Durée et horaires dépendent du jour — demandez en réservant.", "Donnez-nous l'âge des enfants ; dès 7 ans environ, c'est en général possible."]
+    "tips": ["Maillot, serviette et beaucoup de crème solaire.", "Durée et horaires dépendent du jour — demandez en réservant.", "Donnez-nous l'âge des enfants ; dès 7 ans environ, c'est en général possible."],
+    "card_note": "Jamais monté sur une planche ? On commence par les débutants."
    }
   },
   {
    "id": "legzira", "site_id": 97, "mood": "salt", "lengths": ["full"], "status": "sold",
    "slug": {"en": "legzira", "fr": "legzira"}, "img": "legzira", "map": [29.445, -10.115], "related": ["little-desert", "tafraout", "boat-trip"],
    "en": {
-    "name": "Legzira & Massa, with lunch",
+    "name": "Legzira & Aglou, with lunch",
     "line": "Aglou beach, free time on Legzira's red-cliff beach, a fish lunch by the ocean, home via Tiznit and the dunes. Out 08:00, back around 18:00.",
     "title": "Legzira day trip from Agadir — red cliffs, Aglou and a fish lunch",
     "desc": "A long coastal day south of Agadir: the Youssef Ben Tachfine dam, Aglou beach, free time on Legzira's red-cliff beach, fish lunch by the ocean, Tiznit. Out 08:00.",
@@ -192,7 +196,7 @@
     "note": "Quiet weeks? Message us early — this one runs best with a few more people."
    },
    "fr": {
-    "name": "Legzira & Massa, déjeuner compris",
+    "name": "Legzira & Aglou, déjeuner compris",
     "line": "La plage d'Aglou, du temps libre sous les falaises rouges de Legzira, un déjeuner de poisson face à l'océan, retour par Tiznit et les dunes. Départ 8 h, retour vers 18 h.",
     "title": "Legzira au départ d'Agadir — falaises rouges, Aglou et déjeuner de poisson",
     "desc": "Une grande journée côtière au sud d'Agadir : barrage Youssef Ben Tachfine, plage d'Aglou, temps libre sous les falaises de Legzira, poisson face à l'océan, Tiznit.",
@@ -208,23 +212,23 @@
    "slug": {"en": "camel", "fr": "balade-a-dos-de-chameau"}, "img": "camel-sand", "related": ["camel-bbq", "horse", "quad"],
    "en": {
     "name": "Camel ride by the Souss river",
-    "line": "From the ranch out to the river and the flamingos, past eucalyptus and a glimpse of the royal palace.",
-    "title": "Camel ride in Agadir — the Souss river and its flamingos",
-    "desc": "A camel ride from a ranch near Agadir to the Souss river and its flamingos, through eucalyptus and past the royal palace. Hotel pickup. Ask about the sunset ride.",
-    "lede": "A slow, swaying few hours: from the ranch through the eucalyptus to the Souss river, where flamingos feed in the shallows, with a glimpse of the royal palace on the way.",
+    "line": "From the ranch out to the Souss river — flamingos, if they're about — past eucalyptus and a glimpse of the royal palace.",
+    "title": "Camel ride in Agadir — out to the Souss river",
+    "desc": "A camel ride from a ranch near Agadir out to the Souss river, through eucalyptus and past the royal palace — flamingos too, often. Hotel pickup. Ask about the sunset ride.",
+    "lede": "A slow, swaying few hours: from the ranch through the eucalyptus to the Souss river, where flamingos often feed in the shallows, with a glimpse of the royal palace on the way.",
     "facts": {"time": "A few hours, including the drive", "pickup": "From your hotel to the ranch, and back"},
-    "steps": ["We drive you from your hotel to the ranch.", "Up onto your camel, with a guide leading.", "Through the eucalyptus towards the Souss river.", "Flamingos in the shallows, and a glimpse of the royal palace.", "Back to the ranch and to your hotel."],
+    "steps": ["We drive you from your hotel to the ranch.", "Up onto your camel, with a guide leading.", "Through the eucalyptus towards the Souss river.", "The river — flamingos, if they're about — and a glimpse of the royal palace.", "Back to the ranch and to your hotel."],
     "tips": ["Long trousers are more comfortable on a camel.", "A hat for the sun; a layer if you ride at sunset.", "Children usually love it — tell us their ages."],
     "note": "Ask for the sunset ride."
    },
    "fr": {
     "name": "Balade à dos de chameau au bord du Souss",
-    "line": "Du ranch jusqu'à l'oued et ses flamants roses, entre les eucalyptus, avec un aperçu du palais royal.",
-    "title": "Balade à dos de chameau à Agadir — l'oued Souss et ses flamants roses",
-    "desc": "Une balade à dos de chameau depuis un ranch près d'Agadir jusqu'à l'oued Souss et ses flamants roses, entre eucalyptus et palais royal. Prise en charge à l'hôtel.",
-    "lede": "Quelques heures au pas, en se balançant : du ranch à travers les eucalyptus jusqu'à l'oued Souss, où les flamants roses se nourrissent dans l'eau peu profonde, avec un aperçu du palais royal en chemin.",
+    "line": "Du ranch jusqu'à l'oued Souss — et ses flamants roses, s'ils sont là —, entre les eucalyptus, avec un aperçu du palais royal.",
+    "title": "Balade à dos de chameau à Agadir — jusqu'à l'oued Souss",
+    "desc": "Une balade à dos de chameau depuis un ranch près d'Agadir jusqu'à l'oued Souss, entre eucalyptus et palais royal — souvent avec des flamants roses. Prise en charge à l'hôtel.",
+    "lede": "Quelques heures au pas, en se balançant : du ranch à travers les eucalyptus jusqu'à l'oued Souss, où les flamants roses viennent souvent se nourrir dans l'eau peu profonde, avec un aperçu du palais royal en chemin.",
     "facts": {"time": "Quelques heures, trajet compris", "pickup": "De votre hôtel au ranch, aller et retour"},
-    "steps": ["On vous conduit de l'hôtel au ranch.", "En selle, un guide mène la file.", "À travers les eucalyptus, vers l'oued Souss.", "Les flamants roses, et un aperçu du palais royal.", "Retour au ranch, puis à votre hôtel."],
+    "steps": ["On vous conduit de l'hôtel au ranch.", "En selle, un guide mène la file.", "À travers les eucalyptus, vers l'oued Souss.", "L'oued — et les flamants roses, s'ils sont là —, puis un aperçu du palais royal.", "Retour au ranch, puis à votre hôtel."],
     "tips": ["Un pantalon long est plus confortable à dos de chameau.", "Un chapeau pour le soleil ; une petite laine si vous partez au coucher du soleil.", "Les enfants adorent en général — dites-nous leur âge."],
     "note": "Demandez la balade au coucher du soleil."
    }
@@ -236,10 +240,10 @@
     "name": "Camel ride & barbecue dinner",
     "line": "Two hours on a camel to the river mouth, then dinner: barbecue, tagine or vegetarian.",
     "title": "Camel ride and barbecue dinner near Agadir",
-    "desc": "Two hours on a camel through the countryside to the mouth of the Souss river and its flamingos, then dinner: barbecue, tagine or vegetarian. Ask for today's price.",
-    "lede": "Two hours on a camel through the countryside to the mouth of the Souss river and its flamingos — then dinner at the base: barbecue, a tagine, or vegetarian if you prefer.",
+    "desc": "Two hours on a camel through the countryside to the mouth of the Souss river, then dinner: barbecue, tagine or vegetarian. Ask for today's price.",
+    "lede": "Two hours on a camel through the countryside to the mouth of the Souss river — flamingos, if you're lucky — then dinner at the base: barbecue, a tagine, or vegetarian if you prefer.",
     "facts": {"time": "About 2 hours on the camel, then dinner", "food": "Dinner: barbecue, tagine or vegetarian"},
-    "steps": ["Meet your camel at the base, where the horses live too.", "About two hours out through the countryside.", "The mouth of the Souss river, and its flamingos.", "Back for dinner: barbecue, tagine or vegetarian."],
+    "steps": ["Meet your camel at the base, where the horses live too.", "About two hours out through the countryside.", "The mouth of the Souss river — flamingos, if they're about.", "Back for dinner: barbecue, tagine or vegetarian."],
     "tips": ["Tell us about any food needs when you book.", "Long trousers and a layer for after sunset.", "Hungry kids? Dinner comes after the ride — bring a snack."],
     "note": "Go late in the afternoon and you ride back into the sunset."
    },
@@ -247,10 +251,10 @@
     "name": "Chameau & dîner barbecue",
     "line": "Deux heures à dos de chameau jusqu'à l'embouchure de l'oued, puis le dîner : barbecue, tajine ou végétarien.",
     "title": "Balade à dos de chameau et dîner barbecue près d'Agadir",
-    "desc": "Deux heures à dos de chameau jusqu'à l'embouchure de l'oued Souss et ses flamants roses, puis le dîner : barbecue, tajine ou végétarien. Prix du jour sur WhatsApp.",
-    "lede": "Deux heures à dos de chameau à travers la campagne jusqu'à l'embouchure de l'oued Souss et ses flamants roses — puis le dîner à la base : barbecue, tajine, ou végétarien si vous préférez.",
+    "desc": "Deux heures à dos de chameau jusqu'à l'embouchure de l'oued Souss, puis le dîner : barbecue, tajine ou végétarien. Prix du jour sur WhatsApp.",
+    "lede": "Deux heures à dos de chameau à travers la campagne jusqu'à l'embouchure de l'oued Souss — avec des flamants roses, si vous avez de la chance — puis le dîner à la base : barbecue, tajine, ou végétarien si vous préférez.",
     "facts": {"time": "Environ 2 h à dos de chameau, puis le dîner", "food": "Dîner : barbecue, tajine ou végétarien"},
-    "steps": ["Rendez-vous avec votre chameau à la base, où vivent aussi les chevaux.", "Environ deux heures à travers la campagne.", "L'embouchure de l'oued Souss et ses flamants roses.", "Retour pour le dîner : barbecue, tajine ou végétarien."],
+    "steps": ["Rendez-vous avec votre chameau à la base, où vivent aussi les chevaux.", "Environ deux heures à travers la campagne.", "L'embouchure de l'oued Souss — et les flamants roses, s'ils sont là.", "Retour pour le dîner : barbecue, tajine ou végétarien."],
     "tips": ["Signalez-nous vos contraintes alimentaires en réservant.", "Pantalon long et une petite laine pour après le coucher du soleil.", "Enfants affamés ? Le dîner vient après la balade — prévoyez un en-cas."],
     "note": "Partez en fin d'après-midi : le retour se fait face au soleil couchant."
    }
@@ -260,23 +264,23 @@
    "slug": {"en": "horse-riding", "fr": "balade-a-cheval"}, "img": "hero-horses", "related": ["camel", "camel-bbq", "buggy"],
    "en": {
     "name": "Horse riding",
-    "line": "Along the Souss river, past the flamingos and through the eucalyptus woods, with a guide.",
+    "line": "Along the Souss river and through the eucalyptus woods, with a guide — flamingos, if they're about.",
     "title": "Horse riding in Agadir — the Souss river and the eucalyptus woods",
-    "desc": "Horse riding with a guide from a ranch near Agadir: along the Souss river, past the flamingos, through the eucalyptus woods and past the royal palace. Hotel pickup.",
-    "lede": "A guide, a horse and a few hours along the Souss river — past the flamingos, through the eucalyptus woods and along the walls of the royal palace.",
+    "desc": "Horse riding with a guide from a ranch near Agadir: along the Souss river, through the eucalyptus woods and past the royal palace. Hotel pickup.",
+    "lede": "A guide, a horse and a few hours along the Souss river — where flamingos often feed — through the eucalyptus woods and along the walls of the royal palace.",
     "facts": {"time": "A few hours, including the drive", "pickup": "From your hotel to the ranch, and back"},
-    "steps": ["We drive you from your hotel to the ranch.", "Horses matched to the riders, with a guide.", "Along the Souss river and past the flamingos.", "Through the eucalyptus woods and along the royal palace.", "Back to the ranch and to your hotel."],
+    "steps": ["We drive you from your hotel to the ranch.", "In the saddle, with a guide.", "Along the Souss river — flamingos, if they're about.", "Through the eucalyptus woods and along the royal palace.", "Back to the ranch and to your hotel."],
     "tips": ["Tell us honestly how much you've ridden before.", "Long trousers and closed shoes.", "Ask about a sunset ride."],
     "note": "Ask about a sunset ride."
    },
    "fr": {
     "name": "Balade à cheval",
-    "line": "Le long de l'oued Souss, près des flamants roses et dans les bois d'eucalyptus, avec un guide.",
+    "line": "Le long de l'oued Souss et dans les bois d'eucalyptus, avec un guide — et les flamants roses, s'ils sont là.",
     "title": "Balade à cheval à Agadir — l'oued Souss et les bois d'eucalyptus",
-    "desc": "Une balade à cheval avec un guide depuis un ranch près d'Agadir : l'oued Souss, ses flamants roses, les bois d'eucalyptus et le palais royal. Prise en charge à l'hôtel.",
-    "lede": "Un guide, un cheval et quelques heures le long de l'oued Souss — près des flamants roses, à travers les eucalyptus et le long des murs du palais royal.",
+    "desc": "Une balade à cheval avec un guide depuis un ranch près d'Agadir : l'oued Souss, les bois d'eucalyptus et le palais royal. Prise en charge à l'hôtel.",
+    "lede": "Un guide, un cheval et quelques heures le long de l'oued Souss — où les flamants roses viennent souvent se nourrir — à travers les eucalyptus et le long des murs du palais royal.",
     "facts": {"time": "Quelques heures, trajet compris", "pickup": "De votre hôtel au ranch, aller et retour"},
-    "steps": ["On vous conduit de l'hôtel au ranch.", "Un cheval pour chaque cavalier, et un guide.", "Le long de l'oued Souss, près des flamants roses.", "À travers les eucalyptus et le long du palais royal.", "Retour au ranch, puis à votre hôtel."],
+    "steps": ["On vous conduit de l'hôtel au ranch.", "En selle, avec un guide.", "Le long de l'oued Souss — et les flamants roses, s'ils sont là.", "À travers les eucalyptus et le long du palais royal.", "Retour au ranch, puis à votre hôtel."],
     "tips": ["Dites-nous franchement votre niveau.", "Pantalon long et chaussures fermées.", "Demandez la balade au coucher du soleil."],
     "note": "Demandez la balade au coucher du soleil."
    }
@@ -284,7 +288,7 @@
   {
    "id": "crocoparc", "site_id": 83, "mood": "hooves", "lengths": ["half"], "status": "sold",
    "slug": {"en": "crocoparc", "fr": "crocoparc"}, "img": null, "related": ["camel", "city-tour", "buggy"],
-   "stack": {"en": ["Nile crocodiles", "Gardens", "Half a day", "Kids"], "fr": ["Crocodiles du Nil", "Jardins", "Demi-journée", "Enfants"]},
+   "route": {"en": ["Your hotel reception", "About 30 minutes inland", "Crocoparc, Drarga", "Back to your hotel"], "fr": ["La réception de votre hôtel", "Une demi-heure de route", "Crocoparc, Drarga", "Retour à l'hôtel"]},
    "en": {
     "name": "Crocoparc",
     "line": "Nile crocodiles and big gardens about half an hour from town. We collect you from your hotel.",
@@ -293,7 +297,8 @@
     "lede": "A park full of Nile crocodiles, set in big gardens about half an hour out of town — a good one for kids. We do the driving.",
     "facts": {"time": "Half a day, with about 30 minutes' drive each way", "pickup": "From your hotel reception, and back"},
     "steps": ["We collect you from your hotel reception.", "About half an hour's drive to the park.", "Crocodiles, gardens, and time to wander at your own pace.", "We drive you back to your hotel."],
-    "tips": ["Ask us about the park's opening times on the day you want.", "A hat and water — the gardens are sunny.", "Good for a morning when the kids have had enough of the beach."]
+    "tips": ["Ask us about the park's opening times on the day you want.", "A hat and water — the gardens are sunny.", "Good for a morning when the kids have had enough of the beach."],
+    "card_note": "Ask us the park's hours for your day."
    },
    "fr": {
     "name": "Crocoparc",
@@ -303,7 +308,8 @@
     "lede": "Un parc rempli de crocodiles du Nil, au milieu de grands jardins, à une demi-heure de la ville — une bonne idée avec des enfants. On s'occupe de la route.",
     "facts": {"time": "Une demi-journée, avec environ 30 minutes de route dans chaque sens", "pickup": "À la réception de votre hôtel, aller et retour"},
     "steps": ["On vous prend à la réception de votre hôtel.", "Environ une demi-heure de route jusqu'au parc.", "Crocodiles, jardins, et du temps pour flâner à votre rythme.", "Retour à votre hôtel."],
-    "tips": ["Demandez-nous les horaires du parc pour le jour choisi.", "Chapeau et eau : les jardins sont ensoleillés.", "Parfait pour une matinée où les enfants ont fait le tour de la plage."]
+    "tips": ["Demandez-nous les horaires du parc pour le jour choisi.", "Chapeau et eau : les jardins sont ensoleillés.", "Bien pour une matinée où les enfants ont fait le tour de la plage."],
+    "card_note": "Demandez-nous les horaires du parc pour votre jour."
    }
   },
   {
@@ -364,7 +370,7 @@
     "line": "Three hours: the Marina, the fishing port, the view from Agadir Oufella, an argan cooperative and an hour in Souk El Had.",
     "title": "Agadir city tour — the Marina, Agadir Oufella and Souk El Had",
     "desc": "Three hours around Agadir with a guide: the Marina, the fishing port, the view from Agadir Oufella, an argan oil cooperative and an hour of free time in Souk El Had.",
-    "lede": "Your own city in three hours: the seafront and the Marina, the fishing port, the view over the bay from the old hilltop kasbah of Agadir Oufella, an argan oil cooperative, then an hour loose in Souk El Had.",
+    "lede": "Agadir in three hours: the seafront and the Marina, the fishing port, the view over the bay from the old hilltop kasbah of Agadir Oufella, an argan oil cooperative, then an hour loose in Souk El Had.",
     "facts": {"time": "About 3 hours, morning or afternoon", "pickup": "From your hotel"},
     "steps": ["Pickup at your hotel.", "Along the seafront to the Marina.", "The fishing port.", "Up to Agadir Oufella for the view over the bay.", "An argan oil cooperative.", "An hour of free time in Souk El Had, then back to your hotel."],
     "tips": ["Good on day one — you'll know your way around afterwards.", "Cash for the souk; haggling is expected.", "Ask us which days Souk El Had is open."]
@@ -374,10 +380,10 @@
     "line": "Trois heures : la Marina, le port de pêche, la vue depuis Agadir Oufella, une coopérative d'argan et une heure au souk El Had.",
     "title": "Visite d'Agadir — la Marina, Agadir Oufella et le souk El Had",
     "desc": "Trois heures dans Agadir avec un guide : la Marina, le port de pêche, la vue depuis Agadir Oufella, une coopérative d'huile d'argan et une heure libre au souk El Had.",
-    "lede": "Votre ville en trois heures : le front de mer et la Marina, le port de pêche, la vue sur la baie depuis l'ancienne kasbah d'Agadir Oufella, une coopérative d'huile d'argan, puis une heure libre au souk El Had.",
+    "lede": "Agadir en trois heures : le front de mer et la Marina, le port de pêche, la vue sur la baie depuis l'ancienne kasbah d'Agadir Oufella, une coopérative d'huile d'argan, puis une heure libre au souk El Had.",
     "facts": {"time": "Environ 3 heures, le matin ou l'après-midi", "pickup": "À votre hôtel"},
     "steps": ["On vous prend à l'hôtel.", "Le front de mer jusqu'à la Marina.", "Le port de pêche.", "Montée à Agadir Oufella pour la vue sur la baie.", "Une coopérative d'huile d'argan.", "Une heure libre au souk El Had, puis retour à l'hôtel."],
-    "tips": ["Idéal le premier jour : ensuite, vous connaissez la ville.", "Du liquide pour le souk ; on y marchande.", "Demandez-nous les jours d'ouverture du souk El Had."]
+    "tips": ["À faire dès le premier jour : ensuite, vous connaissez la ville.", "Du liquide pour le souk ; on y marchande.", "Demandez-nous les jours d'ouverture du souk El Had."]
    }
   },
   {
@@ -391,7 +397,7 @@
     "lede": "Up into the hills on the Imouzzer road, into a gorge of palms along the river, between argan, almond and olive trees — then free time in the village of Imouzzer.",
     "facts": {"pickup": "From outside your hotel"},
     "steps": ["Pickup outside your hotel.", "Up the Imouzzer road into the hills.", "Paradise Valley: the palm-lined gorge and its river.", "Argan, almond and olive trees along the way.", "Free time in Imouzzer village.", "Back down to Agadir."],
-    "tips": ["In summer go in the morning; the afternoons are scorching.", "Shoes with grip for the rocks by the river.", "Swimsuit under your clothes, in case the water's up.", "Half a day or a full day? Ask us — it depends on the season and what else you'd like to see."],
+    "tips": ["In summer go in the morning; the afternoons are scorching.", "Shoes with grip for the rocks by the river.", "Swimsuit under your clothes, in case the water's up.", "Half a day or a full day? Ask us — it depends on the season and what else you'd like to see.", "Ask about combining it with Taghazout or the Timlaline dunes."],
     "note": "In summer we go to Paradise Valley in the morning. The afternoons are scorching."
    },
    "fr": {
@@ -402,7 +408,7 @@
     "lede": "On monte dans les collines par la route d'Imouzzer, jusqu'à une gorge de palmiers le long de l'oued, entre arganiers, amandiers et oliviers — puis du temps libre au village d'Imouzzer.",
     "facts": {"pickup": "Devant votre hôtel"},
     "steps": ["Prise en charge devant votre hôtel.", "La route d'Imouzzer dans les collines.", "La Vallée du Paradis : la gorge de palmiers et son oued.", "Arganiers, amandiers et oliviers en chemin.", "Temps libre au village d'Imouzzer.", "Redescente vers Agadir."],
-    "tips": ["L'été, partez le matin : l'après-midi, il fait une chaleur écrasante.", "Des chaussures qui accrochent pour les rochers au bord de l'eau.", "Le maillot sous les vêtements, au cas où il y aurait de l'eau.", "Demi-journée ou journée entière ? Demandez-nous : cela dépend de la saison et de vos envies."],
+    "tips": ["L'été, partez le matin : l'après-midi, il fait une chaleur écrasante.", "Des chaussures qui accrochent pour les rochers au bord de l'eau.", "Le maillot sous les vêtements, au cas où il y aurait de l'eau.", "Demi-journée ou journée entière ? Demandez-nous : cela dépend de la saison et de vos envies.", "Demandez-nous pour la combiner avec Taghazout ou les dunes de Timlaline."],
     "note": "L'été, on va à la Vallée du Paradis le matin. L'après-midi, c'est la fournaise."
    }
   },
@@ -415,7 +421,7 @@
     "title": "Taroudant and Tiout day trip — ramparts, souks and a palm grove",
     "desc": "A day inland from Agadir: Taroudant's ramparts and souks, then the palm grove and kasbah of Tiout, home by another road. Pickup around 08:30–09:00.",
     "lede": "East into the Souss valley to Taroudant, whose earth-red ramparts still wrap the whole town. Then the souks, then the palm grove and kasbah at Tiout — and home by a different road.",
-    "facts": {"time": "Out around 08:30–09:00, back in the evening", "pickup": "From your hotel", "food": "Lunch out there — ask us what's included"},
+    "facts": {"time": "Out around 08:30–09:00 — ask us the return time", "pickup": "From your hotel", "food": "Lunch out there — ask us what's included"},
     "steps": ["Pickup around 08:30–09:00 and east up the Souss valley.", "Taroudant: the ramparts that circle the town.", "Time in Taroudant's souks.", "Tiout: the palm grove and the old kasbah — on foot, or by donkey if you like.", "Home to Agadir by another road."],
     "tips": ["Inland is hotter than the coast: hat, water, sunscreen.", "Cash for the souks.", "Walking shoes for the palm grove."]
    },
@@ -425,7 +431,7 @@
     "title": "Taroudant et Tiout à la journée — remparts, souks et palmeraie",
     "desc": "Une journée dans les terres depuis Agadir : remparts et souks de Taroudant, puis la palmeraie et la kasbah de Tiout, retour par une autre route. Départ vers 8 h 30–9 h.",
     "lede": "Cap à l'est dans la vallée du Souss jusqu'à Taroudant, dont les remparts ocre entourent encore toute la ville. Puis les souks, la palmeraie et la kasbah de Tiout — et retour par une autre route.",
-    "facts": {"time": "Départ vers 8 h 30–9 h, retour en soirée", "pickup": "À votre hôtel", "food": "Déjeuner sur place — demandez-nous ce qui est compris"},
+    "facts": {"time": "Départ vers 8 h 30–9 h — demandez-nous l'heure du retour", "pickup": "À votre hôtel", "food": "Déjeuner sur place — demandez-nous ce qui est compris"},
     "steps": ["Départ vers 8 h 30–9 h, vers l'est par la vallée du Souss.", "Taroudant : les remparts qui font le tour de la ville.", "Les souks de Taroudant.", "Tiout : la palmeraie et la vieille kasbah — à pied, ou à dos d'âne si le cœur vous en dit.", "Retour à Agadir par une autre route."],
     "tips": ["Dans les terres, il fait plus chaud que sur la côte : chapeau, eau, crème.", "Du liquide pour les souks.", "Des chaussures de marche pour la palmeraie."]
    }
@@ -438,10 +444,10 @@
     "line": "Granite country: the Ameln valley, the painted rocks near Tafraout, then Tiznit's silver medina.",
     "title": "Tafraout and Tiznit from Agadir — granite valleys and painted rocks",
     "desc": "On request from Agadir: the Ameln valley, Tafraout among pink granite, the painted rocks, then Tiznit's walled medina. Message us for dates.",
-    "lede": "Pink granite country in the Anti-Atlas: the Ameln valley and its villages, Tafraout among the boulders, the painted rocks outside town — and Tiznit's walled medina on the way home. We run it on request.",
+    "lede": "Pink granite country in the Anti-Atlas: the Ameln valley and its villages, Tafraout among the boulders, the painted rocks outside town — and Tiznit's walled medina on the way home. On request: ask us first.",
     "facts": {"time": "A full day — out around 07:30"},
     "steps": ["Out of Agadir across the Souss plain.", "Up into the Ameln valley and its villages under the granite.", "Tafraout, about 1,000 m up.", "The painted rocks near Aguerd Oudad.", "Mint tea, then Tiznit and its silver medina.", "Home to Agadir."],
-    "tips": ["It's cooler up in the mountains — bring a layer.", "Long drive: water and snacks.", "Message us a few days ahead so we can set a date."]
+    "tips": ["It's cooler up in the mountains — bring a layer.", "Long drive: water and snacks.", "Message us a few days ahead and we'll check whether it can run."]
    },
    "fr": {
     "name": "Tafraout & Tiznit",
@@ -451,38 +457,40 @@
     "lede": "Le granit rose de l'Anti-Atlas : la vallée des Ameln et ses villages, Tafraout au milieu des blocs, les rochers peints à la sortie de la ville — et la médina fortifiée de Tiznit au retour. Sur demande.",
     "facts": {"time": "Une journée entière — départ vers 7 h 30"},
     "steps": ["On quitte Agadir par la plaine du Souss.", "Montée dans la vallée des Ameln et ses villages sous le granit.", "Tafraout, à environ 1 000 m d'altitude.", "Les rochers peints près d'Aguerd Oudad.", "Un thé à la menthe, puis Tiznit et sa médina de l'argent.", "Retour à Agadir."],
-    "tips": ["Il fait plus frais en montagne : prenez une petite laine.", "Longue route : de l'eau et de quoi grignoter.", "Écrivez-nous quelques jours avant pour fixer une date."]
+    "tips": ["Il fait plus frais en montagne : prenez une petite laine.", "Longue route : de l'eau et de quoi grignoter.", "Écrivez-nous quelques jours avant : on vérifie si elle peut se faire."]
    }
   },
   {
    "id": "hammam", "site_id": 100, "mood": "slow", "lengths": ["hours"], "status": "sold",
    "slug": {"en": "hammam", "fr": "hammam"}, "img": null, "related": ["berber-evening", "city-tour", "balloon"],
-   "stack": {"en": ["Steam", "Black soap", "Argan oil", "One hour"], "fr": ["Vapeur", "Savon noir", "Huile d'argan", "Une heure"]},
+   "route": {"en": ["Your hotel", "A spa in the centre", "The hammam", "60-minute argan massage", "Back to your hotel"], "fr": ["Votre hôtel", "Un spa du centre-ville", "Le hammam", "Massage à l'argan, 60 min", "Retour à l'hôtel"]},
    "en": {
     "name": "Hammam & massage",
     "line": "A traditional hammam, then an hour's massage with argan oil. We drive you there and back.",
     "title": "Hammam and argan oil massage in Agadir — with transport",
     "desc": "A traditional hammam and a 60-minute massage with argan oil at a spa in central Agadir. We drive you from your hotel and back. Ask for today's price on WhatsApp.",
-    "lede": "Steam, a proper scrub, then an hour's massage with argan oil. We drive you from your hotel to the spa in the city centre and back again, so the only thing you have to do is lie down.",
+    "lede": "Time in a traditional hammam, then an hour's massage with argan oil. We drive you from your hotel to the spa in the city centre and back again, so the only thing you have to do is lie down.",
     "facts": {"time": "The hammam, then a 60-minute massage", "pickup": "From your hotel to the spa in the centre, and back", "incl": "Transport both ways"},
-    "steps": ["We collect you from your hotel.", "A traditional hammam: steam and a scrub.", "A 60-minute massage with argan oil.", "We drive you back to your hotel."],
-    "tips": ["Bring a swimsuit or ask what's provided.", "Good the day after a long trip like Marrakech.", "Tell us if you'd like a female therapist and we'll ask."]
+    "steps": ["We collect you from your hotel.", "A traditional hammam.", "A 60-minute massage with argan oil.", "We drive you back to your hotel."],
+    "tips": ["Bring a swimsuit or ask what's provided.", "Good the day after a long trip like Marrakech.", "Want a gommage (scrub) too? Ask us when you book.", "Tell us if you'd like a female therapist and we'll ask."],
+    "card_note": "Good the day after Marrakech."
    },
    "fr": {
     "name": "Hammam & massage",
     "line": "Un hammam traditionnel, puis une heure de massage à l'huile d'argan. On vous y conduit et on vous ramène.",
     "title": "Hammam et massage à l'huile d'argan à Agadir — transport compris",
     "desc": "Un hammam traditionnel et un massage de 60 minutes à l'huile d'argan dans un spa du centre d'Agadir. On vous conduit depuis votre hôtel, aller et retour.",
-    "lede": "La vapeur, un vrai gommage, puis une heure de massage à l'huile d'argan. On vous conduit de l'hôtel au spa du centre-ville et on vous ramène : vous n'avez qu'à vous allonger.",
+    "lede": "Un moment au hammam traditionnel, puis une heure de massage à l'huile d'argan. On vous conduit de l'hôtel au spa du centre-ville et on vous ramène : vous n'avez qu'à vous allonger.",
     "facts": {"time": "Le hammam, puis 60 minutes de massage", "pickup": "De votre hôtel au spa du centre, aller et retour", "incl": "Transport aller et retour"},
-    "steps": ["On passe vous prendre à l'hôtel.", "Le hammam traditionnel : vapeur et gommage.", "Un massage de 60 minutes à l'huile d'argan.", "Retour à votre hôtel."],
-    "tips": ["Prenez un maillot, ou demandez ce qui est fourni.", "Parfait le lendemain d'une grosse journée comme Marrakech.", "Vous préférez une masseuse ? Dites-le-nous, on demande."]
+    "steps": ["On passe vous prendre à l'hôtel.", "Le hammam traditionnel.", "Un massage de 60 minutes à l'huile d'argan.", "Retour à votre hôtel."],
+    "tips": ["Prenez un maillot, ou demandez ce qui est fourni.", "Bien pratique le lendemain d'une grosse journée comme Marrakech.", "Envie d'un gommage en plus ? Demandez-nous en réservant.", "Vous préférez une masseuse ? Dites-le-nous, on demande."],
+    "card_note": "Bien pratique le lendemain de Marrakech."
    }
   },
   {
    "id": "berber-evening", "site_id": 98, "mood": "slow", "lengths": ["hours"], "status": "sold",
    "slug": {"en": "berber-evening", "fr": "soiree-berbere"}, "img": null, "related": ["camel-bbq", "hammam", "city-tour"],
-   "stack": {"en": ["Pastilla", "Couscous", "Musicians", "Fantasia"], "fr": ["Pastilla", "Couscous", "Musiciens", "Fantasia"]},
+   "route": {"en": ["Evening", "Dinner under the tents", "Ahwach & Gnaoua music", "The fantasia", "Mint tea & pastries"], "fr": ["Le soir", "Dîner sous les tentes", "Musique ahwach et gnaoua", "La fantasia", "Thé et pâtisseries"]},
    "en": {
     "name": "Berber evening & dinner",
     "line": "Dinner under caidal tents — pastilla, couscous, mint tea — with musicians, dancers and fantasia riders.",
@@ -491,7 +499,8 @@
     "lede": "A long dinner under big caidal tents — pastilla, briouates, couscous, fruit, then mint tea and pastries — while Ahwach and Gnaoua groups play, dancers and acrobats perform and fantasia riders charge past.",
     "facts": {"time": "An evening", "food": "Dinner: pastilla, briouates, couscous, fruit, mint tea and pastries"},
     "steps": ["Arrive in the evening and take your place under the tents.", "Dinner, course after course.", "Ahwach and Gnaoua music, dancers and acrobats.", "The fantasia: riders charging in a line and firing together.", "Mint tea and pastries to finish."],
-    "tips": ["Tell us about any food needs when you book.", "The fantasia is loud — warn small children.", "Ask us about getting there and back on the night."]
+    "tips": ["Tell us about any food needs when you book.", "The fantasia is loud — warn small children.", "Ask us about getting there and back on the night."],
+    "card_note": "The fantasia is loud — warn the little ones."
    },
    "fr": {
     "name": "Soirée berbère & dîner",
@@ -501,32 +510,35 @@
     "lede": "Un long dîner sous de grandes tentes caïdales — pastilla, briouates, couscous, fruits, puis thé à la menthe et pâtisseries — pendant que jouent les groupes ahwach et gnaoua, que dansent danseurs et acrobates et que passent au galop les cavaliers de la fantasia.",
     "facts": {"time": "Une soirée", "food": "Dîner : pastilla, briouates, couscous, fruits, thé à la menthe et pâtisseries"},
     "steps": ["Arrivée en soirée, installation sous les tentes.", "Le dîner, plat après plat.", "Musique ahwach et gnaoua, danseurs et acrobates.", "La fantasia : les cavaliers chargent en ligne et tirent ensemble.", "Thé à la menthe et pâtisseries pour finir."],
-    "tips": ["Signalez-nous vos contraintes alimentaires en réservant.", "La fantasia est bruyante — prévenez les petits.", "Demandez-nous comment se passent l'aller et le retour ce soir-là."]
+    "tips": ["Signalez-nous vos contraintes alimentaires en réservant.", "La fantasia est bruyante — prévenez les petits.", "Demandez-nous comment se passent l'aller et le retour ce soir-là."],
+    "card_note": "La fantasia est bruyante — prévenez les petits."
    }
   },
   {
-   "id": "balloon", "site_id": 101, "mood": "slow", "lengths": ["half"], "status": "on_request",
+   "id": "balloon", "site_id": 101, "mood": "slow", "lengths": [], "status": "on_request", "zone": "far",
    "slug": {"en": "hot-air-balloon", "fr": "montgolfiere"}, "img": null, "related": ["hammam", "berber-evening", "paradise-valley"],
-   "stack": {"en": ["Sunrise", "Mint tea", "Up", "Breakfast"], "fr": ["Lever du soleil", "Thé à la menthe", "Envol", "Petit-déjeuner"]},
+   "route": {"en": ["Before sunrise", "Mint tea", "The flight", "Breakfast on the ground"], "fr": ["Avant l'aube", "Thé à la menthe", "Le vol", "Petit-déjeuner au sol"]},
    "en": {
     "name": "Hot-air balloon",
-    "line": "A sunrise flight with mint tea before and breakfast after. Ask us for dates.",
+    "line": "A sunrise flight, mint tea before and breakfast after. Ask us whether it can fly on your dates.",
     "title": "Hot-air balloon at sunrise — on request from Agadir",
     "desc": "A sunrise hot-air balloon flight over the plains and villages, with mint tea before take-off and breakfast after landing. On request — message us for dates.",
     "lede": "Up before the sun, mint tea while the balloon fills, then a slow flight over plains and villages as the light comes up — and breakfast once you're back on the ground. We arrange it on request.",
     "facts": {"time": "Sunrise — an early start", "food": "Mint tea before, breakfast after landing"},
-    "steps": ["Message us with the dates you have.", "We tell you where it flies from and confirm a morning.", "Mint tea while the balloon is prepared.", "The flight over plains and villages at sunrise.", "Breakfast after landing."],
-    "tips": ["Flights depend on the wind — have a back-up morning.", "Layers: it's cold before sunrise, warm by breakfast.", "Ask us a few days ahead."]
+    "steps": ["Message us with the dates you have.", "We check whether a flight is possible, where it flies from, and which morning.", "Mint tea while the balloon is prepared.", "The flight over plains and villages at sunrise.", "Breakfast after landing."],
+    "tips": ["Flights depend on the wind — have a back-up morning.", "Layers: it's cold before sunrise, warm by breakfast.", "Ask us a few days ahead."],
+    "card_note": "Where does it fly from? Ask us — it's on request."
    },
    "fr": {
     "name": "Montgolfière",
-    "line": "Un vol au lever du soleil, thé à la menthe avant, petit-déjeuner après. Demandez-nous les dates.",
+    "line": "Un vol au lever du soleil, thé à la menthe avant, petit-déjeuner après. Demandez-nous si c'est possible à vos dates.",
     "title": "Montgolfière au lever du soleil — sur demande depuis Agadir",
     "desc": "Un vol en montgolfière au lever du soleil au-dessus des plaines et des villages, thé à la menthe avant et petit-déjeuner après l'atterrissage. Sur demande.",
     "lede": "Debout avant le soleil, un thé à la menthe pendant qu'on gonfle le ballon, puis un vol lent au-dessus des plaines et des villages dans la lumière du matin — et le petit-déjeuner une fois au sol. Sur demande.",
     "facts": {"time": "Au lever du soleil — départ très tôt", "food": "Thé à la menthe avant, petit-déjeuner après l'atterrissage"},
-    "steps": ["Envoyez-nous vos dates.", "On vous dit d'où part le vol et on confirme une matinée.", "Thé à la menthe pendant la préparation du ballon.", "Le vol au-dessus des plaines et des villages, au lever du soleil.", "Petit-déjeuner après l'atterrissage."],
-    "tips": ["Le vol dépend du vent : gardez une matinée de secours.", "Plusieurs couches : il fait froid avant l'aube, bon au petit-déjeuner.", "Demandez-nous quelques jours avant."]
+    "steps": ["Envoyez-nous vos dates.", "On vérifie si un vol est possible, d'où il part, et quelle matinée.", "Thé à la menthe pendant la préparation du ballon.", "Le vol au-dessus des plaines et des villages, au lever du soleil.", "Petit-déjeuner après l'atterrissage."],
+    "tips": ["Le vol dépend du vent : gardez une matinée de secours.", "Plusieurs couches : il fait froid avant l'aube, bon au petit-déjeuner.", "Demandez-nous quelques jours avant."],
+    "card_note": "D'où part le vol ? Demandez-nous — c'est sur demande."
    }
   },
   {
@@ -540,7 +552,7 @@
     "lede": "Two days east across the south: Taroudant, saffron country around Taliouine, Taznakht, then down the palm-filled Draa valley to Zagora — a camel to camp, a night under the desert sky and sunrise on the dunes. On request.",
     "facts": {"time": "2 days, 1 night — back in Agadir on the evening of day 2", "pickup": "From your accommodation in Agadir"},
     "steps": ["Day 1: Taroudant, then Taliouine and its saffron fields.", "Taznakht, Agdz and down the Draa valley to Zagora.", "A camel ride to camp, sunset over the dunes, a night in the desert.", "Day 2: sunrise on the dunes, breakfast at camp.", "Back via Agdz and Taroudant, home to Agadir in the evening."],
-    "tips": ["Desert nights are cold, even in spring — pack a warm layer.", "A small overnight bag is easier on a camel.", "Message us with your dates; we'll confirm what's included."]
+    "tips": ["Desert nights are cold, even in spring — pack a warm layer.", "A small overnight bag is easier on a camel.", "Message us with your dates; we'll tell you whether it can run and what's included."]
    },
    "fr": {
     "name": "Désert de Zagora, 2 jours",
@@ -550,13 +562,13 @@
     "lede": "Deux jours vers l'est à travers le Sud : Taroudant, le pays du safran autour de Taliouine, Taznakht, puis la vallée du Drâa et ses palmiers jusqu'à Zagora — un chameau jusqu'au bivouac, une nuit sous le ciel du désert et le lever du soleil sur les dunes. Sur demande.",
     "facts": {"time": "2 jours, 1 nuit — retour à Agadir le soir du 2e jour", "pickup": "À votre hébergement à Agadir"},
     "steps": ["Jour 1 : Taroudant, puis Taliouine et ses champs de safran.", "Taznakht, Agdz, et la vallée du Drâa jusqu'à Zagora.", "À dos de chameau jusqu'au bivouac, coucher de soleil sur les dunes, nuit dans le désert.", "Jour 2 : lever du soleil sur les dunes, petit-déjeuner au camp.", "Retour par Agdz et Taroudant, arrivée à Agadir le soir."],
-    "tips": ["Les nuits du désert sont froides, même au printemps : une couche chaude.", "Un petit sac pour la nuit, c'est plus simple à dos de chameau.", "Écrivez-nous vos dates ; on vous confirme ce qui est compris."]
+    "tips": ["Les nuits du désert sont froides, même au printemps : une couche chaude.", "Un petit sac pour la nuit, c'est plus simple à dos de chameau.", "Écrivez-nous vos dates ; on vous dira si le circuit peut se faire et ce qui est compris."]
    }
   },
   {
    "id": "el-borj", "site_id": 81, "mood": "further", "lengths": ["two"], "status": "on_request",
-   "slug": {"en": "el-borj-desert", "fr": "desert-d-el-borj"}, "img": null, "related": ["zagora", "legzira", "little-desert"],
-   "stack": {"en": ["Tiznit", "Legzira", "El Borj", "Tighmert"], "fr": ["Tiznit", "Legzira", "El Borj", "Tighmert"]},
+   "slug": {"en": "el-borj-desert", "fr": "desert-d-el-borj"}, "img": null, "map": [28.6555, -9.8888], "related": ["zagora", "legzira", "little-desert"],
+   "route": {"en": ["Agadir", "Tiznit", "Legzira", "El Borj dunes", "Tighmert"], "fr": ["Agadir", "Tiznit", "Legzira", "Dunes d'El Borj", "Tighmert"]},
    "en": {
     "name": "El Borj desert, 2 days",
     "line": "Tiznit and Legzira on the way, sunset in the El Borj dunes and a night in tents; camels and the Tighmert palm grove next day.",
@@ -565,7 +577,8 @@
     "lede": "Two days south: Tiznit, lunch by the sea at Legzira, sunset in the El Borj dunes and a night in tents — then camels, old rock carvings and the Tighmert palm grove. On request.",
     "facts": {"time": "2 days, 1 night — back in Agadir around 18:00 on day 2"},
     "steps": ["Day 1: south to Tiznit.", "Lunch at Legzira, by the ocean.", "On to the El Borj dunes for sunset, and a night in tents.", "Day 2: a camel ride and the rock carvings.", "Lunch in the Tighmert palm grove, then home, around 18:00."],
-    "tips": ["Warm layer for the night; sunscreen for the day.", "Pack light — one small bag.", "Message us with your dates and we'll confirm the details."]
+    "tips": ["Warm layer for the night; sunscreen for the day.", "Pack light — one small bag.", "Message us with your dates and we'll tell you whether it can run."],
+    "card_note": "Tell us your dates first."
    },
    "fr": {
     "name": "Désert d'El Borj, 2 jours",
@@ -575,31 +588,32 @@
     "lede": "Deux jours vers le sud : Tiznit, déjeuner face à la mer à Legzira, coucher de soleil dans les dunes d'El Borj et nuit sous la tente — puis les chameaux, des gravures rupestres et la palmeraie de Tighmert. Sur demande.",
     "facts": {"time": "2 jours, 1 nuit — retour à Agadir vers 18 h le 2e jour"},
     "steps": ["Jour 1 : cap au sud jusqu'à Tiznit.", "Déjeuner à Legzira, face à l'océan.", "Les dunes d'El Borj au coucher du soleil, et la nuit sous la tente.", "Jour 2 : balade à dos de chameau et gravures rupestres.", "Déjeuner dans la palmeraie de Tighmert, puis retour vers 18 h."],
-    "tips": ["Une couche chaude pour la nuit, de la crème solaire pour le jour.", "Voyagez léger : un petit sac.", "Écrivez-nous vos dates, on vous confirme les détails."]
+    "tips": ["Une couche chaude pour la nuit, de la crème solaire pour le jour.", "Voyagez léger : un petit sac.", "Écrivez-nous vos dates, on vous dira si le circuit peut se faire."],
+    "card_note": "Donnez-nous d'abord vos dates."
    }
   },
   {
-   "id": "marrakech-essaouira", "site_id": 80, "mood": "further", "lengths": ["two"], "status": "on_request",
+   "id": "marrakech-essaouira", "site_id": 80, "mood": "further", "lengths": ["two"], "status": "on_request", "zone": "far",
    "slug": {"en": "marrakech-essaouira", "fr": "marrakech-essaouira"}, "img": "essaouira-lane", "related": ["marrakech", "essaouira", "zagora"],
    "en": {
     "name": "Marrakech & Essaouira, 2 days",
     "line": "Marrakech's palaces and souks, a night in a hotel, then Essaouira's medina and the coast road home.",
     "title": "Marrakech and Essaouira in 2 days from Agadir",
     "desc": "Two cities in two days, on request: Marrakech's palaces, souks and Jemaa el-Fna, a night in a hotel, then Essaouira's medina and the coast road back to Agadir.",
-    "lede": "Two cities without rushing either. Marrakech's palaces, souks and Jemaa el-Fna at night, a night in a hotel — then over to Essaouira's medina by the sea and home along the coast road. On request.",
+    "lede": "Two cities in two days. Marrakech's palaces, souks and Jemaa el-Fna, then a night in a hotel — then over to Essaouira's medina by the sea and home along the coast road. On request.",
     "facts": {"time": "2 days, 1 night in a hotel — back in Agadir around 18:00 on day 2"},
-    "steps": ["Day 1: Marrakech — the palaces and the souks.", "Jemaa el-Fna in the evening, and a night in a hotel.", "Day 2: across to Essaouira and its medina.", "Lunch by the sea.", "Home to Agadir along the coast road, around 18:00."],
-    "tips": ["Walking shoes for two city days.", "A jacket for windy Essaouira.", "Message us with your dates; we'll confirm the hotel and what's included."]
+    "steps": ["Day 1: Marrakech — the palaces and the souks.", "Jemaa el-Fna, then a night in a hotel.", "Day 2: across to Essaouira and its medina.", "A seafood lunch.", "Home to Agadir along the coast road, around 18:00."],
+    "tips": ["Walking shoes for two city days.", "A jacket for windy Essaouira.", "Message us with your dates; we'll tell you whether it can run, with which hotel and what's included."]
    },
    "fr": {
     "name": "Marrakech & Essaouira, 2 jours",
     "line": "Les palais et les souks de Marrakech, une nuit à l'hôtel, puis la médina d'Essaouira et la route de la côte pour rentrer.",
     "title": "Marrakech et Essaouira en 2 jours depuis Agadir",
     "desc": "Deux villes en deux jours, sur demande : les palais, les souks et Jemaa el-Fna à Marrakech, une nuit à l'hôtel, puis la médina d'Essaouira et la route de la côte.",
-    "lede": "Deux villes sans courir. Les palais et les souks de Marrakech, Jemaa el-Fna le soir, une nuit à l'hôtel — puis la médina d'Essaouira au bord de l'océan, et retour par la route de la côte. Sur demande.",
+    "lede": "Deux villes en deux jours. Les palais et les souks de Marrakech, Jemaa el-Fna, puis une nuit à l'hôtel — ensuite la médina d'Essaouira au bord de l'océan, et retour par la route de la côte. Sur demande.",
     "facts": {"time": "2 jours, 1 nuit à l'hôtel — retour à Agadir vers 18 h le 2e jour"},
-    "steps": ["Jour 1 : Marrakech — les palais et les souks.", "Jemaa el-Fna le soir, et une nuit à l'hôtel.", "Jour 2 : direction Essaouira et sa médina.", "Déjeuner face à la mer.", "Retour à Agadir par la route de la côte, vers 18 h."],
-    "tips": ["De bonnes chaussures pour deux jours en ville.", "Une veste pour Essaouira et son vent.", "Écrivez-nous vos dates ; on vous confirme l'hôtel et ce qui est compris."]
+    "steps": ["Jour 1 : Marrakech — les palais et les souks.", "Jemaa el-Fna, puis une nuit à l'hôtel.", "Jour 2 : direction Essaouira et sa médina.", "Un déjeuner de fruits de mer.", "Retour à Agadir par la route de la côte, vers 18 h."],
+    "tips": ["De bonnes chaussures pour deux jours en ville.", "Une veste pour Essaouira et son vent.", "Écrivez-nous vos dates ; on vous dira si le circuit peut se faire, avec quel hôtel et ce qui est compris."]
    }
   }
  ]
