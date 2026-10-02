@@ -1,6 +1,6 @@
 # BUILD STATUS — hala-tours
 
-_Last updated: 2026-10-02 by BuildHala (Phase 3 in progress — all pages built EN+FR; QA rounds running)_
+_Last updated: 2026-10-02 07:45 UTC by BuildHala (Phase 3 complete — 78 pages EN+FR + 404 live, QA done)_
 
 ## Recovered state (resume of crashed run "agadir-batch2")
 - Prior run left ONLY raw material (no repo, no status files, no code, no deployment):
@@ -45,7 +45,7 @@ _Last updated: 2026-10-02 by BuildHala (Phase 3 in progress — all pages built 
 - "Add to my day" picks persist in localStorage across pages/languages; dock shows count; day pages dock → "Today's price" (#ask).
 
 ## Pages remaining
-- None to build. Remaining work: QA round 2, perf numbers, QA_CHECKLIST claim table, live verification.
+- None. All BRAND_NOTES page-map pages built EN + FR.
 
 ## Factual uncertainties
 - PHONE CONFLICT: site +212 660 732 477 (also its WhatsApp button) vs Google +212 660 732 177. Unresolvable online → owner must confirm. Build with ONE constant (working value …477).
@@ -56,17 +56,22 @@ _Last updated: 2026-10-02 by BuildHala (Phase 3 in progress — all pages built 
 - Multi-day tours + balloon + Tafraout: listed but unconfirmed → shown with an "On request" badge and route facts only.
 - Homepage lengths per day ("Couple of hours / Half day / All day / Two days") are approximate groupings from the live site's stated times; Paradise Valley shown as half or full day (owner question 11); Crocoparc "half day" is our grouping (30 min drive each way + park).
 - Live "desk open now" status uses the Google hours in Africa/Casablanca time (Ramadan hours unknown).
+- Legzira photo is the surviving arch (Commons, dated 2018); captioned as such — copy promises no arches.
+- Sandboarding: legacy text (copied) vs reviews disagree on where it runs → page names no dunes/lunch, "ask us".
 
 ## QA status
-- Phase 2 self-checks done (see Log 06:32). Full QA pending (phase 4; QA_CHECKLIST.md).
+- Phase 3 QA done: 3 screenshot rounds (qa/hala-tours/p3/r1-*, r2-*, r3-*, live-home-390), 360 px overflow sweep over all 79 pages, forms EN/FR decoded, perf per template, check_site OK (2 WARN justified: real quote "Paradise city"). Details + per-page claim tables in QA_CHECKLIST.md.
 
 ## Deployment URL
-- target: https://hala-tours.peashoot.io/ (Cloudflare Pages project "hala-tours", output dir `site/`, no build command) — not yet created
+- https://hala-tours.peashoot.io/ — Cloudflare Pages project "hala-tours" (output dir `site/`). Push does NOT auto-deploy: run `/home/agent/agadir-pilot/tools/cf-static-deploy.sh hala-tours deploy` after pushing.
+- Live check 2026-10-02 (deploy 9f4f269): `/`, `/days/marrakech/`, `/fr/`, `/fr/sorties/vallee-du-paradis/` → 200, canonical correct, no broken images, no overflow at 390, mailto links intact (no Cloudflare email-protection rewrite), `/does-not-exist/` → 404 page; no failed requests/console errors after allowing the Cloudflare Insights beacon in CSP.
 
 ## Outstanding problems
 - Orphan Google Maps tabs may remain in shared Chromium from ResearchHala's timed-out tab.run (not closable from its kernel) — orchestrator informed.
 - No photo of the desk/Hamilton entrance (biggest image gap; Fadwa could take one). Visit section uses the OSM locator + minibus photo instead.
 - Guests' faces in Hala's own photos (hero riders, minibus selfie) — owner should confirm reuse consent.
+- Homepage at 390 is 11.8k CSS px (target ≈11k; was 16.9k). Further cuts would drop chapter intros or photos the review asked to keep.
+- Visit page has no photo of the desk itself (none exists).
 
 ## Log
 - 05:08 recovery: workspace created from prior raw research; brief + standard written.
@@ -78,3 +83,7 @@ _Last updated: 2026-10-02 by BuildHala (Phase 3 in progress — all pages built 
 - 06:10 round 1 (qa/hala-tours/p2/round1-*): mobile fold strong but eyebrow repeated the header ("at the Hotel Hamilton" twice), rating below the fold; rows 150 px tall because "Add to my day" had its own line (page 17.9k px); locator map showed mostly grass (only primary/tertiary roads, no buildings/service roads) and its label covered the pin; day map labels unreadable at 390 (product names, 15 px at 0.75 scale) and Paradise Valley/Taroudant collided; desktop flipped chapters squeezed the list into the 5/12 column; thumb index visible over the hero with ellipsised labels; reviews heading read "5.0 5.0 on Google". → eyebrow now states what Hala sells, proof moved directly under the photo, add-button moved to the length row, locator rebuilt with buildings/service roads/pools/beach (RDP-simplified, 92 KB HTML / 26 KB gz), short map labels at 19 px, flip grid 7/5, thumbs use short names and appear only when the guide crosses mid-screen, heading fixed; adults/children pluralised properly in the WhatsApp text.
 - 06:25 round 2 (round2-*): desktop rhythm right, all chapters balanced; mobile 16.9k px (was 17.9k). Remaining: proof rows loose on phone, cobalt "Two days" tab invisible on the cobalt menu sheet → tightened, sheet tab inverted to paper.
 - 06:32 round 3 (round3-390-fold/full/menu, round3-1440-fold/full/guide): final. Functional checks at 360/390: no horizontal overflow (scrollWidth 360), menu aria-expanded/Esc/focus return/closes on link tap, length filter (Two days → 3 rows, 6 chapters collapse), Add to my day → dock count + planner chips, validation errors (adults 0), composed wa.me text decoded correctly (no empty/undefined lines), mailto fallback body, no console errors, no failed requests on fresh loads. check_site OK, 0 WARN. Tab closed, preview stopped.
+- 07:00 BuildHala: days.json (24 records EN+FR, fresh copy), 8 Commons place photos (API metadata in research/raw/commons/chosen.json) + 3 more own photos, multi-page build (39 page keys × 2), inner-page CSS, generic WhatsApp forms (plan/day/transfer), localStorage picks. Commit c55a93b.
+- 07:10 round 1 screenshots; homepage 16.6k → 11.8k px; EN+FR pages commit 88d082b, deployed (orchestrator: deploy via cf-static-deploy.sh; email_off wrapping added).
+- 07:25 round 2: FR, menu, forms filled/success, 404, desktop; fixes (mood filter placement, dock labels, valleys note overlap). Perf + functional checks recorded. Commits f545524, 9e2c507.
+- 07:45 live verification; CSP allowed Cloudflare Insights beacon (was blocked). Commit 9f4f269 deployed. Tab closed, preview stopped.
