@@ -66,6 +66,7 @@ _Last updated: 2026-10-02 by FixHala (Phase 4 fix pass — Audit A + B findings 
 ## Deployment URL
 - https://hala-tours.peashoot.io/ — Cloudflare Pages project "hala-tours" (output dir `site/`). Push does NOT auto-deploy: run `/home/agent/agadir-pilot/tools/cf-static-deploy.sh hala-tours deploy` after pushing.
 - Live check 2026-10-02 (deploy 9f4f269): `/`, `/days/marrakech/`, `/fr/`, `/fr/sorties/vallee-du-paradis/` → 200, canonical correct, no broken images, no overflow at 390, mailto links intact (no Cloudflare email-protection rewrite), `/does-not-exist/` → 404 page; no failed requests/console errors after allowing the Cloudflare Insights beacon in CSP.
+- Live check 2026-10-02 after phase 4 (deploy 3aafb61, CSS ?v=de8413ae): at 390 `/`, `/fr/`, `/days/`, `/days/hot-air-balloon/`, `/days/buggy/`, `/where-we-go/`, `/transfers/`, `/visit/`, `/fr/sorties/desert-de-zagora/`, valleys mood page → no overflow, no broken images, no aggregateRating, no console errors/failed requests; header FR pill → `/fr/`; "Two days" filter → 1 chapter + "3 days fit “Two days”"; balloon form → "Could it run on my dates…" decoded. Shots `qa/hala-tours/p4-fix/live-*`.
 
 ## Outstanding problems
 - Orphan Google Maps tabs may remain in shared Chromium from ResearchHala's timed-out tab.run (not closable from its kernel) — orchestrator informed.
@@ -90,3 +91,4 @@ _Last updated: 2026-10-02 by FixHala (Phase 4 fix pass — Audit A + B findings 
 - 07:25 round 2: FR, menu, forms filled/success, 404, desktop; fixes (mood filter placement, dock labels, valleys note overlap). Perf + functional checks recorded. Commits f545524, 9e2c507.
 - 07:45 live verification; CSP allowed Cloudflare Insights beacon (was blocked). Commit 9f4f269 deployed. Tab closed, preview stopped.
 - Phase 4 FixHala: facts/copy fixes in days/en/fr.json (on-request framing, "at the Hamilton", flamingo hedges, sandboarding/hammam specifics removed, transfers wording, FR typography pass in build.py, FR alts via images.json alt_fr, mobile hero re-cut), UI fixes (filter collapse + aria-live, whole-row links, mobile EN/FR pill, 44 px hero tabs, compact chapters 4–7, map teaser + full where map, route cards, dock picks chip, success box, 404 font, thumb index on the book edge, desktop h1 on two lines). Commit 3794b38 + follow-ups.
+- Phase 4 deploy 3aafb61 (cf-static-deploy) + live verification at 390; tab closed, preview stopped.
