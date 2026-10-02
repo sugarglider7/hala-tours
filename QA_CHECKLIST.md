@@ -439,3 +439,202 @@ Round 1 (`r1-*`): home 390/1440, day quad 390/1440, Paradise Valley 390, balloon
 Round 2 (`r2-*`): menu open 390, day ask form filled + success 390, planner error + success (filled) 390, 404 390, FR home 390/1440, FR Zagora 1440, FR Legzira 390, all days 1440, FR mood at 360 (+ `r2b-fr-dock-360` after dock fix).
 Round 3 (`r3-*`): home 390/1440 final, Marrakech day 390, FR Paradise Valley 1440, 404 1440.
 Fixed between rounds: homepage 16.6k → 11.8k px (3 rows per mood, line hidden on phones, 2:1 photos with the desk note hanging off the photo, compact desk, 2–3 quotes, optional planner details), "All 3 days in Two days, one night away" wording, mood-page filter moved under the band, desktop mood tab stretching, FR dock label wrapping at 360, valleys stack note overlap, 404 WhatsApp label.
+
+## Audit A — facts & copy
+
+_Phase 4, AuditFactsHala, 2026-10-02. Scope: `tools/content/{days,catalogue,en,fr}.json`, `tools/images.json`, `tools/build.py` templates, all 79 generated `site/**/*.html` (text, meta, JSON-LD). Rendered spot checks: `/`, `/moods/sand-and-engines/`, `/days/little-desert/`, `/days/crocoparc/` (no photo), `/days/marrakech/`, `/days/hot-air-balloon/` (on request, no photo), `/days/zagora-desert/` (on request), `/visit/`, `/transfers/`, `/reviews/`, `/credits/`, `/fr/`, `/fr/nous-trouver/`, `/fr/sorties/montgolfiere/`, `/fr/transferts/`. Live checked with curl: same copy as the repo (deploy 9f4f269). Copy findings apply at every viewport. Base URL: https://hala-tours.peashoot.io._
+
+**Checked and passing (no action needed):**
+- Phone: only +212 660 732 477 / `tel:+212660732477` / `wa.me/212660732477` (470 / 416 / 394 occurrences). The Google variant …177 never appears, and neither does any other number.
+- Prices: no €, MAD, DH, dirham or euro figures anywhere, transfers included.
+- People: Ayoub is named by first name only, with no title, as "Ayoub and the team". Mustafa, Larcen, Hassan, Jamal and the other names never appear, not even inside quotes.
+- Quotes: all 11 match `research/raw/google_reviews_2026-10-02.json` word for word. All 11 reviews were originally written in English (not Google translations). Names appear as Google shows them ("daniel oconnell"), with no dates. The excerpts keep the original meaning.
+- Reuse of old-site wording: I compared 7-word sequences across EN and FR against `research/raw/crawl*/` and `products_live.txt`, which includes the copied competitor text. The only matches were the address and phone/email block, "prise en charge à votre hôtel à Agadir", "to the mouth of the Souss river", "at the Youssef Ben Tachfine dam, Aglou beach" and "20 min, 30 min ou une heure". None of the copied paragraphs were reused.
+- Out-of-date place facts: the site never mentions the Tifnit fishing or cave village, never promises Legzira arches, gives no Crocoparc opening hours, gives no Essaouira drive time, and does not mention the Tafraout Wednesday souk or almond blossom.
+- Commons photos (8 files): author, licence and licence link match `research/raw/commons/chosen.json`. Each is captioned "the place, not our trip" on every page that uses it (10 pages) and listed on `/credits/`. None of them shows a vehicle, guide or group.
+- Language claim: "We speak English and French" / "On parle anglais et français", plus `knowsLanguage` en and fr. This matches the SOT.
+- Opening hours (Mon–Sat 08:00–23:00, Sun 09:00–22:00) and the address match on every page and in both languages. The EN and FR numbers (times, km, minutes, ages) match for all 24 days.
+- Every page has exactly one h1, a correct self-canonical, and en/fr/x-default hreflang pointing to pages that exist. Titles and meta descriptions are unique. STANDARD §3 banned words: none found in EN or FR.
+
+### P1 — must fix
+
+**A1 · P1 · every on-request day page, EN + FR: `/days/hot-air-balloon/`, `/days/tafraout/`, `/days/zagora-desert/`, `/days/el-borj-desert/`, `/days/marrakech-essaouira/` and the `/fr/sorties/…` mirrors**
+- **What's wrong:** The "On request" box says "This one doesn't run every week." (FR "Cette sortie ne part pas toutes les semaines."), from `en.json`/`fr.json` `day.request_text`. Directly under it, the CTA says "Check today's price on WhatsApp" (`day.ask_title`), and "Times are usual times — we confirm yours when you book." (`day.times_note`) is printed too.
+- **Why it matters:** These five products have no evidence they are still sold. SOT says "UNVERIFIED as currently sold", and orchestrator decision 2 says frame them as "on request — ask us for dates". "Doesn't run every week", "today's price" and "usual times" all tell the reader the trip does run, with a price and a timetable. That is exactly the owner-embarrassment case from the brief ("We don't sell this anymore").
+- **Fix:**
+  - `request_text` → "We arrange this one on request. Message us with your dates and we'll tell you honestly whether we can do it." / FR "On l'organise sur demande. Écrivez-nous vos dates : on vous dira franchement si c'est possible."
+  - When `status == on_request`: set `ask_title` → "Ask us about dates on WhatsApp" / "Demandez-nous les dates sur WhatsApp".
+  - When `status == on_request`: hide `times_note`.
+
+**A2 · P1 · footer of all 39 FR pages, e.g. `/fr/`**
+- **What's wrong:** "Le comptoir d'excursions de l'hôtel Hamilton, à Agadir." (`fr.json` `footer.line`). In French this means "the Hotel Hamilton's excursion desk", i.e. the hotel's own desk. The EN line says "The local travel desk at the Hotel Hamilton".
+- **Why it matters:** It claims Hala is affiliated with, or run by, the hotel. Nothing supports that (SOT §b: "at/inside", not "of"). Both the Hamilton and the owner could object.
+- **Fix:** "Le comptoir d'excursions installé à l'hôtel Hamilton, à Agadir." or "Votre comptoir d'excursions à l'hôtel Hamilton, Agadir."
+
+### P2 — should fix
+
+**A3 · P2 · `/visit/`, `/` (#desk), `/fr/nous-trouver/`, `/fr/`, visit meta descriptions**
+- **What's wrong:** The site states as fact that the desk is "inside the Hotel Hamilton" (`desk.text`, `visit_page.find[0]`, `visit_page.desc`), and FR "dans l'hôtel Hamilton" / "Nous sommes dans l'hôtel Hamilton".
+- **Why it matters:** The business itself only writes "(Hotel Hamilton) Boulevard Mohamed V" (S1). "Inside / main reception" is PROBABLE, from reviews only, and the exact spot is still owner question 3. The brief says "at/around".
+- **Fix:** Use "at the Hotel Hamilton" / "à l'hôtel Hamilton" everywhere. Keep the reception hint as soft advice, which is already done well: "Can't see us straight away? Ask at reception."
+
+**A4 · P2 · `/visit/` lede + `/fr/nous-trouver/`**
+- **What's wrong:** "A real desk in a real hotel. Walk in, sit down, tell us what you fancy" / "Entrez, asseyez-vous".
+- **Why it matters:** Nothing establishes seating, and walk-ins are only PROBABLE (SOT §b "Walk-ins"). The owner may have a counter, not chairs.
+- **Fix:** "Come by the desk during opening hours and tell us what you fancy — or message us first and we'll have ideas ready." / "Passez au comptoir aux heures d'ouverture et dites-nous ce qui vous tente — ou écrivez-nous d'abord…"
+
+**A5 · P2 · `/where-we-go/` + `/fr/ou-nous-allons/`**
+- **What's wrong:**
+  - Tafraout, Zagora, El Borj, Marrakech & Essaouira and the balloon are listed with no "On request" badge (0 badges on the page, versus 5 on `/days/`).
+  - The "Further out" intro promises "Day trips and longer trips, with pickup from your hotel." (`where_page.away_text`).
+- **Why it matters:**
+  - It is the only list of days that drops the on-request framing.
+  - Hotel pickup is not stated for El Borj, Marrakech & Essaouira, Tafraout or the balloon.
+- **Fix:**
+  - Render `u.on_request` in `render_where` `lst()` when `status == on_request`.
+  - `away_text` → "Day trips and longer trips — most with pickup from your hotel; the longer ones on request." / FR "…la plupart avec prise en charge à l'hôtel ; les plus longues sur demande."
+
+**A6 · P2 · `/days/sandboarding/` + `/fr/sorties/sandboard/` (also the home and Sand mood rows)**
+- **What's wrong:**
+  - Timing "A couple of hours on its own, or half a day combined with quads" (`days.json` sandboarding `facts.time`), plus lengths `hours`/`half`.
+  - The lede says "Most people do it as part of a bigger afternoon".
+- **Why it matters:** No source gives a sandboarding duration. The old page (copied from a Tripadvisor listing) describes a day trip north to Taboga with lunch at Tamri. Two reviews describe a roughly 4-hour quad + sandboard combo in the south. "A couple of hours" and "most people" are invented.
+- **Fix:**
+  - Drop `facts.time`, or use "Ask us — on its own or as part of a quad afternoon".
+  - Lede → "A board, a tall dune and the walk back up. It's at its best as part of a bigger afternoon — quads first, then the boards, sometimes a camel at the end."
+  - Lengths: keep `half` only, or let the tip "ask us" cover it.
+
+**A7 · P2 · `/days/hammam/` + `/fr/sorties/hammam/` (including the day page's place-name stack "Black soap")**
+- **What's wrong:** The lede says "Steam, a proper scrub, then an hour's massage", step 2 says "A traditional hammam: steam and a scrub", the FR says "un vrai gommage" / "vapeur et gommage", and the place-name stack shows "Black soap / Savon noir".
+- **Why it matters:** The source only says "take advantage of the hammam" plus a 60-minute argan massage. A scrub (gommage) or black soap is not stated, and spas often charge extra for it. Promising it is an inclusion claim.
+- **Fix:**
+  - Lede → "Time in a traditional hammam, then an hour's massage with argan oil."
+  - Step → "A traditional hammam."
+  - Stack: "Black soap" → "Hammam".
+  - Optional tip: "Want a gommage (scrub)? Ask us when you book."
+
+**A8 · P2 · `/days/camel/`, `/days/camel-bbq/`, `/days/horse-riding/`, Animals mood (`moods.hooves.intro`), `/moods/hooves-humps-and-crocodiles/`, FR mirrors**
+- **What's wrong:** Flamingos are promised as a certainty: "where flamingos feed in the shallows", "The mouth of the Souss river, and its flamingos", "Flamingos in the shallows".
+- **Why it matters:** The Hala source for camel + BBQ (id 87) itself says "If you are lucky, you may see migratory birds (flamingos…)". Flamingos are seasonal, so a guest who sees none has a fair complaint.
+- **Fix:** Add a hedge once per page, e.g. "the Souss river, where flamingos often feed in the shallows" / "…et, souvent, ses flamants roses". Keep the step as "The mouth of the Souss river — flamingos, if they're about."
+
+**A9 · P2 · `/days/hot-air-balloon/`, `/moods/go-slow/`, `/fr/sorties/montgolfiere/`, `/fr/envies/au-ralenti/`**
+- **What's wrong:**
+  - The balloon is labelled "Half a day".
+  - The Go slow mood title says "Hammam, Berber evening & sunrise balloon — slow days in Agadir".
+- **Why it matters:** The launch site is unknown (SOT notes: "location not stated; photos are Marrakech/other"). The page body honestly says "We tell you where it flies from", but the length label and "in Agadir" claim a local half-day.
+- **Fix:**
+  - Drop the length, or use a neutral "Ask us" length label.
+  - Mood title → "Hammam, Berber evening & a sunrise balloon on request — slow days from Agadir" (FR "…au départ d'Agadir").
+
+**A10 · P2 · all FR pages, e.g. `/fr/` ("Quelle journée vous fait envie ?")**
+- **What's wrong:** French high punctuation uses an ordinary breaking space: 175× before "?", 108× before ":", 82× before ";" (FR "!" lines too, e.g. "Passez nous dire bonjour !"). "« Ajouter à ma journée »" has ordinary spaces inside the guillemets. Template strings have no space at all: "Photo: Baca12" and "Utilisée sur:" (8+8×, `build.py` caption and credits rows).
+- **Why it matters:**
+  - On a 360–390 px phone, "?" or ":" can wrap alone onto the next line. Example: the h1 "Quelle journée vous fait envie ?" at 44 px.
+  - The missing spaces are plain French typography errors.
+- **Fix:**
+  - In `build.py`, post-process FR text nodes: replace `" ([?!;:»])"` with `"\u202f\1"` (and `"\u00a0"` before ":"), and `"« "` with `"«\u202f"`.
+  - Make the FR caption/credits strings "Photo : " and "Utilisée sur : " (move them into `fr.json`).
+
+**A11 · P2 · about 27 of 28 FR pages that have images, e.g. `/fr/`, `/fr/sorties/marrakech/`, `/fr/nous-trouver/`**
+- **What's wrong:** Every `alt` is in English: "A line of riders on horseback along a cliff-top path above the Atlantic surf", "The Koutoubia minaret rising above palm trees…", "A minibus full of smiling, waving passengers…".
+- **Why it matters:** Screen-reader users and image search get English on `lang="fr"` pages, which breaks the "full FR mirror" rule (STANDARD §3).
+- **Fix:**
+  - Add `alt_fr` to every entry in `tools/images.json`, e.g. "Une file de cavaliers sur un sentier de falaise au-dessus de l'Atlantique". Make `img()` pick the alt by language.
+  - While there, change `group-4x4` "and their guide" → "and a man in a blue robe". It isn't established that he is the guide.
+
+**A12 · P2 · `/fr/` (#reviews) and `/fr/avis/` title + description**
+- **What's wrong:** "5,0 sur Google, sur 390 avis" and "Avis — 5,0 sur Google, sur 390 avis" (`fr.json` `reviews.title`, `reviews_page.title/desc`).
+- **Why it matters:** The doubled "sur… sur" reads like a literal translation.
+- **Fix:** "5,0 sur Google · 390 avis" (title: "Avis — 5,0 sur Google (390 avis)"). Desc: "…: 5,0 sur Google pour 390 avis."
+
+**A13 · P2 · JSON-LD on `/`, `/visit/`, `/fr/`, `/fr/nous-trouver/` (`build.py` `org()`)**
+- **What's wrong:** The TravelAgency `aggregateRating` (5.0 / 390) is copied from Google Maps reviews.
+- **Why it matters:** The figures are verified, but Google's review-snippet rules exclude self-serving LocalBusiness ratings and ratings collected on a third-party platform. That risks a structured-data manual action. The 390 count will also go stale silently.
+- **Fix:** Remove `aggregateRating` from `org()`. Keep the visible "5.0 on Google" text, which is fine.
+
+**A14 · P2 · Google listing linked from every page ("Open in Google Maps" / "Read them all on Google")**
+- **What's wrong:** The Google listing shows +212 6 60 73 21 77. The site shows …477 (orchestrator decision 1).
+- **Why it matters:** A guest who taps through sees two different numbers. This doesn't block the owner meeting, but it is the first thing to settle there.
+- **Fix:** Fadwa asks the owner which number is live on WhatsApp. If it is …177, change the one constant `catalogue.json` `contact` and rebuild. If it is …477, the owner should correct the Google listing.
+
+### P3 — polish
+
+**A15 · P3 · day lengths, every guide row + `/fr/organiser/`**
+- **What's wrong:** Jet ski (20 min–1 h) is labelled "Couple of hours" / FR "Quelques heures". The FR long label for `hours` is "Deux ou trois heures" (`fr.json` `ui.lengths.hours`), which contradicts both the jet ski and EN "A couple of hours".
+- **Fix:** EN "An hour or two" / FR "Une heure ou deux" for `hours`, in both `lengths` and `length_short`.
+
+**A16 · P3 · `/days/legzira/`, `/fr/sorties/legzira/`**
+- **What's wrong:** The name is "Legzira & Massa, with lunch", but no step goes to Massa (the old-site title says "Legzira+Massa", but the itinerary is the dam, Aglou, Legzira, Tiznit and the dunes).
+- **Fix:** Either rename to "Legzira & Aglou, with lunch" / "Legzira & Aglou, déjeuner compris", or ask the owner where Massa fits.
+
+**A17 · P3 · Legzira photo caption on `/days/legzira/` and `/credits/` (EN + FR)**
+- **What's wrong:** "Legzira beach, 2018 — the arch that still stands" uses the present tense for a 2018 photo. Legzira's arches have been collapsing (2016).
+- **Fix:** "Legzira beach in 2018, after the big arch fell" / FR "La plage de Legzira en 2018, après la chute de la grande arche".
+
+**A18 · P3 · invented specifics in day records (`days.json`)**
+- **What's wrong** (none of these is in any source):
+  - Little Desert: "an hour in Tiznit's old walled town" (EN lede).
+  - Taroudant: "back in the evening" (facts.time).
+  - Horse riding: "Horses matched to the riders" / "Un cheval pour chaque cavalier".
+  - Boat trip: "the catch of the day grilled on deck" (the source says fresh fish, not your catch).
+  - Marrakech & Essaouira: "Two cities without rushing either", "Jemaa el-Fna at night / le soir" and "Lunch by the sea" (the source says "a seafood meal", Jemaa el-Fna by day).
+- **Fix:**
+  - Little Desert: "time in Tiznit's old walled town".
+  - Taroudant: "Out around 08:30–09:00; ask us the return time".
+  - Horse riding: "Horses and a guide" / "Des chevaux et un guide".
+  - Boat trip: "fresh fish grilled on deck".
+  - Marrakech & Essaouira: "Two cities in two days", "Jemaa el-Fna before the night in a hotel", "A seafood lunch".
+
+**A19 · P3 · `/transfers/` + `/fr/transferts/`**
+- **What's wrong:**
+  - "Someone waiting when you land" / "Quelqu'un qui vous attend à l'arrivée" (a meet-and-greet promise that isn't stated).
+  - "Late arrivals are fine" (a policy; reviews only show a 2 AM run *to* the airport).
+  - "one size for 1–3 people, one for 4–7" (vehicle types are UNVERIFIED; the source has price tiers, not sizes).
+  - Zoltán Tóth's quote is about the vans on day trips, not transfers.
+- **Fix:**
+  - Lede → "A lift from the airport to your hotel, and back when it's time to go."
+  - Late: "Landing late? Tell us your flight and we'll tell you what's possible."
+  - Vehicle: "one rate for 1–3 people, one for 4–7".
+  - Swap the quote for Meem's ("transport is included to and from your hotel"), or drop it.
+
+**A20 · P3 · pickup stated as absolute**
+- **What's wrong:** `/plan/` "Say yes, and we collect you from your hotel on the day." / FR "on vient vous chercher à l'hôtel le jour J". Jet ski, camel + BBQ, the Berber evening and the balloon have no stated pickup.
+- **Fix:** "…and, for most days, we collect you from your hotel."
+
+**A21 · P3 · `/visit/` "Ayoub and the team" + FR**
+- **What's wrong:** "Most people meet Ayoub at the desk." / "La plupart des gens rencontrent Ayoub au comptoir." This is a statistic-style claim taken from review counts (130 of 390).
+- **Fix:** "At the desk you'll usually find Ayoub." / "Au comptoir, c'est souvent Ayoub qui vous accueille."
+
+**A22 · P3 · street name inconsistency**
+- **What's wrong:** The address, map text and JSON-LD say "Boulevard Mohammed V", but the locator alt says "Avenue Mohammed V" (`desk.map_alt`, EN + FR). Hala writes "Boulevard Mohamed V".
+- **Fix:** Use "Boulevard Mohammed V" in `map_alt` too.
+
+**A23 · P3 · copy that reads like a template, or odd phrasing**
+  - `/days/agadir-city-tour/`: "Your own city in three hours" → "Agadir in three hours". FR "Votre ville en trois heures" → "Agadir en trois heures".
+  - Every day page has the kicker "No prices printed — ever" / "Aucun prix affiché — jamais", which sounds defensive in front of the owner → "Prices change with the season" / "Les prix changent selon la saison".
+  - FR hero: "on sait sûrement quoi faire" is a literal rendering → "on a sûrement une idée".
+  - FR uses filler adjectives: "idéal avec un enfant à côté de vous" (buggy line; it also over-claims) → "pratique avec un enfant à côté de vous". "Parfait le lendemain d'une grosse journée" (hammam) → "Bien pratique le lendemain d'une grosse journée". "Parfait pour une matinée…" (Crocoparc) → "Bien pour une matinée…". "Idéal le premier jour" (city tour) → "À faire dès le premier jour".
+  - FR Little Desert step "là où l'oued rejoint l'océan": this cliché was removed from EN in phase 3 → "le long de la côte, là où se posent les oiseaux".
+
+**A24 · P3 · FR time format**
+- **What's wrong:** Day copy uses "8 h 30" and the visit description "de 8 h à 23 h", but the hours block and footer render "08:00 – 23:00" (`fr.json` `ui.days_range`).
+- **Fix:** FR `days_range` → "8 h – 23 h" / "9 h – 22 h", and format `{open}`/`{close}` the same way.
+
+**A25 · P3 · hygiene**
+- **What's wrong:**
+  - The h1 on on-request days runs into the badge: the accessible name reads "Hot-air balloonOn request" (`<h1>Hot-air balloon<span class="badge">`).
+  - TouristTrip `touristType` holds the mood name ("Sand & engines"), which is not an audience type.
+  - 67 of 79 titles are over 70 characters with the " | Hala Tours Agadir" suffix, e.g. FR Vallée du Paradis at 98, so they get cut off in search results.
+- **Fix:**
+  - Add a space or visually hidden separator before the badge (`' <span…'`).
+  - Remove `touristType`.
+  - Drop the suffix on day and mood titles, which already say "from Agadir".
+
+**A26 · P3 · gaps against the brief**
+- **What's wrong:**
+  - The brief lists "minibuses/buses/transport". The site only offers airport transfers.
+  - Day combinations reviewers booked are missing: Taghazout + Paradise Valley, and Paradise Valley + Timlaline dunes (SOT: PROBABLE, "ask us / we combine"). They do not appear, although the brief says "do not accidentally omit it".
+- **Fix:**
+  - On `/transfers/` add: "Need a minibus for a group, or a ride somewhere else? Ask us." / FR "Un minibus pour un groupe, ou un autre trajet ? Demandez-nous."
+  - Paradise Valley tip: "Ask about combining it with Taghazout or the Timlaline dunes." / FR "Demandez-nous pour la combiner avec Taghazout ou les dunes de Timlaline."
