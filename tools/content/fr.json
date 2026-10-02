@@ -2,7 +2,7 @@
  "lang": "fr",
  "locale": "fr_FR",
  "meta": {
-  "title": "Hala Tours Agadir — excursions, activités et transferts depuis l'hôtel Hamilton",
+  "title": "Hala Tours Agadir — excursions, activités et transferts, hôtel Hamilton",
   "description": "Quad, chameau, jet-ski, Vallée du Paradis, Marrakech, Essaouira et transferts aéroport au départ d'Agadir. Réservez à notre comptoir, à l'hôtel Hamilton, ou sur WhatsApp.",
   "og_title": "Hala Tours Agadir — quelle journée vous fait envie ?",
   "suffix": " | Hala Tours Agadir"
@@ -26,7 +26,7 @@
   "added": "Ajouté",
   "on_request": "Sur demande",
   "sticky_idle": "Ma journée",
-  "sticky_go": "Organiser sur WhatsApp",
+  "sticky_go": "Organiser",
   "picks_one": "1 sortie choisie · Organiser",
   "picks_many": "{n} sorties choisies · Organiser",
   "open_now": "Comptoir ouvert · jusqu'à {close}",
@@ -86,28 +86,28 @@
    "name": "Médinas & souks", "short": "Médinas", "slug": "medinas-et-souks",
    "intro": "Des remparts, des souks et de grandes places : Marrakech et Essaouira à la journée, ou le port et le souk El Had d'Agadir en une matinée.",
    "note": "Marrakech, c'est long : départ à 7 h, retour vers 21 h.",
-   "title": "Marrakech, Essaouira et visite d'Agadir — excursions au départ d'Agadir",
+   "title": "Marrakech, Essaouira et visite d'Agadir — excursions d'une journée",
    "desc": "Médinas & souks : Marrakech à la journée, les remparts et le port d'Essaouira avec un guide, et trois heures de visite d'Agadir avec le souk El Had. Prise en charge à l'hôtel."
   },
   "valleys": {
    "name": "Palmiers, gorges & villages de montagne", "short": "Palmiers", "slug": "palmiers-gorges-et-villages",
    "intro": "Dans les terres, l'air change. Les gorges de palmiers sur la route d'Imouzzer, les remparts de Taroudant, les villages de granit autour de Tafraout.",
    "note": "L'été, on va à la Vallée du Paradis le matin. L'après-midi, c'est la fournaise.",
-   "title": "Vallée du Paradis, Taroudant et Tafraout — excursions au départ d'Agadir",
+   "title": "Vallée du Paradis, Taroudant et Tafraout — au départ d'Agadir",
    "desc": "Palmiers, gorges & villages : la Vallée du Paradis sur la route d'Imouzzer, les remparts de Taroudant et la palmeraie de Tiout, et les rochers peints de Tafraout sur demande."
   },
   "slow": {
    "name": "Au ralenti", "short": "Ralenti", "slug": "au-ralenti",
    "intro": "Pas besoin de moteur tous les jours. Vapeur et huile d'argan, un long dîner en musique — et, sur demande, une montgolfière au lever du soleil.",
    "page_note": "Le hammam, le lendemain de Marrakech. Croyez-nous.",
-   "title": "Hammam, soirée berbère et montgolfière sur demande — journées tranquilles au départ d'Agadir",
+   "title": "Hammam, soirée berbère, montgolfière sur demande — au départ d'Agadir",
    "desc": "Au ralenti : hammam traditionnel et massage à l'huile d'argan avec transport, soirée berbère avec dîner et fantasia, et vol en montgolfière au lever du soleil sur demande."
   },
   "further": {
    "name": "Deux jours, une nuit ailleurs", "short": "2 jours", "slug": "deux-jours-ailleurs",
    "intro": "Dormir dans le désert à Zagora ou à El Borj, ou enchaîner Marrakech et Essaouira. Ces trois circuits se font sur demande — envoyez-nous vos dates, on vérifie si l'un d'eux peut partir.",
    "page_note": "Donnez-nous d'abord vos dates. On vous dira franchement ce qui est possible.",
-   "title": "Circuits de 2 jours depuis Agadir — Zagora, El Borj, Marrakech et Essaouira",
+   "title": "2 jours depuis Agadir — Zagora, El Borj, Marrakech et Essaouira",
    "desc": "Deux jours, une nuit ailleurs, sur demande : le désert de Zagora par la vallée du Drâa, les dunes d'El Borj, ou Marrakech et Essaouira. Écrivez-nous pour les dates."
   }
  },

@@ -198,7 +198,7 @@
    "fr": {
     "name": "Legzira & Aglou, déjeuner compris",
     "line": "La plage d'Aglou, du temps libre sous les falaises rouges de Legzira, un déjeuner de poisson face à l'océan, retour par Tiznit et les dunes. Départ 8 h, retour vers 18 h.",
-    "title": "Legzira au départ d'Agadir — falaises rouges, Aglou et déjeuner de poisson",
+    "title": "Legzira depuis Agadir — falaises rouges, Aglou et déjeuner de poisson",
     "desc": "Une grande journée côtière au sud d'Agadir : barrage Youssef Ben Tachfine, plage d'Aglou, temps libre sous les falaises de Legzira, poisson face à l'océan, Tiznit.",
     "lede": "Une grande journée sur la côte : le barrage Youssef Ben Tachfine, la plage d'Aglou, du temps libre sous les falaises rouges de Legzira, un déjeuner de poisson face à l'océan, et retour par Tiznit et les dunes.",
     "facts": {"time": "Départ vers 8 h, retour vers 18 h — environ 300 km aller-retour", "pickup": "À votre hôtel à Agadir", "food": "Déjeuner de poisson face à l'océan, compris"},
@@ -303,7 +303,7 @@
    "fr": {
     "name": "Crocoparc",
     "line": "Des crocodiles du Nil et de grands jardins à une demi-heure de la ville. On vient vous chercher à l'hôtel.",
-    "title": "Crocoparc au départ d'Agadir — crocodiles du Nil, prise en charge à l'hôtel",
+    "title": "Crocoparc au départ d'Agadir — crocodiles du Nil, prise en charge",
     "desc": "Une demi-journée au Crocoparc près d'Agadir : crocodiles du Nil et grands jardins, à 30 minutes de la ville. On vous prend à la réception de l'hôtel et on vous ramène.",
     "lede": "Un parc rempli de crocodiles du Nil, au milieu de grands jardins, à une demi-heure de la ville — une bonne idée avec des enfants. On s'occupe de la route.",
     "facts": {"time": "Une demi-journée, avec environ 30 minutes de route dans chaque sens", "pickup": "À la réception de votre hôtel, aller et retour"},
@@ -403,7 +403,7 @@
    "fr": {
     "name": "Vallée du Paradis",
     "line": "La route d'Imouzzer jusqu'à une gorge bordée de palmiers, entre arganiers, amandiers et oliviers, avec du temps libre au village d'Imouzzer.",
-    "title": "Vallée du Paradis depuis Agadir — la gorge de palmiers sur la route d'Imouzzer",
+    "title": "Vallée du Paradis depuis Agadir — gorge de palmiers, route d'Imouzzer",
     "desc": "La Vallée du Paradis depuis Agadir : la route d'Imouzzer, une gorge de palmiers entre arganiers, amandiers et oliviers, et du temps libre à Imouzzer.",
     "lede": "On monte dans les collines par la route d'Imouzzer, jusqu'à une gorge de palmiers le long de l'oued, entre arganiers, amandiers et oliviers — puis du temps libre au village d'Imouzzer.",
     "facts": {"pickup": "Devant votre hôtel"},
@@ -547,7 +547,7 @@
    "en": {
     "name": "Zagora desert, 2 days",
     "line": "Over to the Draa valley via Taroudant and Taliouine, a camel to camp, a night in the desert, sunrise on the dunes.",
-    "title": "Zagora desert in 2 days from Agadir — the Draa valley and a night at camp",
+    "title": "Zagora desert in 2 days from Agadir — Draa valley, night at camp",
     "desc": "Two days from Agadir on request: Taroudant, saffron country at Taliouine, the Draa valley to Zagora, a camel to a desert camp, sunrise on the dunes.",
     "lede": "Two days east across the south: Taroudant, saffron country around Taliouine, Taznakht, then down the palm-filled Draa valley to Zagora — a camel to camp, a night under the desert sky and sunrise on the dunes. On request.",
     "facts": {"time": "2 days, 1 night — back in Agadir on the evening of day 2", "pickup": "From your accommodation in Agadir"},

@@ -2,7 +2,7 @@
  "lang": "en",
  "locale": "en_GB",
  "meta": {
-  "title": "Hala Tours Agadir — day trips, activities & transfers from the Hotel Hamilton desk",
+  "title": "Hala Tours Agadir — day trips, activities & transfers, Hotel Hamilton",
   "description": "Quads, camels, jet skis, Paradise Valley, Marrakech, Essaouira and airport transfers from Agadir. Book at our desk at the Hotel Hamilton or on WhatsApp. 5.0 on Google.",
   "og_title": "Hala Tours Agadir — what kind of day do you want?",
   "suffix": " | Hala Tours Agadir"
@@ -100,7 +100,7 @@
    "name": "Go slow", "short": "Slow", "slug": "go-slow",
    "intro": "Not every day needs an engine. Steam and argan oil, a long dinner with music — and, on request, a balloon at sunrise.",
    "page_note": "Hammam the day after Marrakech. Trust us.",
-   "title": "Hammam, Berber evening & a sunrise balloon on request — slow days from Agadir",
+   "title": "Hammam, Berber evening & a sunrise balloon on request — from Agadir",
    "desc": "Go slow: a traditional hammam with argan oil massage and transport, a Berber evening with dinner and fantasia, and a sunrise balloon flight on request."
   },
   "further": {
@@ -195,7 +195,7 @@
   "home_pick": [1, 2, 3],
   "platform": "Google review",
   "link": "Read them all on Google",
-  "link_short": "All of them on Google",
+  "link_short": "All on Google",
   "more": "More reviews",
   "lang_note": ""
  },

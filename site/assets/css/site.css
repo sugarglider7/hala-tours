@@ -476,7 +476,7 @@ a.ch__num{text-decoration:none}
 a.ch__num:hover{text-decoration:underline}
 .day__name a{text-decoration:none;background:linear-gradient(var(--cd),var(--cd)) 0 100%/0 2px no-repeat;transition:background-size .25s var(--ease)}
 .day__name a:hover,.day__name a:focus-visible{background-size:100% 2px}
-.day__name a::after{content:" →";color:var(--cd);font-weight:600}
+.day__name a::after{content:"\a0→";color:var(--cd);font-weight:600}
 .day--more{display:none}
 .ch.is-filtered .day--more:not(.is-out){display:grid}
 .ch.is-filtered .ch__more{display:none}
