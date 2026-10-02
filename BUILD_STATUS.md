@@ -15,6 +15,15 @@ _Last updated: 2026-10-02 06:40 UTC by DesignHala (Phase 2 design + EN homepage 
 5. Images: DO-NOT-USE the cross-agency duplicates and the generic web product photos (unknown copyright). Use Hala's own photos (WhatsApp gallery + Google owner photos). Destination context imagery: Wikimedia Commons files with free licences (CC0/PD/CC BY/CC BY-SA), CONTEXT-ONLY (places, never vehicles/guides/groups implying Hala), credited on a /credits/ page (+ FR) with author, licence, link.
 6. Visit Hala: lightweight self-drawn SVG locator map from OSM geometry around Hotel Hamilton + "Open in Google Maps" link; hours as on the Google listing (Mon–Sat 08:00–23:00, Sun 09:00–22:00).
 
+## Orchestrator review (phase 2 → phase 3, binding)
+- Homepage proof approved: "the desk's own guidebook" — seven colour-coded mood chapters, thumb-index tabs, Kalam desk notes, sketch map, duration rings, WhatsApp day planner. Keep it.
+- SHORTEN THE HOMEPAGE: at 390 px it is ~17,000 CSS px. Each mood chapter on the homepage shows its photo + intro + the first 3 days, then "All N days in <mood> →" linking to that mood's own page (which lists every day of the mood). Length filter keeps working across what's shown (and on mood pages). Target ≤ ~11,000 CSS px at 390.
+- Planner: keep the homepage planner AND build `/plan/` (+ `/fr/plan/`) from the same partial; "Add to my day" persists across pages (localStorage) and inner pages link to /plan/. Every experience page also has a one-tap "Ask about this day on WhatsApp" with a prefilled message naming the day.
+- Pages to build: one page per day (24) + transfers; one page per mood (7); where we go (map); visit the desk (OSM map, hours, how to find it in the Hamilton, phone/WhatsApp, Google Maps link); reviews; plan; credits (Commons licences); 404 — all EN + FR.
+- Phone/WhatsApp stays +212 660 732 477 (single constant) — owner to confirm vs Google's …177.
+- Experience pages render only verified fields (no "N/A"); "On request" badge kept for the 5 unconfirmed days; no prices anywhere.
+- Live: https://hala-tours.peashoot.io/ (Cloudflare Pages project hala-tours, output dir site/, auto-deploys on push to main).
+
 ## Research
 - DONE 2026-10-02 (ResearchHala): SOURCE_OF_TRUTH.md · CONTENT_INVENTORY.md · ASSET_INVENTORY.md · LEGACY_CONTENT_INVENTORY.md · research/notes-{catalogue,provenance,reviews,contact-location}.md.
 - Live site re-crawled (raw: research/raw/crawl2/, index.json maps URL→file; products_live.txt). All 390 Google reviews captured (research/raw/google_reviews_2026-10-02.json). 8 Google "By owner" photos downloaded (research/raw/images/google-owner/). Contact sheets: /home/agent/agadir-pilot/qa/hala-tours/sheets/.
