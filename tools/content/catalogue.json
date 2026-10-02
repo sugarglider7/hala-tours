@@ -1,5 +1,5 @@
 {
-  "_doc": "Language-neutral structure. Strings live in en.json / fr.json under the same ids. Facts: SOURCE_OF_TRUTH.md + research/notes-catalogue.md (site id = legacy de_sv.php i=). status: 'sold' = review evidence; 'on_request' = listed by Hala, unconfirmed (orchestrator decision 2). lengths: hours | half | full | two (roughly; a product may sit in two). map: [lat, lon] of the destination for the day-trip map (general geography).",
+  "_doc": "Language-neutral structure. The days themselves live in days.json (one record per day, EN+FR). Mood strings and page copy live in en.json / fr.json. Facts: SOURCE_OF_TRUTH.md + research/notes-catalogue.md. contact = the ONE phone constant (orchestrator decision 1; owner to confirm vs Google's ...177).",
   "contact": {
     "phone_display": "+212 660 732 477",
     "phone_tel": "+212660732477",
@@ -21,38 +21,7 @@
     {"id": "further", "color": "cobalt", "img": "robe-wind"}
   ],
   "lengths": ["hours", "half", "full", "two"],
-  "products": [
-    {"id": "quad", "site_id": 84, "mood": "sand", "lengths": ["hours"], "status": "sold"},
-    {"id": "buggy", "site_id": 85, "mood": "sand", "lengths": ["half"], "status": "sold"},
-    {"id": "sandboarding", "site_id": 93, "mood": "sand", "lengths": ["hours", "half"], "status": "sold"},
-    {"id": "little-desert", "site_id": 76, "mood": "sand", "lengths": ["full"], "status": "sold", "map": [29.96, -9.62]},
-
-    {"id": "jet-ski", "site_id": 88, "mood": "salt", "lengths": ["hours"], "status": "sold"},
-    {"id": "boat-trip", "site_id": 94, "mood": "salt", "lengths": ["half"], "status": "sold"},
-    {"id": "surf", "site_id": 92, "mood": "salt", "lengths": ["half"], "status": "sold"},
-    {"id": "legzira", "site_id": 97, "mood": "salt", "lengths": ["full"], "status": "sold", "map": [29.445, -10.115]},
-
-    {"id": "camel", "site_id": 95, "mood": "hooves", "lengths": ["hours"], "status": "sold"},
-    {"id": "camel-bbq", "site_id": 87, "mood": "hooves", "lengths": ["hours"], "status": "sold"},
-    {"id": "horse", "site_id": 86, "mood": "hooves", "lengths": ["hours"], "status": "sold"},
-    {"id": "crocoparc", "site_id": 83, "mood": "hooves", "lengths": ["half"], "status": "sold"},
-
-    {"id": "marrakech", "site_id": 77, "mood": "medina", "lengths": ["full"], "status": "sold", "map": [31.6295, -7.9811]},
-    {"id": "essaouira", "site_id": 82, "mood": "medina", "lengths": ["full"], "status": "sold", "map": [31.5085, -9.7595]},
-    {"id": "city-tour", "site_id": 90, "mood": "medina", "lengths": ["half"], "status": "sold"},
-
-    {"id": "paradise-valley", "site_id": 78, "mood": "valleys", "lengths": ["half", "full"], "status": "sold", "map": [30.585, -9.505]},
-    {"id": "taroudant", "site_id": 75, "mood": "valleys", "lengths": ["full"], "status": "sold", "map": [30.4703, -8.877]},
-    {"id": "tafraout", "site_id": 96, "mood": "valleys", "lengths": ["full"], "status": "on_request", "map": [29.7194, -8.9726]},
-
-    {"id": "hammam", "site_id": 100, "mood": "slow", "lengths": ["hours"], "status": "sold"},
-    {"id": "berber-evening", "site_id": 98, "mood": "slow", "lengths": ["hours"], "status": "sold"},
-    {"id": "balloon", "site_id": 101, "mood": "slow", "lengths": ["half"], "status": "on_request"},
-
-    {"id": "zagora", "site_id": 79, "mood": "further", "lengths": ["two"], "status": "on_request", "map": [30.33, -5.84]},
-    {"id": "el-borj", "site_id": 81, "mood": "further", "lengths": ["two"], "status": "on_request"},
-    {"id": "marrakech-essaouira", "site_id": 80, "mood": "further", "lengths": ["two"], "status": "on_request"}
-  ],
+  "home_rows": 3,
   "map_extra": {
     "agadir": [30.4202, -9.5982],
     "tiznit": [29.6974, -9.7316],

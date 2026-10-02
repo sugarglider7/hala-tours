@@ -208,12 +208,395 @@
     "kb": 152
    },
    {
-    "w": 700,
-    "h": 525,
-    "file": "group-4x4-700.webp",
-    "kb": 63
+    "w": 800,
+    "h": 600,
+    "file": "group-4x4-800.webp",
+    "kb": 79
+   },
+   {
+    "w": 560,
+    "h": 420,
+    "file": "group-4x4-560.webp",
+    "kb": 44
    }
   ]
+ },
+ "dune-ocean": {
+  "w": 1242,
+  "h": 931,
+  "color": "#f6d7b3",
+  "lqip": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAACQBACdASoUAA8APu1iqU2ppaOiMAgBMB2JZACdMoKABb/4DyB9UzbviBehXQAA/q9vqrRP5WkvFo+S4+bSVkwKuEezpzD0r3E0emh7fjKwsIlbIkn7uCstHrjduaW4JGdh61EeRNmFL1yAAAA=",
+  "alt": "A man sitting on a pale sand dune high above the blue Atlantic",
+  "variants": [
+   {
+    "w": 1200,
+    "h": 900,
+    "file": "dune-ocean-1200.webp",
+    "kb": 39
+   },
+   {
+    "w": 800,
+    "h": 600,
+    "file": "dune-ocean-800.webp",
+    "kb": 22
+   },
+   {
+    "w": 560,
+    "h": 420,
+    "file": "dune-ocean-560.webp",
+    "kb": 12
+   }
+  ]
+ },
+ "essaouira-lane": {
+  "w": 1242,
+  "h": 931,
+  "color": "#b69b84",
+  "lqip": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAAAwBACdASoUAA8APu1iqU2ppaOiMAgBMB2JQBOmUI7gA3+M+tiy8xryK4AA/tDDk8OJfcPhqesLAmDSKfZ5Ag3DH/4OIfZ0T/o2IUKpbcDiq6FcWnd6waAF8pnH/87fTn1zl9kdhknESowdSCVC5gAeFgxEnQAA",
+  "alt": "A stone gateway at the end of a busy medina lane lined with stalls",
+  "variants": [
+   {
+    "w": 1200,
+    "h": 900,
+    "file": "essaouira-lane-1200.webp",
+    "kb": 138
+   },
+   {
+    "w": 800,
+    "h": 600,
+    "file": "essaouira-lane-800.webp",
+    "kb": 85
+   },
+   {
+    "w": 560,
+    "h": 420,
+    "file": "essaouira-lane-560.webp",
+    "kb": 53
+   }
+  ]
+ },
+ "transfer-van": {
+  "w": 1600,
+  "h": 1200,
+  "color": "#3f567e",
+  "lqip": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAABQBACdASoUAA8APu1iqU2ppaOiMAgBMB2JZgCdMoRwAB0YWh5gDlpG491UAMyEq4f4rdV2lSEcqfcJN5nfuAiesLuw3JCaokH5ke8HUMp57NNjPeT+oXXdUiNFT5NpUsavsB/fDsrGt+qZ/curAXd3atW8VOQoVrzvu22sZwv4ZrauEAA=",
+  "alt": "Three travellers standing in front of a silver minivan under palm trees",
+  "variants": [
+   {
+    "w": 1200,
+    "h": 900,
+    "file": "transfer-van-1200.webp",
+    "kb": 108
+   },
+   {
+    "w": 800,
+    "h": 600,
+    "file": "transfer-van-800.webp",
+    "kb": 53
+   },
+   {
+    "w": 560,
+    "h": 420,
+    "file": "transfer-van-560.webp",
+    "kb": 29
+   }
+  ]
+ },
+ "paradise": {
+  "w": 3840,
+  "h": 2571,
+  "color": "#272423",
+  "lqip": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAABwAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JQBOgA6cYf3tzXgAA9nztiX2dUC+1XRTQl39ElaexT/i2u3MdiklRHlGwdjJ4V9Bf9OgGDn+9gm2fnqDg90gA",
+  "alt": "Palm trees along a still green river pool at the foot of a rocky gorge",
+  "variants": [
+   {
+    "w": 1200,
+    "h": 803,
+    "file": "paradise-1200.webp",
+    "kb": 195
+   },
+   {
+    "w": 800,
+    "h": 536,
+    "file": "paradise-800.webp",
+    "kb": 89
+   },
+   {
+    "w": 560,
+    "h": 375,
+    "file": "paradise-560.webp",
+    "kb": 45
+   }
+  ],
+  "credit": {
+   "place": {
+    "en": "Paradise Valley",
+    "fr": "Vall\u00e9e du Paradis"
+   },
+   "author": "Younes GOUSSYRA",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "source": "https://commons.wikimedia.org/wiki/File:Paradise_valley_Souss_Idaoutanane.jpg"
+  }
+ },
+ "koutoubia": {
+  "w": 3648,
+  "h": 2736,
+  "color": "#282e15",
+  "lqip": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAABQBACdASoUAA8APu1iqU2ppaOiMAgBMB2JaACdH8GJ/gLsbiTcReR7ihbQAPpKNonMeeBybzpskhV0LLHyUYHgeM1xSt+gZfbgBVQfDOupO7FzjjElNliIWw4flxE0pSlTvUWASGaKiM+EgvownZOL8UJWZwZXtAAAAA==",
+  "alt": "The Koutoubia minaret rising above palm trees and gardens under a blue sky",
+  "variants": [
+   {
+    "w": 1200,
+    "h": 900,
+    "file": "koutoubia-1200.webp",
+    "kb": 122
+   },
+   {
+    "w": 800,
+    "h": 600,
+    "file": "koutoubia-800.webp",
+    "kb": 59
+   },
+   {
+    "w": 560,
+    "h": 420,
+    "file": "koutoubia-560.webp",
+    "kb": 30
+   }
+  ],
+  "credit": {
+   "place": {
+    "en": "The Koutoubia, Marrakech",
+    "fr": "La Koutoubia, Marrakech"
+   },
+   "author": "Baca12",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "source": "https://commons.wikimedia.org/wiki/File:Mosqu%C3%A9e_de_la_Koutoubia_-_marakesh.jpg"
+  }
+ },
+ "taroudant": {
+  "w": 2840,
+  "h": 1890,
+  "color": "#6faadd",
+  "lqip": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAAAwBACdASoUAA0APu1iqU2ppaOiMAgBMB2JZgCdMoGv/gPAYj+G1Jhs+kgA/d0TTTTcVc8yxeIzevuraG/CG0/7UkX2wK6tjapgYzSEVPgW/yU+0DnW/RcZtubzqpAH/ySvty7AlLEKOxoLZBrmwU+BVAAAAA==",
+  "alt": "Crenellated red-earth ramparts and towers running along a wide road",
+  "variants": [
+   {
+    "w": 1200,
+    "h": 799,
+    "file": "taroudant-1200.webp",
+    "kb": 67
+   },
+   {
+    "w": 800,
+    "h": 532,
+    "file": "taroudant-800.webp",
+    "kb": 33
+   },
+   {
+    "w": 560,
+    "h": 373,
+    "file": "taroudant-560.webp",
+    "kb": 18
+   }
+  ],
+  "credit": {
+   "place": {
+    "en": "The ramparts of Taroudant",
+    "fr": "Les remparts de Taroudant"
+   },
+   "author": "Bj\u00f8rn Christian T\u00f8rrissen",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+   "source": "https://commons.wikimedia.org/wiki/File:Taroudant_City_Walls_2011.jpg"
+  }
+ },
+ "tafraout": {
+  "w": 3840,
+  "h": 2560,
+  "color": "#62544a",
+  "lqip": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAQBACdASoUAA0APu1kqU2ppaQiMAgBMB2JZgCdMoAC+24zZrjhQpkbQAD+38DjCMgMYV4cAtnx0ufKT1K8KJ9E0wDkouhPXXayERyrOWQ+hxUcfVN9mfnjfsPR31rGhEjXFPQbdfbV3AAA",
+  "alt": "Boulders painted blue and pink scattered across a green valley below a mountain ridge",
+  "variants": [
+   {
+    "w": 1200,
+    "h": 800,
+    "file": "tafraout-1200.webp",
+    "kb": 79
+   },
+   {
+    "w": 800,
+    "h": 533,
+    "file": "tafraout-800.webp",
+    "kb": 42
+   },
+   {
+    "w": 560,
+    "h": 373,
+    "file": "tafraout-560.webp",
+    "kb": 24
+   }
+  ],
+  "credit": {
+   "place": {
+    "en": "The painted rocks near Tafraout",
+    "fr": "Les rochers peints pr\u00e8s de Tafraout"
+   },
+   "author": "Simohnt",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "source": "https://commons.wikimedia.org/wiki/File:Colored_Rocks_3.jpg"
+  }
+ },
+ "legzira": {
+  "w": 3840,
+  "h": 2160,
+  "color": "#d6ad88",
+  "lqip": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAQBACdASoUAAsAPu1iqU2ppaOiMAgBMB2JZACdL1yBz4qvceb/M/tXuAD+2UH/ZLX+L+Pr2HQsgLB2RETiEqOfMKKQ7PQVuWyvPUaz4/hYw+lOR7hLKX0F3AA=",
+  "alt": "A red rock arch on a wide sandy beach, people walking beneath it",
+  "variants": [
+   {
+    "w": 1200,
+    "h": 675,
+    "file": "legzira-1200.webp",
+    "kb": 79
+   },
+   {
+    "w": 800,
+    "h": 450,
+    "file": "legzira-800.webp",
+    "kb": 31
+   },
+   {
+    "w": 560,
+    "h": 315,
+    "file": "legzira-560.webp",
+    "kb": 14
+   }
+  ],
+  "credit": {
+   "place": {
+    "en": "Legzira beach, 2018 \u2014 the arch that still stands",
+    "fr": "La plage de Legzira en 2018 \u2014 l'arche toujours debout"
+   },
+   "author": "Roy Egloff",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "source": "https://commons.wikimedia.org/wiki/File:MA.GN.Sidi-Ifni_Legzira-Beach_Stone-Arch_756_16x9-R_5120x2880.jpg"
+  }
+ },
+ "oufella": {
+  "w": 3840,
+  "h": 2880,
+  "color": "#787b7f",
+  "lqip": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAACwAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JYgCdACHcUz+6kYmZQAD+xtZQ+nMW/aGRf/mv6As2yykXzcysu9vAn3i2J7bYMbEXStlgsnFG5D6F3Z/zfaX4W8TB0zcyUlI3AAAA",
+  "alt": "The port of Agadir and the bay seen from the hilltop of Agadir Oufella",
+  "variants": [
+   {
+    "w": 1200,
+    "h": 900,
+    "file": "oufella-1200.webp",
+    "kb": 144
+   },
+   {
+    "w": 800,
+    "h": 600,
+    "file": "oufella-800.webp",
+    "kb": 65
+   },
+   {
+    "w": 560,
+    "h": 420,
+    "file": "oufella-560.webp",
+    "kb": 33
+   }
+  ],
+  "credit": {
+   "place": {
+    "en": "The port of Agadir from Agadir Oufella",
+    "fr": "Le port d'Agadir vu d'Agadir Oufella"
+   },
+   "author": "Abdeaitali",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "source": "https://commons.wikimedia.org/wiki/File:Port_of_Agadir_from_Kasbah_of_Agadir_Oufella.jpg"
+  }
+ },
+ "marina": {
+  "w": 2120,
+  "h": 1412,
+  "color": "#445a4c",
+  "lqip": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAABQBACdASoUAA0APu1iqU2ppaOiMAgBMB2JZgCdMoMjbEZbaLVprWy5RwWAAPzUAfsp9BZKZZTXjla4aa+hgQq2agAtkc2tAfWajZJV3mItj2Oz107jyQEMcJtLmDwInVAl3tgFoA1p+mcKnET6KVPGYAA=",
+  "alt": "Pontoons and moored boats in Agadir marina, white apartment buildings around the basin",
+  "variants": [
+   {
+    "w": 1200,
+    "h": 799,
+    "file": "marina-1200.webp",
+    "kb": 77
+   },
+   {
+    "w": 800,
+    "h": 533,
+    "file": "marina-800.webp",
+    "kb": 38
+   },
+   {
+    "w": 560,
+    "h": 373,
+    "file": "marina-560.webp",
+    "kb": 20
+   }
+  ],
+  "credit": {
+   "place": {
+    "en": "Agadir marina",
+    "fr": "La marina d'Agadir"
+   },
+   "author": "Abdeaitali",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "source": "https://commons.wikimedia.org/wiki/File:Panorama_Marina_Agadir_2020.jpg"
+  }
+ },
+ "zagora": {
+  "w": 3840,
+  "h": 2880,
+  "color": "#716448",
+  "lqip": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAADQAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JQBOgA+hkf5jPGRCTHbAA34BY5IsRnjGWGANCrgqvn0DVoEFAgIq4J1Osd+K2e2jIDHYLF0R3OFjj3PgDb5m/nt9lciTzKZAEQjE1ev34uiAA",
+  "alt": "A dense palm grove in the Draa valley at Agdz below a bare mountain",
+  "variants": [
+   {
+    "w": 1200,
+    "h": 900,
+    "file": "zagora-1200.webp",
+    "kb": 98
+   },
+   {
+    "w": 800,
+    "h": 600,
+    "file": "zagora-800.webp",
+    "kb": 61
+   },
+   {
+    "w": 560,
+    "h": 420,
+    "file": "zagora-560.webp",
+    "kb": 38
+   }
+  ],
+  "credit": {
+   "place": {
+    "en": "The Draa valley palm grove at Agdz, on the way to Zagora",
+    "fr": "La palmeraie du Dr\u00e2a \u00e0 Agdz, sur la route de Zagora"
+   },
+   "author": "Sylvestre BOCCO",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "source": "https://commons.wikimedia.org/wiki/File:Jebel_Kissane_et_Palmeraie_d_Agdz_Maroc_2026.jp.jpg"
+  }
  },
  "_og": {
   "file": "og-hala.jpg",

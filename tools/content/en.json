@@ -1,11 +1,11 @@
 {
  "lang": "en",
  "locale": "en_GB",
- "home_path": "/",
  "meta": {
   "title": "Hala Tours Agadir — day trips, activities & transfers from the Hotel Hamilton desk",
   "description": "Quads, camels, jet skis, Paradise Valley, Marrakech, Essaouira and airport transfers from Agadir. Book at our desk in the Hotel Hamilton or on WhatsApp. 5.0 on Google.",
-  "og_title": "Hala Tours Agadir — what kind of day do you want?"
+  "og_title": "Hala Tours Agadir — what kind of day do you want?",
+  "suffix": " | Hala Tours Agadir"
  },
  "ui": {
   "skip": "Skip to content",
@@ -13,24 +13,12 @@
   "close": "Close",
   "nav_label": "Main",
   "brand_sub": "at the Hotel Hamilton",
-  "nav": [
-   [
-    "#guide",
-    "The days"
-   ],
-   [
-    "#map",
-    "Where we go"
-   ],
-   [
-    "#desk",
-    "Visit the desk"
-   ],
-   [
-    "#reviews",
-    "Reviews"
-   ]
-  ],
+  "home_label": "Hala Tours Agadir — home",
+  "nav": [["days", "The days"], ["where", "Where we go"], ["visit", "Visit the desk"], ["reviews", "Reviews"]],
+  "more_links": [["transfers", "Airport transfers"], ["plan", "Plan my day"], ["credits", "Photo credits"]],
+  "other_lang": {"code": "fr", "short": "FR", "label": "Version française"},
+  "this_lang": "EN",
+  "lang_label": "Language",
   "cta_plan": "Plan my day",
   "call": "Call",
   "whatsapp": "WhatsApp",
@@ -41,37 +29,15 @@
   "sticky_go": "Plan on WhatsApp",
   "open_now": "Desk open now · until {close}",
   "closed_now": "The desk opens at {open}",
-  "lengths": {
-   "hours": "A couple of hours",
-   "half": "Half a day",
-   "full": "All day",
-   "two": "Two days"
-  },
-  "length_short": {
-   "hours": "Couple of hours",
-   "half": "Half day",
-   "full": "All day",
-   "two": "Two days"
-  },
-  "days": {
-   "Mo": "Monday",
-   "Tu": "Tuesday",
-   "We": "Wednesday",
-   "Th": "Thursday",
-   "Fr": "Friday",
-   "Sa": "Saturday",
-   "Su": "Sunday"
-  },
-  "days_range": [
-   [
-    "Monday – Saturday",
-    "08:00 – 23:00"
-   ],
-   [
-    "Sunday",
-    "09:00 – 22:00"
-   ]
-  ]
+  "crumb_label": "Breadcrumb",
+  "home": "Home",
+  "lengths": {"hours": "A couple of hours", "half": "Half a day", "full": "All day", "two": "Two days"},
+  "length_short": {"hours": "Couple of hours", "half": "Half day", "full": "All day", "two": "Two days"},
+  "days_range": [["Monday – Saturday", "08:00 – 23:00"], ["Sunday", "09:00 – 22:00"]],
+  "more_days": "All {n} days in {mood}",
+  "count_days": "{n} days",
+  "photo_by": "Photo",
+  "context_photo": "the place, not our trip"
  },
  "hero": {
   "eyebrow": "Day trips, activities & transfers from Agadir",
@@ -88,181 +54,148 @@
   "filter_label": "How long have you got?",
   "filter_all": "Any length",
   "none_here": "Nothing that length in this mood — try another, or ask us.",
-  "chapter": "Mood {n} of 7"
+  "chapter": "Mood {n} of 7",
+  "all_link": "See all 24 days on one page"
  },
  "moods": {
   "sand": {
-   "name": "Sand & engines", "short": "Sand",
+   "name": "Sand & engines", "short": "Sand", "slug": "sand-and-engines",
    "intro": "South of Agadir the tracks run through Berber villages and out onto dunes by the ocean at Tifnit. Bring sunglasses; you'll get sand everywhere.",
-   "note": "Quads, a sandboard and a camel in one afternoon? Ask us — we combine."
+   "note": "Quads, a sandboard and a camel in one afternoon? Ask us — we combine.",
+   "title": "Quads, buggies, sandboarding & the Little Desert from Agadir",
+   "desc": "Sand & engines: quad biking to the dunes by Tifnit beach, two-seat buggies, sandboarding and the Little Desert by 4x4. Hotel pickup from Agadir. Ask for today's price."
   },
   "salt": {
-   "name": "Salt water", "short": "Sea",
+   "name": "Salt water", "short": "Sea", "slug": "salt-water",
    "intro": "Agadir lives on its bay. Get on it, get in it, or follow the coast south for a long day by the sea.",
-   "note": null
+   "page_note": "Calm mornings are the best for anything on the water.",
+   "title": "Jet ski, boat trips, surf lessons & Legzira from Agadir",
+   "desc": "Salt water: a jet ski on Agadir bay, a boat trip with fishing and fish grilled on board, surf lessons with hotel pickup, and the long coastal day to Legzira."
   },
   "hooves": {
-   "name": "Hooves, humps & crocodiles", "short": "Animals",
+   "name": "Hooves, humps & crocodiles", "short": "Animals", "slug": "hooves-humps-and-crocodiles",
    "intro": "Camels and horses out to the Souss river, where flamingos feed in the shallows. And for the kids, a park full of Nile crocodiles.",
-   "note": "Ask for the sunset ride."
+   "note": "Ask for the sunset ride.",
+   "title": "Camel rides, horse riding & Crocoparc from Agadir",
+   "desc": "Camel rides by the Souss river and its flamingos, camel and barbecue dinner, horse riding through the eucalyptus woods, and Crocoparc. Hotel pickup from Agadir."
   },
   "medina": {
-   "name": "Medinas & markets", "short": "Medinas",
+   "name": "Medinas & markets", "short": "Medinas", "slug": "medinas-and-markets",
    "intro": "Ramparts, souks and big old squares: Marrakech and Essaouira for the day, or Agadir's own port and Souk El Had in a morning.",
-   "note": "Marrakech is a long one: out at 7, home around 9."
+   "note": "Marrakech is a long one: out at 7, home around 9.",
+   "title": "Marrakech, Essaouira & Agadir city tour — day trips from Agadir",
+   "desc": "Medinas & markets: Marrakech for the day, Essaouira's ramparts and port with a guide, and a three-hour Agadir city tour with Souk El Had. Hotel pickup."
   },
   "valleys": {
-   "name": "Palms, gorges & mountain villages", "short": "Valleys",
+   "name": "Palms, gorges & mountain villages", "short": "Valleys", "slug": "palms-gorges-and-mountain-villages",
+   "places": ["Imouzzer", "Paradise Valley", "Taroudant", "Tiout", "Tafraout", "Ameln"],
    "intro": "Inland the air changes. Palm-lined gorges up the Imouzzer road, the walls of Taroudant, granite villages around Tafraout.",
-   "note": "In summer we go to Paradise Valley in the morning. The afternoons are scorching."
+   "note": "In summer we go to Paradise Valley in the morning. The afternoons are scorching.",
+   "title": "Paradise Valley, Taroudant & Tafraout — day trips from Agadir",
+   "desc": "Palms, gorges & mountain villages: Paradise Valley on the Imouzzer road, Taroudant's ramparts and the Tiout palm grove, and Tafraout's painted rocks on request."
   },
   "slow": {
-   "name": "Go slow", "short": "Slow",
+   "name": "Go slow", "short": "Slow", "slug": "go-slow",
    "intro": "Not every day needs an engine. Steam and argan oil, a long dinner with music, a balloon at sunrise if the dates work.",
-   "note": null
+   "page_note": "Hammam the day after Marrakech. Trust us.",
+   "title": "Hammam, Berber evening & sunrise balloon — slow days in Agadir",
+   "desc": "Go slow: a traditional hammam with argan oil massage and transport, a Berber evening with dinner and fantasia, and a sunrise balloon flight on request."
   },
   "further": {
-   "name": "Two days, one night away", "short": "Two days",
+   "name": "Two days, one night away", "short": "Two days", "slug": "two-days-away",
    "intro": "Sleep in the desert at Zagora or El Borj, or do Marrakech and Essaouira together. These run on request — message us for dates.",
-   "note": null
+   "page_note": "Tell us your dates first. We'll tell you honestly what's possible.",
+   "title": "Two-day trips from Agadir — Zagora, El Borj, Marrakech & Essaouira",
+   "desc": "Two days, one night away, on request: the Zagora desert via the Draa valley, the El Borj dunes, or Marrakech and Essaouira together. Message us for dates."
   }
  },
- "products": {
-  "quad": {
-   "name": "Quad biking",
-   "line": "South of the city, through a Berber village and onto the dunes by Tifnit beach. About 90 minutes of riding, briefing first."
-  },
-  "buggy": {
-   "name": "Buggy ride",
-   "line": "Two-seat buggies through forest and dunes with a mint-tea stop. Morning or afternoon; good with kids beside you."
-  },
-  "sandboarding": {
-   "name": "Sandboarding",
-   "line": "Boards and a big dune. Best paired with the quads — ask us."
-  },
-  "little-desert": {
-   "name": "The Little Desert by 4x4",
-   "line": "Dunes and a short camel ride, the Souss-Massa coast, lunch in a Berber family's home, then the old medina of Tiznit. Out 08:30, back around 17:30."
-  },
-  "jet-ski": {
-   "name": "Jet ski",
-   "line": "Twenty minutes, half an hour or a full hour on Agadir bay."
-  },
-  "boat-trip": {
-   "name": "Boat trip: fish, swim, lunch",
-   "line": "Out from the marina with fishing gear on board, a swim stop, then fish grilled on deck with Moroccan salad. Back at your hotel early afternoon."
-  },
-  "surf": {
-   "name": "Surf lessons",
-   "line": "Beginner and intermediate lessons, with pickup from your hotel in Agadir. Kids from about seven — ask us."
-  },
-  "legzira": {
-   "name": "Legzira & Massa, with lunch",
-   "line": "Aglou beach, free time on Legzira's red-cliff beach, a fish lunch by the ocean, home via Tiznit and the dunes. Out 08:00, back around 18:00."
-  },
-  "camel": {
-   "name": "Camel ride by the Souss river",
-   "line": "From the ranch out to the river and the flamingos, past eucalyptus and a glimpse of the royal palace."
-  },
-  "camel-bbq": {
-   "name": "Camel ride & barbecue dinner",
-   "line": "Two hours on a camel to the river mouth, then dinner: barbecue, tagine or vegetarian."
-  },
-  "horse": {
-   "name": "Horse riding",
-   "line": "Along the Souss river, past the flamingos and through the eucalyptus woods, with a guide."
-  },
-  "crocoparc": {
-   "name": "Crocoparc",
-   "line": "Nile crocodiles and big gardens about half an hour from town. We collect you from your hotel."
-  },
-  "marrakech": {
-   "name": "Marrakech for the day",
-   "line": "Bahia Palace, the Koutoubia gardens, the souks and Jemaa el-Fna. Out 07:00, home around 21:00. Lunch isn't included."
-  },
-  "essaouira": {
-   "name": "Essaouira for the day",
-   "line": "Goats in the argan trees on the way, then the port, the Skala ramparts and the medina with a guide, and free time. Lunch is up to you."
-  },
-  "city-tour": {
-   "name": "Agadir city tour",
-   "line": "Three hours: the Marina, the fishing port, the view from Agadir Oufella, an argan cooperative and an hour in Souk El Had."
-  },
-  "paradise-valley": {
-   "name": "Paradise Valley",
-   "line": "Up the Imouzzer road to a palm-lined gorge between argan, almond and olive trees, with free time in Imouzzer village."
-  },
-  "taroudant": {
-   "name": "Taroudant & Tiout",
-   "line": "Taroudant's ramparts and souks, then the palm grove and kasbah at Tiout. Home by another road."
-  },
-  "tafraout": {
-   "name": "Tafraout & Tiznit",
-   "line": "Granite country: the Ameln valley, the painted rocks near Tafraout, then Tiznit's silver medina."
-  },
-  "hammam": {
-   "name": "Hammam & massage",
-   "line": "A traditional hammam, then an hour's massage with argan oil. We drive you there and back."
-  },
-  "berber-evening": {
-   "name": "Berber evening & dinner",
-   "line": "Dinner under caidal tents — pastilla, couscous, mint tea — with musicians, dancers and fantasia riders."
-  },
-  "balloon": {
-   "name": "Hot-air balloon",
-   "line": "A sunrise flight with mint tea before and breakfast after. Ask us for dates."
-  },
-  "zagora": {
-   "name": "Zagora desert, 2 days",
-   "line": "Over to the Draa valley via Taroudant and Taliouine, a camel to camp, a night in the desert, sunrise on the dunes."
-  },
-  "el-borj": {
-   "name": "El Borj desert, 2 days",
-   "line": "Tiznit and Legzira on the way, sunset in the El Borj dunes and a night in tents; camels and the Tighmert palm grove next day."
-  },
-  "marrakech-essaouira": {
-   "name": "Marrakech & Essaouira, 2 days",
-   "line": "Marrakech's palaces and souks, a night in a hotel, then Essaouira's medina and the coast road home."
-  }
+ "days_page": {
+  "title": "All 24 days out of Agadir — by mood and by length",
+  "desc": "Every day trip, activity and longer trip we book from the Hotel Hamilton desk in Agadir, in seven moods — filter by how long you've got. No prices printed: ask on WhatsApp.",
+  "kicker": "The whole guide",
+  "h1": "Every day out of Agadir",
+  "lede": "Twenty-four days in seven moods. Filter by how long you've got, open any day for the details, and add the ones you like to your day."
+ },
+ "mood_page": {
+  "kicker": "Mood {n} of 7",
+  "back": "All the days",
+  "other": "Other moods",
+  "plan_title": "Can't decide?",
+  "plan_text": "Pick a few, or just tell us the mood. We'll suggest the day and send today's price.",
+  "plan_cta": "Tell us your day"
+ },
+ "day": {
+  "facts_label": "At a glance",
+  "facts": {"time": "Timing", "pickup": "Pickup", "food": "Food", "incl": "Included", "kids": "Children"},
+  "what": "What happens",
+  "good": "Good to know",
+  "suits": "Who it suits",
+  "request_title": "On request",
+  "request_text": "This one doesn't run every week. Message us with your dates and we'll tell you honestly what's possible.",
+  "ask_kicker": "No prices printed — ever",
+  "ask_title": "Check today's price on WhatsApp",
+  "ask_text": "Add a date and how many of you, if you know. It becomes a WhatsApp message to our desk; you can edit it before you send.",
+  "one_tap": "Ask about this day on WhatsApp",
+  "submit": "Send on WhatsApp",
+  "or_desk": "Or come to the desk at the Hamilton",
+  "or_plan": "Planning more than one day?",
+  "related": "More days like this",
+  "times_note": "Times are usual times — we confirm yours when you book.",
+  "wa_intro": "Hello Hala Tours! I'm interested in: {day}.",
+  "wa_outro": "Is it possible, and what's today's price?",
+  "photo_alt_note": ""
  },
  "map": {
   "kicker": "Where we go",
   "title": "Agadir in the middle, the days all around it",
-  "text": "Every line starts at our desk on Boulevard Mohammed V. Tap a place to jump to its day.",
+  "text": "Every line starts at our desk on Boulevard Mohammed V. Tap a place to open its day.",
   "agadir": "Agadir",
   "desk": "our desk",
   "ocean": "Atlantic Ocean",
   "zagora_arrow": "Zagora",
   "caption": "Sketch map: places roughly where they are, roads not drawn.",
-  "labels": {"little-desert": "Little Desert", "legzira": "Legzira", "marrakech": "Marrakech", "essaouira": "Essaouira", "paradise-valley": "Paradise Valley", "taroudant": "Taroudant", "tafraout": "Tafraout"}
+  "labels": {"little-desert": "Little Desert", "legzira": "Legzira", "marrakech": "Marrakech", "essaouira": "Essaouira", "paradise-valley": "Paradise Valley", "taroudant": "Taroudant", "tafraout": "Tafraout"},
+  "page_link": "The map, bigger, with every place"
+ },
+ "where_page": {
+  "title": "Where we go — day trips around Agadir on one map",
+  "desc": "A sketch map of every day trip from our desk in Agadir: Marrakech, Essaouira, Paradise Valley, Taroudant, Tafraout, Legzira, the Little Desert and Zagora.",
+  "h1": "Where we go",
+  "lede": "Agadir in the middle, the days all around it. Every line starts at our desk on Boulevard Mohammed V.",
+  "away_h": "Further out",
+  "away_text": "Day trips and longer trips, with pickup from your hotel.",
+  "near_h": "Around Agadir",
+  "near_text": "Quads, camels, the bay and the hammam — most of these are a short drive from your hotel."
  },
  "reviews": {
   "kicker": "Reviews",
   "title": "on Google, from 390 reviews",
   "items": [
-   {
-    "q": "very honest and will tell you to see other prices before you book with him.",
-    "by": "Noor"
-   },
-   {
-    "q": "The communication with the agency was easy, the price honest and the organisation very good.",
-    "by": "Maura Bestetti"
-   },
-   {
-    "q": "What I loved is how transport is included to and from your hotel !!",
-    "by": "Meem"
-   },
-   {
-    "q": "Staff made sure the family and especially kids are safe!",
-    "by": "Mariam Alastall"
-   },
-   {
-    "q": "our only regret is we didn't have more time to do more.",
-    "by": "JayMiester"
-   }
+   {"q": "very honest and will tell you to see other prices before you book with him.", "by": "Noor"},
+   {"q": "The communication with the agency was easy, the price honest and the organisation very good.", "by": "Maura Bestetti"},
+   {"q": "What I loved is how transport is included to and from your hotel !!", "by": "Meem"},
+   {"q": "Staff made sure the family and especially kids are safe!", "by": "Mariam Alastall"},
+   {"q": "our only regret is we didn't have more time to do more.", "by": "JayMiester"},
+   {"q": "Ayoub was an absolute gentleman to deal with located in main reception of Hamilton Hotel.", "by": "daniel oconnell"},
+   {"q": "We booked in the main entrance at Hamilton Hotel and prices were so so much better than the prices you are offered while walking round the shops.", "by": "Erin Grace-Woodrow"},
+   {"q": "The transport vans came around the agreed time and they were clean and of good condition.", "by": "Zoltán Tóth"},
+   {"q": "Ayoub is a absolute gentleman and non pushy", "by": "Carly Hughes"},
+   {"q": "It's easy to communicate with the guys from the agency, because they speak English very well.", "by": "Hannah VG"},
+   {"q": "Paradise city trip was out of this world lots of beautiful scenery.", "by": "Stephanie McDougal"}
   ],
+  "home_pick": [0, 1, 2, 3, 4],
   "platform": "Google review",
-  "link": "Read them all on Google"
+  "link": "Read them all on Google",
+  "more": "More reviews",
+  "lang_note": ""
+ },
+ "reviews_page": {
+  "title": "Reviews — 5.0 on Google from 390 reviews",
+  "desc": "What people say about booking their days out with Hala Tours Agadir at the Hotel Hamilton: 5.0 on Google from 390 reviews. Short quotes, exactly as written.",
+  "h1": "on Google",
+  "lede": "From 390 reviews. A few of them, word for word, as people wrote them.",
+  "cta_title": "Want a day like theirs?",
+  "cta_text": "Tell us the sort of day you want and we'll reply with ideas and today's price."
  },
  "desk": {
   "kicker": "Visit the desk",
@@ -272,28 +205,41 @@
   "hours_title": "Desk hours",
   "maps": "Open in Google Maps",
   "facts": [
-   [
-    "Pickup",
-    "From your hotel in Agadir on almost every trip, and back again."
-   ],
-   [
-    "Families",
-    "Tell us the kids' ages. We'll say honestly which days suit them."
-   ],
-   [
-    "Languages",
-    "We speak English and French."
-   ],
-   [
-    "Prices",
-    "We don't print prices — ask for today's on WhatsApp."
-   ]
+   ["Pickup", "From your hotel in Agadir on almost every trip, and back again."],
+   ["Families", "Tell us the kids' ages. We'll say honestly which days suit them."],
+   ["Languages", "We speak English and French."],
+   ["Prices", "We don't print prices — ask for today's on WhatsApp."]
   ],
   "note": "Come and say hello!",
   "photo_caption": "On the way out for the day.",
   "map_alt": "Street map: Hala Tours Agadir at the Hotel Hamilton on Avenue Mohammed V, Agadir",
   "osm": "Map data © OpenStreetMap contributors",
-  "beach": "Beach"
+  "beach": "Beach",
+  "more": "How to find us",
+  "transfers_line": "Landing or leaving? We do airport transfers too."
+ },
+ "visit_page": {
+  "title": "Visit the desk — Hala Tours Agadir at the Hotel Hamilton",
+  "desc": "Find the Hala Tours Agadir desk inside the Hotel Hamilton, Boulevard Mohammed V, Agadir. Open Monday–Saturday 08:00–23:00, Sunday 09:00–22:00. Map, directions, WhatsApp.",
+  "h1": "Come and see us at the Hamilton",
+  "lede": "A real desk in a real hotel. Walk in, sit down, tell us what you fancy — or message us first and we'll have ideas ready.",
+  "find_h": "Finding us",
+  "find": [
+   "We're inside the Hotel Hamilton on Boulevard Mohammed V, in the centre of Agadir.",
+   "Come in through the hotel's main entrance. Can't see us straight away? Ask at reception.",
+   "Staying at another hotel? That's fine — on almost every trip we collect you from your hotel in Agadir."
+  ],
+  "getting_h": "Getting here",
+  "getting": [
+   ["From the airport", "Agadir–Al Massira airport is about 23 km away — around 30 minutes by road. We can collect you."],
+   ["By bus", "There's a city bus stop about 200 m from the hotel."],
+   ["By taxi", "Ask for the Hotel Hamilton on Boulevard Mohammed V."]
+  ],
+  "team_h": "Ayoub and the team",
+  "team": "Most people meet Ayoub at the desk. Tell him what you like, how long you've got and who's coming, and you'll get an honest answer — including which days aren't worth it for small children.",
+  "quotes": [5, 6, 8],
+  "plus_code": "Plus Code",
+  "wa_cta": "Message us before you come"
  },
  "transfers": {
   "kicker": "Getting here and away",
@@ -302,13 +248,59 @@
   "cta": "Ask about a transfer",
   "wa": "Hello Hala Tours! I'd like a transfer.\nFrom:\nTo:\nDate and flight time:\nNumber of people:"
  },
+ "transfers_page": {
+  "title": "Airport transfers — Agadir, Marrakech, Casablanca & Essaouira airports",
+  "desc": "Transfers between Agadir–Al Massira airport and your hotel, and from Marrakech, Casablanca and Essaouira airports to Agadir. Priced per vehicle for 1–3 or 4–7 people.",
+  "h1": "Airport transfers",
+  "lede": "Someone waiting when you land, and a lift back to the airport when it's time to go. One price per vehicle — for 1–3 or 4–7 people — so the more of you, the better it works out.",
+  "routes_h": "Routes we drive",
+  "routes": [
+   ["agadir-in", "Agadir airport → your hotel"],
+   ["agadir-out", "Your hotel → Agadir airport"],
+   ["marrakech", "Marrakech airport → Agadir"],
+   ["casablanca", "Casablanca airport → Agadir"],
+   ["essaouira", "Essaouira airport → Agadir"],
+   ["other", "Something else"]
+  ],
+  "vehicle_h": "Per vehicle",
+  "vehicle": "Prices are per vehicle, not per person: one size for 1–3 people, one for 4–7. Ask for today's price on WhatsApp.",
+  "late_h": "Landing late?",
+  "late": "Tell us your flight number and time. Late arrivals are fine — just ask us first.",
+  "form_title": "Ask about your transfer",
+  "form_text": "Fill in what you know; it becomes a WhatsApp message to our desk.",
+  "route_label": "Which transfer?",
+  "route_choose": "Choose a route",
+  "date_label": "Date",
+  "time_label": "Flight time",
+  "flight_label": "Flight number",
+  "flight_ph": "e.g. FR 1234",
+  "people_label": "People",
+  "bags_label": "Suitcases",
+  "stay_label": "Hotel or address in Agadir",
+  "name_label": "Your name",
+  "submit": "Send on WhatsApp",
+  "err_route": "Which transfer do you need?",
+  "err_date": "Please choose a date that isn't in the past.",
+  "err_people": "How many people? At least one, please.",
+  "wa_intro": "Hello Hala Tours! I'd like a transfer.",
+  "wa_route": "Route",
+  "wa_date": "Date",
+  "wa_time": "Flight time",
+  "wa_flight": "Flight",
+  "wa_people": "People",
+  "wa_bags": "Suitcases",
+  "wa_stay": "Hotel",
+  "wa_name": "Name",
+  "wa_outro": "What's today's price?",
+  "quote": 7
+ },
  "plan": {
   "kicker": "Tell us your day",
   "title": "Tell us what sort of day you want",
   "text": "Fill in what you know. It becomes a WhatsApp message to our desk — you can still edit it before you send. We reply with ideas and today's price.",
   "moods_label": "What kind of day?",
   "picked_label": "Days you've picked",
-  "picked_empty": "None yet — tap “Add to my day” on anything above, or just choose a mood.",
+  "picked_empty": "None yet — tap “Add to my day” on any day, or just choose a mood.",
   "remove": "Remove",
   "length_label": "How long?",
   "length_any": "Not sure",
@@ -351,11 +343,38 @@
   "wa_simple": "Hello Hala Tours! I'd like to plan a day in Agadir.",
   "mail_subject": "Planning a day with Hala Tours"
  },
+ "plan_page": {
+  "title": "Plan my day — tell us on WhatsApp what sort of day you want",
+  "desc": "Pick a mood, add the days you like, tell us the date and who's coming. It becomes a WhatsApp message to the Hala Tours desk in Agadir; we reply with ideas and today's price.",
+  "aside_h": "What happens next",
+  "aside": ["Your message opens in WhatsApp — check it and press send.", "We reply with ideas, times and today's price.", "Say yes, and we collect you from your hotel on the day."],
+  "browse": "Browse all the days first"
+ },
+ "credits_page": {
+  "title": "Photo and map credits",
+  "desc": "Who took the photos on this site, under which licence, and where the map data comes from.",
+  "h1": "Photo & map credits",
+  "lede": "Photos of our days out are Hala Tours Agadir's own. A few place photos come from Wikimedia Commons under free licences — they show the places, not our trips. Here's who took them.",
+  "own_h": "Our own photos",
+  "own": "Quads, camels, horses, the jet ski, Essaouira, the minibus and the 4x4: photos by Hala Tours Agadir and the people on our trips.",
+  "commons_h": "Place photos from Wikimedia Commons",
+  "by": "by",
+  "licence": "Licence",
+  "source": "Original file",
+  "changes": "Cropped and resized for this site.",
+  "used_on": "Used on",
+  "map_h": "Maps",
+  "map": "The street map of the Hamilton area uses OpenStreetMap data © OpenStreetMap contributors, available under the Open Database Licence. The day-trip map is our own sketch.",
+  "odbl": "https://www.openstreetmap.org/copyright",
+  "fonts_h": "Type",
+  "fonts": "Bricolage Grotesque and Kalam, both under the SIL Open Font License."
+ },
  "footer": {
   "line": "The local travel desk at the Hotel Hamilton, Agadir.",
   "contact": "Contact",
   "visit": "Visit",
-  "small": "Hala Tours Agadir · prices on request · photos by Hala Tours Agadir"
+  "pages": "Pages",
+  "small": "Hala Tours Agadir · prices on request · photos by Hala Tours Agadir; place photos credited"
  },
  "notfound": {
   "title": "Page not found — Hala Tours Agadir",

@@ -1,4 +1,4 @@
-/* Hala Tours Agadir — menu, desk hours, day picks, length filter, thumb index, dock, WhatsApp planner. */
+/* Hala Tours Agadir — menu, desk hours, day picks, length filter, thumb index, dock, WhatsApp forms. */
 (function () {
   "use strict";
   var d = document, root = d.documentElement;
@@ -57,22 +57,24 @@
   }
   deskStatus(); setInterval(deskStatus, 60000);
 
-  /* ---------- picks (shared with the planner; kept for the session) */
-  var KEY = "hala-picks", picks = [];
-  try { picks = JSON.parse(sessionStorage.getItem(KEY) || "[]").filter(function (id) { return D.products[id]; }); } catch (e) {}
-  var dockLabel = $("[data-dock-label]"), dockCount = $("[data-count]"), pickedList = $("[data-picked]"), pickedEmpty = $("[data-picked-empty]");
-  function moodOf(id) { var row = d.getElementById("day-" + id), ch = row && row.closest(".ch"); return ch ? ch.className.match(/ch--(\w+)/)[1] : "cobalt"; }
+  /* ---------- picks ("Add to my day"), kept across pages and visits */
+  var KEY = "hala-picks", picks = [], store = null;
+  try { store = window.localStorage; picks = JSON.parse(store.getItem(KEY) || "[]"); } catch (e) { store = null; }
+  if (!Array.isArray(picks)) picks = [];
+  picks = picks.filter(function (id, i) { return D.products[id] && picks.indexOf(id) === i; });
+  var dockLink = $(".dock__plan"), dockLabel = $("[data-dock-label]"), dockCount = $("[data-count]");
+  var pickedList = $("[data-picked]"), pickedEmpty = $("[data-picked-empty]");
   function renderPicks() {
-    try { sessionStorage.setItem(KEY, JSON.stringify(picks)); } catch (e) {}
+    try { store && store.setItem(KEY, JSON.stringify(picks)); } catch (e) {}
     $$("[data-pick]").forEach(function (b) { b.setAttribute("aria-pressed", String(picks.indexOf(b.dataset.pick) > -1)); });
-    if (dockCount) {
+    if (dockCount && !dockLink.hasAttribute("data-static")) {
       dockCount.hidden = !picks.length; dockCount.textContent = picks.length;
       dockLabel.textContent = picks.length ? D.ui.sticky_go : D.ui.sticky_idle;
     }
     if (pickedList) {
       pickedList.innerHTML = "";
       picks.forEach(function (id) {
-        var li = d.createElement("li"); li.className = "c-" + moodOf(id);
+        var li = d.createElement("li"); li.className = "c-" + (D.pc[id] || "cobalt");
         li.appendChild(d.createTextNode(D.products[id]));
         var x = d.createElement("button"); x.type = "button"; x.setAttribute("aria-label", D.s.remove + ": " + D.products[id]);
         x.innerHTML = '<svg class="ico" aria-hidden="true"><use href="#i-close"/></svg>';
@@ -89,16 +91,22 @@
       renderPicks();
     });
   });
+  window.addEventListener("storage", function (ev) {
+    if (ev.key !== KEY) return;
+    try { picks = JSON.parse(ev.newValue || "[]").filter(function (id) { return D.products[id]; }); } catch (e) { picks = []; }
+    renderPicks();
+  });
   renderPicks();
 
-  /* ---------- length filter */
-  var chips = $$(".chip[data-len]");
+  /* ---------- length filter (works on every chapter on the page; on the homepage it also reveals hidden rows) */
+  var chips = $$(".chip[data-len]"), bar = $(".lenbar");
   chips.forEach(function (c) {
     c.addEventListener("click", function () {
       var len = c.dataset.len;
       chips.forEach(function (x) { x.setAttribute("aria-pressed", String(x === c)); });
       $$(".ch").forEach(function (ch) {
         var shown = 0;
+        ch.classList.toggle("is-filtered", !!len);
         $$(".day", ch).forEach(function (row) {
           var ok = !len || row.dataset.lengths.split(" ").indexOf(len) > -1;
           row.classList.toggle("is-out", !ok); if (ok) shown++;
@@ -106,8 +114,7 @@
         ch.classList.toggle("is-empty", !shown);
         $(".ch__none", ch).hidden = !!shown;
       });
-      var r = $(".lenbar").getBoundingClientRect();
-      if (r.top < 0) $(".lenbar").scrollIntoView({ block: "start" });
+      if (bar && bar.getBoundingClientRect().top < 0) bar.scrollIntoView({ block: "start" });
     });
   });
 
@@ -124,9 +131,7 @@
     $$("[data-thumb]").forEach(function (t) { thumbs[t.dataset.thumb] = t; });
     var chObs = new IntersectionObserver(function (es) {
       es.forEach(function (en) {
-        if (en.isIntersecting) {
-          Object.keys(thumbs).forEach(function (k) { thumbs[k].classList.toggle("is-on", k === en.target.dataset.mood); });
-        }
+        if (en.isIntersecting) Object.keys(thumbs).forEach(function (k) { thumbs[k].classList.toggle("is-on", k === en.target.dataset.mood); });
       });
     }, { rootMargin: "-45% 0px -50% 0px" });
     $$(".ch").forEach(function (ch) { chObs.observe(ch); });
@@ -137,58 +142,110 @@
         es.forEach(function (en) { if (en.isIntersecting) hideFor.add(en.target); else hideFor.delete(en.target); });
         dock.classList.toggle("is-hidden", hideFor.size > 0);
       });
-      ["#plan", "#foot"].forEach(function (s) { var el = $(s); el && dObs.observe(el); });
+      $$("[data-dock-hide]").forEach(function (el) { dObs.observe(el); });
     }
   }
 
-  /* ---------- planner → WhatsApp */
-  var form = d.getElementById("planner");
-  if (!form) return;
-  var S = D.s, kids = form.elements.kids, agesBox = $("[data-ages]", form), ok = $("[data-ok]", form);
-  var dateIn = form.elements.date, today = new Date();
+  /* ---------- WhatsApp forms: plan (planner), day (one day), transfer */
+  var S = D.s;
   var iso = function (x) { return x.getFullYear() + "-" + String(x.getMonth() + 1).padStart(2, "0") + "-" + String(x.getDate()).padStart(2, "0"); };
-  dateIn.min = iso(today);
-  kids.addEventListener("input", function () { agesBox.hidden = !(parseInt(kids.value, 10) > 0); });
+  var nice = function (v) {
+    var dt = new Date(v + "T12:00:00");
+    return dt.toLocaleDateString(D.lang === "fr" ? "fr-FR" : "en-GB", { weekday: "short", day: "numeric", month: "short", year: "numeric" });
+  };
+  var val = function (form, name) { var el = form.elements[name]; return el ? String(el.value || "").trim() : ""; };
+  var line = function (L, label, v) { if (v) L.push("• " + label + ": " + v); };
+  var lineFr = function (L, label, v) { if (v) L.push("• " + label + (D.lang === "fr" ? " : " : ": ") + v); };
+  var add = D.lang === "fr" ? lineFr : line;
 
-  function showErr(name, on, field) {
-    var el = $('[data-err="' + name + '"]', form); if (el) el.hidden = !on;
-    if (field) { field.setAttribute("aria-invalid", String(on)); if (on) field.setAttribute("aria-describedby", (field.id || name) + "-err"); }
-    if (el && field) el.id = (field.id || name) + "-err";
+  function people(form) {
+    var a = parseInt(val(form, "adults"), 10) || 0, k = parseInt(val(form, "kids"), 10) || 0, ages = val(form, "ages");
+    var txt = a === 1 ? S.wa_adult : fmt(S.wa_adults, { n: a });
+    if (k > 0) txt += ", " + (k === 1 ? S.wa_kid : fmt(S.wa_kids, { n: k })) + (ages ? " (" + S.wa_ages + (D.lang === "fr" ? " : " : ": ") + ages + ")" : "");
+    return txt;
   }
-  function compose() {
-    var f = form.elements, L = [S.wa_intro, ""];
-    var moods = $$('input[name="mood"]:checked', form).map(function (x) { return D.moods[x.value]; });
-    if (moods.length) L.push("• " + S.wa_moods + ": " + moods.join(", "));
-    if (picks.length) L.push("• " + S.wa_picked + ": " + picks.map(function (id) { return D.products[id]; }).join("; "));
-    var len = ($('input[name="length"]:checked', form) || {}).value;
-    if (len) L.push("• " + S.wa_length + ": " + D.lengths[len]);
-    if (f.date.value) {
-      var dt = new Date(f.date.value + "T12:00:00");
-      L.push("• " + S.wa_date + ": " + dt.toLocaleDateString(D.lang === "fr" ? "fr-FR" : "en-GB", { weekday: "short", day: "numeric", month: "short", year: "numeric" }));
+  var COMPOSE = {
+    plan: function (form) {
+      var L = [S.wa_intro, ""];
+      var moods = $$('input[name="mood"]:checked', form).map(function (x) { return D.moods[x.value]; });
+      add(L, S.wa_moods, moods.join(", "));
+      add(L, S.wa_picked, picks.map(function (id) { return D.products[id]; }).join(D.lang === "fr" ? " ; " : "; "));
+      var len = ($('input[name="length"]:checked', form) || {}).value;
+      add(L, S.wa_length, len ? D.lengths[len] : "");
+      add(L, S.wa_date, val(form, "date") && nice(val(form, "date")));
+      add(L, S.wa_people, people(form));
+      add(L, S.wa_stay, val(form, "stay"));
+      add(L, S.wa_name, val(form, "name"));
+      add(L, S.wa_msg, val(form, "msg"));
+      L.push("", S.wa_outro);
+      return L;
+    },
+    day: function (form) {
+      var L = [fmt(S.d_intro, { day: D.products[form.dataset.day] }), ""];
+      add(L, S.wa_date, val(form, "date") && nice(val(form, "date")));
+      add(L, S.wa_people, people(form));
+      add(L, S.wa_stay, val(form, "stay"));
+      L.push("", S.d_outro);
+      return L;
+    },
+    transfer: function (form) {
+      var L = [S.t_intro, ""], r = form.elements.route;
+      add(L, S.t_route, r.value ? r.options[r.selectedIndex].text : "");
+      add(L, S.t_date, val(form, "date") && nice(val(form, "date")));
+      add(L, S.t_time, val(form, "time"));
+      add(L, S.t_flight, val(form, "flight"));
+      add(L, S.t_people, val(form, "people"));
+      add(L, S.t_bags, val(form, "bags"));
+      add(L, S.t_stay, val(form, "stay"));
+      add(L, S.t_name, val(form, "name"));
+      L.push("", S.t_outro);
+      return L;
     }
-    var a = parseInt(f.adults.value, 10) || 0, k = parseInt(f.kids.value, 10) || 0;
-    var ppl = a === 1 ? S.wa_adult : fmt(S.wa_adults, { n: a });
-    if (k > 0) ppl += ", " + (k === 1 ? S.wa_kid : fmt(S.wa_kids, { n: k })) + (f.ages.value.trim() ? " (" + S.wa_ages + ": " + f.ages.value.trim() + ")" : "");
-    L.push("• " + S.wa_people + ": " + ppl);
-    if (f.stay.value.trim()) L.push("• " + S.wa_stay + ": " + f.stay.value.trim());
-    if (f.name.value.trim()) L.push("• " + S.wa_name + ": " + f.name.value.trim());
-    if (f.msg.value.trim()) L.push("• " + S.wa_msg + ": " + f.msg.value.trim());
-    L.push("", S.wa_outro);
-    return L.join("\n");
+  };
+
+  function showErr(form, name, on, field) {
+    var el = $('[data-err="' + name + '"]', form);
+    if (el) { el.hidden = !on; el.id = el.id || (form.dataset.wa + "-" + name + "-err"); }
+    if (field) {
+      field.setAttribute("aria-invalid", String(on));
+      if (el) {
+        var ids = (field.getAttribute("aria-describedby") || "").split(" ").filter(function (x) { return x && x !== el.id; });
+        if (on) ids.push(el.id);
+        if (ids.length) field.setAttribute("aria-describedby", ids.join(" ")); else field.removeAttribute("aria-describedby");
+      }
+    }
+    return on;
   }
-  form.addEventListener("submit", function (ev) {
-    ev.preventDefault();
-    var f = form.elements, bad = null;
-    var hasWhat = $$('input[name="mood"]:checked', form).length || picks.length || f.msg.value.trim();
-    showErr("what", !hasWhat); if (!hasWhat) bad = bad || $('input[name="mood"]', form);
-    var a = parseInt(f.adults.value, 10);
-    var aBad = !(a >= 1 && a <= 60); showErr("adults", aBad, f.adults); if (aBad) bad = bad || f.adults;
-    var dBad = !!f.date.value && f.date.value < iso(new Date()); showErr("date", dBad, f.date); if (dBad) bad = bad || f.date;
-    if (bad) { bad.focus(); return; }
-    var text = compose(), href = D.wa + "?text=" + encodeURIComponent(text);
-    $("[data-retry]", form).href = href;
-    $("[data-mail]", form).href = "mailto:" + D.email + "?subject=" + encodeURIComponent(S.mail_subject) + "&body=" + encodeURIComponent(text);
-    ok.hidden = false; ok.focus();
-    window.open(href, "_blank", "noopener");
+  function validate(form) {
+    var kind = form.dataset.wa, f = form.elements, bad = [], today = iso(new Date());
+    if (kind === "plan") {
+      var hasWhat = $$('input[name="mood"]:checked', form).length || picks.length || val(form, "msg");
+      if (showErr(form, "what", !hasWhat)) bad.push($('input[name="mood"]', form));
+    }
+    if (f.adults) { var a = parseInt(f.adults.value, 10); if (showErr(form, "adults", !(a >= 1 && a <= 60), f.adults)) bad.push(f.adults); }
+    if (kind === "transfer") {
+      if (showErr(form, "route", !f.route.value, f.route)) bad.push(f.route);
+      if (showErr(form, "date", !f.date.value || f.date.value < today, f.date)) bad.push(f.date);
+      var n = parseInt(f.people.value, 10); if (showErr(form, "people", !(n >= 1 && n <= 60), f.people)) bad.push(f.people);
+    } else if (f.date) {
+      if (showErr(form, "date", !!f.date.value && f.date.value < today, f.date)) bad.push(f.date);
+    }
+    return bad[0] || null;
+  }
+
+  $$("form[data-wa]").forEach(function (form) {
+    var ok = $("[data-ok]", form), kids = form.elements.kids, agesBox = $("[data-ages]", form);
+    if (form.elements.date) form.elements.date.min = iso(new Date());
+    if (kids && agesBox) kids.addEventListener("input", function () { agesBox.hidden = !(parseInt(kids.value, 10) > 0); });
+    form.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var bad = validate(form);
+      if (bad) { bad.focus(); return; }
+      var text = COMPOSE[form.dataset.wa](form).join("\n"), href = D.wa + "?text=" + encodeURIComponent(text);
+      $("[data-retry]", form).href = href;
+      $("[data-mail]", form).href = "mailto:" + D.email + "?subject=" + encodeURIComponent(S.mail_subject) + "&body=" + encodeURIComponent(text);
+      ok.hidden = false; ok.focus();
+      window.open(href, "_blank", "noopener");
+    });
   });
 })();
