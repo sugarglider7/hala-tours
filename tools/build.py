@@ -1042,8 +1042,9 @@ def main():
     write("/_headers", "/assets/*\n  Cache-Control: public, max-age=31536000, immutable\n"
           "/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n  X-Frame-Options: SAMEORIGIN\n"
           "  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()\n"
-          "  Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; "
-          "font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'\n")
+          "  Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; "
+          "script-src 'self' https://static.cloudflareinsights.com; font-src 'self'; connect-src 'self' https://cloudflareinsights.com; "
+          "object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'\n")
     print(f"built {len(written)} files ({len(keys)} pages × {len(LANGS)} languages + 404)")
 
 
